@@ -140,10 +140,10 @@ elif page == "Contact Us":
             </style>
             **Follow us on social media:**
             <div class="social-icons">
-                <a href="https://www.facebook.com/YourTeamPage" target="_blank">
+                <a href="https://www.facebook.com/706GreyWolves7v7" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="50" height="50">
                 </a>
-                <a href="https://www.instagram.com/YourTeamPage" target="_blank">
+                <a href="https://www.instagram.com/706greywolves" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="50" height="50">
                 </a>
             </div>
