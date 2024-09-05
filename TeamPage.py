@@ -91,7 +91,7 @@ st.set_page_config(layout="wide")
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # Add the image to the sidebar
-st.sidebar.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
+st.sidebar.image("Images/706gw_no_bg.png", use_column_width=True)
 
 # Define the sidebar menu
 with st.sidebar:
@@ -110,26 +110,26 @@ if page == "Home":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7</h1>", unsafe_allow_html=True)
     st.write("Welcome to the home of the 706 Grey Wolves! Explore our team members, schedule, and photos.")
     #st.write("Welcome to the home page!")
-    st.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
+    st.image("Images/706gw_no_bg.png", use_column_width=True)
     st.write("Here you can find the latest updates and news.")
 
     # Add a scrolling image gallery
     images = [
-        {'img': '.venv/Scripts/706GWImages/AllStars.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/BJ.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/BJ and Alan.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/cody.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/Dylan.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/FirstTeamImage.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/Flash.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/GetOutTheWay.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/HunterHeadTop.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/Isaac.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/MikeWeathers.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/MoneyInTheBank.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/PB12.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/TheBoys.jpg', 'title': '', 'text': ''},
-        {'img': '.venv/Scripts/706GWImages/TooStrong.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/AllStars.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/BJ.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/BJ and Alan.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/cody.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/Dylan.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/FirstTeamImage.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/Flash.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/GetOutTheWay.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/HunterHeadTop.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/Isaac.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/MikeWeathers.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/MoneyInTheBank.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/PB12.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/TheBoys.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/TooStrong.jpg', 'title': '', 'text': ''},
     ]
 
     carousel(images)
@@ -140,9 +140,9 @@ if page == "Home":
 elif page == "Team Members":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7 Staff</h1>", unsafe_allow_html=True)
     team_members = [
-        {"name": "Marvin Aviles", "position": "Founder", "photo": ".venv/Scripts/Images/MarvinSr.PNG"},
-        {"name": "Pam Aviles", "position": "Co-Founder/Team Trainer", "photo": ".venv/Scripts/Images/Pam.jpg"},
-        {"name": "Marvin Aviles Jr", "position": "Defensive Coordinator", "photo": ".venv/Scripts/Images/MarvinJr.PNG"},
+        {"name": "Marvin Aviles", "position": "Founder", "photo": "Images/MarvinSr.PNG"},
+        {"name": "Pam Aviles", "position": "Co-Founder/Team Trainer", "photo": "Images/Pam.jpg"},
+        {"name": "Marvin Aviles Jr", "position": "Defensive Coordinator", "photo": "Images/MarvinJr.PNG"},
         # Add more team members here
     ]
 
@@ -177,7 +177,7 @@ elif page == "Upcoming Matches":
 # Sponsorship and Donations section
 elif page == "Sponsorship and Donations":
     # Page title
-    st.image(".venv/Scripts/Images/706gw_no_bg.png", width=None)
+    st.image("Images/706gw_no_bg.png", width=None)
     st.markdown("<h1 class='centered-title'>Sponsorship and Donations</h1>", unsafe_allow_html=True)
     st.markdown(
         "<div class='section-content'>The 706 Grey Wolves (706 GW) is a travel 7v7 football team for youth ages 11-18, residing in Columbia County, GA. 706 GW is about to embark on its second season with the Hands League. Every Saturday from January 2025 - June 2025, the 706 GW will travel out of state for 7v7 tournaments, as well as compete in the local Augusta Hands League 7v7 tournaments. 706 GW is funded by sponsors and operated solely by volunteers.</div>",
@@ -216,14 +216,14 @@ elif page == "Sponsorship and Donations":
 
     with col1:
         st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
-        st.image('.venv/Scripts/706GWImages/Venmo.jpg', width=200)
+        st.image('706GWImages/Venmo.jpg', width=200)
         venmo_link = "https://venmo.com/code?user_id=398555769261378993"
         st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
                     unsafe_allow_html=True)
 
     with col2:
         st.markdown("<div class='venmo-info'>CashApp Username: $MarvinAviles85</div>", unsafe_allow_html=True)
-        st.image('.venv/Scripts/706GWImages/CashApp.jpg', width=200)
+        st.image('706GWImages/CashApp.jpg', width=200)
         cashapp_link = "https://cash.app/$MarvinAviles85"
         st.markdown(f"<a href='{cashapp_link}' target='_blank'><button class='donate-button'>CashApp</button></a>",
                     unsafe_allow_html=True)
@@ -247,21 +247,21 @@ elif page == "Registration":
 
     with col1:
         st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
-        st.image('.venv/Scripts/706GWImages/Venmo.jpg', width=200)
+        st.image('706GWImages/Venmo.jpg', width=200)
         venmo_link = "https://venmo.com/code?user_id=398555769261378993"
         st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
                     unsafe_allow_html=True)
 
     with col2:
         st.markdown("<div class='venmo-info'>CashApp Username: $MarvinAviles85</div>", unsafe_allow_html=True)
-        st.image('.venv/Scripts/706GWImages/CashApp.jpg', width=200)
+        st.image('706GWImages/CashApp.jpg', width=200)
         cashapp_link = "https://cash.app/$MarvinAviles85"
         st.markdown(f"<a href='{cashapp_link}' target='_blank'><button class='donate-button'>CashApp</button></a>",
                     unsafe_allow_html=True)
 
 elif page == "Contact Us":
     st.header("Contact Us")
-    st.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
+    st.image("Images/706gw_no_bg.png", use_column_width=True)
     st.write("Email us at 706greywovles7v7@gmail.com")
     st.markdown("""
             <style>
