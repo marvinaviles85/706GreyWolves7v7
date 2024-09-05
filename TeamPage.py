@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from streamlit_carousel import carousel
 
 custom_css = """
 <style>
@@ -10,8 +11,23 @@ custom_css = """
         color: white;
     }
     .team-member img, .photo-gallery img {
-        width: 200px; /* Set a Consistent Width */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%; /* Set a Consistent Width */
+        height: 100%; /* Maintain aspect ratio */
+        object-fit: contain;
+    }
+     .carousel-title {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 1.5em;
+        color: white;
+    }
+    .carousel-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 1em;
+        color: white;
     }
     .iframe-container {
         width: 100%;
@@ -24,24 +40,65 @@ custom_css = """
     }
     .iframe-container iframe {
         width: 100%;
-        height: 3000px;
         border: none;
+    }
+        .section-content {
+        font-family: 'Arial', sans-serif;
+        font-size: 1.2em;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .sponsor-level {
+        font-family: 'Arial', sans-serif;
+        font-size: 1.5em;
+        color: white;
+        margin-top: 10px;
+    }
+    .sponsor-details {
+        font-family: 'Arial', sans-serif;
+        font-size: 1em;
+        color: white;
+        margin-bottom: 10px;
+    }
+    .donate-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius:12px;
+    }
+    .venmo-inf {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2em;
+        color: #333;
+        margin-top: 20px;
+    }
+    .centered-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
 """
+st.set_page_config(layout="wide")
 
 # Inject the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # Add the image to the sidebar
-st.sidebar.image("Images/706gw_no_bg.png", use_column_width=True)
+st.sidebar.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
 
 # Define the sidebar menu
 with st.sidebar:
     page = option_menu(
         "",
-        ["Home", "Team Members", "Upcoming Matches", "Photos", "Registration", "Contact Us"],
-        icons=["house", "people", "calendar", "images", "clipboard", "envelope"],
+        ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donations", "Registration", "Contact Us"],
+        icons=["house", "people", "calendar", "star", "clipboard", "envelope"],
         menu_icon="cast",
         default_index=0,
     )
@@ -53,15 +110,39 @@ if page == "Home":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7</h1>", unsafe_allow_html=True)
     st.write("Welcome to the home of the 706 Grey Wolves! Explore our team members, schedule, and photos.")
     #st.write("Welcome to the home page!")
-    st.image("Images/706gw_no_bg.png", use_column_width=True)
+    st.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
+    st.write("Here you can find the latest updates and news.")
+
+    # Add a scrolling image gallery
+    images = [
+        {'img': '.venv/Scripts/706GWImages/AllStars.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/BJ.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/BJ and Alan.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/cody.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/Dylan.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/FirstTeamImage.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/Flash.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/GetOutTheWay.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/HunterHeadTop.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/Isaac.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/MikeWeathers.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/MoneyInTheBank.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/PB12.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/TheBoys.jpg', 'title': '', 'text': ''},
+        {'img': '.venv/Scripts/706GWImages/TooStrong.jpg', 'title': '', 'text': ''},
+    ]
+
+    carousel(images)
+    st.header("Latest News")
+    st.write("Stay tuned for the latest news and updates.")
 
 # Team members section
 elif page == "Team Members":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7 Staff</h1>", unsafe_allow_html=True)
     team_members = [
-        {"name": "Marvin Aviles", "position": "Founder", "photo": "Images/MarvinSr.PNG"},
-        {"name": "Pam Aviles", "position": "Co-Founder/Team Trainer", "photo": "Images/Pam.jpg"},
-        {"name": "Marvin Aviles Jr", "position": "Defensive Coordinator", "photo": "Images/MarvinJr.PNG"},
+        {"name": "Marvin Aviles", "position": "Founder", "photo": ".venv/Scripts/Images/MarvinSr.PNG"},
+        {"name": "Pam Aviles", "position": "Co-Founder/Team Trainer", "photo": ".venv/Scripts/Images/Pam.jpg"},
+        {"name": "Marvin Aviles Jr", "position": "Defensive Coordinator", "photo": ".venv/Scripts/Images/MarvinJr.PNG"},
         # Add more team members here
     ]
 
@@ -93,44 +174,94 @@ elif page == "Upcoming Matches":
     for match in matches:
         st.write(f"{match['date']} - vs {match['opponent']} ({match['location']})")
 
-# Photo Collage section
-elif page == "Photos":
-    st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7 2024</h1>", unsafe_allow_html=True)
+# Sponsorship and Donations section
+elif page == "Sponsorship and Donations":
+    # Page title
+    st.image(".venv/Scripts/Images/706gw_no_bg.png", width=None)
+    st.markdown("<h1 class='centered-title'>Sponsorship and Donations</h1>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='section-content'>The 706 Grey Wolves (706 GW) is a travel 7v7 football team for youth ages 11-18, residing in Columbia County, GA. 706 GW is about to embark on its second season with the Hands League. Every Saturday from January 2025 - June 2025, the 706 GW will travel out of state for 7v7 tournaments, as well as compete in the local Augusta Hands League 7v7 tournaments. 706 GW is funded by sponsors and operated solely by volunteers.</div>",
+        unsafe_allow_html=True)
 
-    # Create a 3-column layout
-    col1, col2, col3 = st.columns(3)
+    # Sponsorship Levels
+    st.markdown("<h2 class='section-title'>Sponsorship Levels</h2>", unsafe_allow_html=True)
+
+    sponsorship_levels = [
+        {"level": "$100 Individual Donation",
+         "details": "Your business name and logo are listed on our 706 Grey Wolves 7v7 website, Facebook Page and Instagram Page."},
+        {"level": "$250 Donation",
+         "details": "Your logo is displayed on a banner with other sponsors (supplied by 706 GW) that is displayed every Saturday during multiple games"},
+        {"level": "$500 Business Donation",
+         "details": "Your logo displayed on the uniforms of the players, banner, 706 Grey Wolves 7v7 website, Facebook Page and Instagram Page."},
+    ]
+
+    for level in sponsorship_levels:
+        st.markdown(f"<div class='sponsor-level'>{level['level']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='sponsor-details'>{level['details']}</div>", unsafe_allow_html=True)
+
+    # Donation Information
+    st.markdown("<h2 class='section-title'>Donation Information</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='section-content'>Your generous donation assists with the costs of: Uniforms, Softshell helmets, Player Equipment, Tournament fees, Player Insurance,Qualified Family Assistance, Medical Supplies</div>",
+        unsafe_allow_html=True)
+
+    # Venmo and CashApp Information
+    st.markdown("<h2 class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='section-content'>To make a donation, please send your payment to our Venmo or CashApp account:</div>",
+        unsafe_allow_html=True)
+
+    # Create columns for QR codes and buttons
+    col1, col2 = st.columns(2)
 
     with col1:
-        st.image("706GWImages/AllStars.jpg", use_column_width=True)
-        st.image("706GWImages/BJ.jpg", use_column_width=True)
-        st.image("706GWImages/GetOutTheWay.jpg", use_column_width=True)
-        st.image("706GWImages/MikeWeathers.jpg", use_column_width=True)
-        st.image("706GWImages/TheBoys.jpg", use_column_width=True)
+        st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
+        st.image('.venv/Scripts/706GWImages/Venmo.jpg', width=200)
+        venmo_link = "https://venmo.com/code?user_id=398555769261378993"
+        st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
+                    unsafe_allow_html=True)
 
     with col2:
-        st.image("706GWImages/Bjorkman.jpg", use_column_width=True)
-        st.image("706GWImages/Dylan.jpg", use_column_width=True)
-        st.image("706GWImages/HunterHeadTop.jpg", use_column_width=True)
-        st.image("706GWImages/MoneyInTheBank.jpg", use_column_width=True)
-        st.image("706GWImages/TooStrong.jpg", use_column_width=True)
-
-    with col3:
-        st.image("706GWImages/FirstTeamImage.jpg", use_column_width=True)
-        st.image("706GWImages/Flash.jpg", use_column_width=True)
-        st.image("706GWImages/Isaac.jpg", use_column_width=True)
-        st.image("706GWImages/PB12.jpg", use_column_width=True)
+        st.markdown("<div class='venmo-info'>CashApp Username: $MarvinAviles85</div>", unsafe_allow_html=True)
+        st.image('.venv/Scripts/706GWImages/CashApp.jpg', width=200)
+        cashapp_link = "https://cash.app/$MarvinAviles85"
+        st.markdown(f"<a href='{cashapp_link}' target='_blank'><button class='donate-button'>CashApp</button></a>",
+                    unsafe_allow_html=True)
 
 elif page == "Registration":
-    st.header("Register Now")
+    st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
     st.markdown("""
     <div class="iframe-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexO7RZIemrzcf0Y2pBDd1d7k8ehU7EqAJcwPVcXiW1ryCUjw/viewform?embedded=true" width="800" height="2400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexO7RZIemrzcf0Y2pBDd1d7k8ehU7EqAJcwPVcXiW1ryCUjw/viewform?embedded=true" width="800" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div> 
     """, unsafe_allow_html=True)
 
+    # Venmo and CashApp Information
+    st.markdown("<h2 class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='section-content'>Please send your registration payment to our Venmo or CashApp account:</div>",
+        unsafe_allow_html=True)
+
+    # Create columns for QR codes and buttons
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
+        st.image('.venv/Scripts/706GWImages/Venmo.jpg', width=200)
+        venmo_link = "https://venmo.com/code?user_id=398555769261378993"
+        st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
+                    unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("<div class='venmo-info'>CashApp Username: $MarvinAviles85</div>", unsafe_allow_html=True)
+        st.image('.venv/Scripts/706GWImages/CashApp.jpg', width=200)
+        cashapp_link = "https://cash.app/$MarvinAviles85"
+        st.markdown(f"<a href='{cashapp_link}' target='_blank'><button class='donate-button'>CashApp</button></a>",
+                    unsafe_allow_html=True)
+
 elif page == "Contact Us":
     st.header("Contact Us")
-    st.image("Images/706gw_no_bg.png", use_column_width=True)
+    st.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
     st.write("Email us at 706greywovles7v7@gmail.com")
     st.markdown("""
             <style>
