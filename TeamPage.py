@@ -34,7 +34,7 @@ custom_css = """
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # Add the image to the sidebar
-st.sidebar.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
+st.sidebar.image("Images/706gw_no_bg.png", use_column_width=True)
 
 # Define the sidebar menu
 with st.sidebar:
@@ -53,15 +53,15 @@ if page == "Home":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7</h1>", unsafe_allow_html=True)
     st.write("Welcome to the home of the 706 Grey Wolves! Explore our team members, schedule, and photos.")
     #st.write("Welcome to the home page!")
-    st.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
+    st.image("Images/706gw_no_bg.png", use_column_width=True)
 
 # Team members section
 elif page == "Team Members":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7 Staff</h1>", unsafe_allow_html=True)
     team_members = [
-        {"name": "Marvin Aviles", "position": "Founder", "photo": ".venv/Scripts/Images/MarvinSr.PNG"},
-        {"name": "Pam Aviles", "position": "Co-Founder/Team Trainer", "photo": ".venv/Scripts/Images/Pam.jpg"},
-        {"name": "Marvin Aviles Jr", "position": "Defensive Coordinator", "photo": ".venv/Scripts/Images/MarvinJr.PNG"},
+        {"name": "Marvin Aviles", "position": "Founder", "photo": "Images/MarvinSr.PNG"},
+        {"name": "Pam Aviles", "position": "Co-Founder/Team Trainer", "photo": "Images/Pam.jpg"},
+        {"name": "Marvin Aviles Jr", "position": "Defensive Coordinator", "photo": "Images/MarvinJr.PNG"},
         # Add more team members here
     ]
 
@@ -101,24 +101,24 @@ elif page == "Photos":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.image(".venv/Scripts/706GWImages/AllStars.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/BJ.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/GetOutTheWay.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/MikeWeathers.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/TheBoys.jpg", use_column_width=True)
+        st.image("706GWImages/AllStars.jpg", use_column_width=True)
+        st.image("706GWImages/BJ.jpg", use_column_width=True)
+        st.image("706GWImages/GetOutTheWay.jpg", use_column_width=True)
+        st.image("706GWImages/MikeWeathers.jpg", use_column_width=True)
+        st.image("706GWImages/TheBoys.jpg", use_column_width=True)
 
     with col2:
-        st.image(".venv/Scripts/706GWImages/Bjorkman.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/Dylan.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/HunterHeadTop.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/MoneyInTheBank.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/TooStrong.jpg", use_column_width=True)
+        st.image("706GWImages/Bjorkman.jpg", use_column_width=True)
+        st.image("706GWImages/Dylan.jpg", use_column_width=True)
+        st.image("706GWImages/HunterHeadTop.jpg", use_column_width=True)
+        st.image("706GWImages/MoneyInTheBank.jpg", use_column_width=True)
+        st.image("706GWImages/TooStrong.jpg", use_column_width=True)
 
     with col3:
-        st.image(".venv/Scripts/706GWImages/FirstTeamImage.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/Flash.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/Isaac.jpg", use_column_width=True)
-        st.image(".venv/Scripts/706GWImages/PB12.jpg", use_column_width=True)
+        st.image("706GWImages/FirstTeamImage.jpg", use_column_width=True)
+        st.image("706GWImages/Flash.jpg", use_column_width=True)
+        st.image("706GWImages/Isaac.jpg", use_column_width=True)
+        st.image("706GWImages/PB12.jpg", use_column_width=True)
 
 elif page == "Registration":
     st.header("Register Now")
@@ -130,7 +130,7 @@ elif page == "Registration":
 
 elif page == "Contact Us":
     st.header("Contact Us")
-    st.image(".venv/Scripts/Images/706gw_no_bg.png", use_column_width=True)
+    st.image("Images/706gw_no_bg.png", use_column_width=True)
     st.write("Email us at 706greywovles7v7@gmail.com")
     st.markdown("""
             <style>
