@@ -177,10 +177,15 @@ elif page == "Upcoming Matches":
 # Sponsorship and Donations section
 elif page == "Sponsorship and Donations":
     # Page title
-    st.image("Images/706gw_no_bg.png", width=None)
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+    st.image("Images/706gw_no_bg.png", use_column_width=True)
+
+    # Centered Title
     st.markdown("<h1 class='centered-title'>Sponsorship and Donations</h1>", unsafe_allow_html=True)
     st.markdown(
-        "<div class='section-content'>The 706 Grey Wolves (706 GW) is a travel 7v7 football team for youth ages 11-18, residing in Columbia County, GA. 706 GW is about to embark on its second season with the Hands League. Every Saturday from January 2025 - June 2025, the 706 GW will travel out of state for 7v7 tournaments, as well as compete in the local Augusta Hands League 7v7 tournaments. 706 GW is funded by sponsors and operated solely by volunteers.</div>",
+        "<div class='section-content'>The 706 Grey Wolves (706 GW) is a travel 7v7 football team for youth ages 11-18. 706 GW is about to embark on its second season with the Hands League. From January 2025 to June 2025, the 706 GW will travel out of state every Saturday for 7v7 tournaments, as well as compete in the local Augusta Hands League 7v7 tournaments. 706 GW is proudly funded by sponsors and operated solely by dedicated volunteers.</div>",
         unsafe_allow_html=True)
 
     # Sponsorship Levels
@@ -188,11 +193,11 @@ elif page == "Sponsorship and Donations":
 
     sponsorship_levels = [
         {"level": "$100 Individual Donation",
-         "details": "Your business name and logo are listed on our 706 Grey Wolves 7v7 website, Facebook Page and Instagram Page."},
+         "details": "Your business name and logo will be listed on our 706 Grey Wolves 7v7 website, Facebook Page, and Instagram Page."},
         {"level": "$250 Donation",
-         "details": "Your logo is displayed on a banner with other sponsors (supplied by 706 GW) that is displayed every Saturday during multiple games"},
+         "details": "Your logo will be displayed on a banner with other sponsors (supplied by 706 GW) that is showcased every Saturday during multiple games"},
         {"level": "$500 Business Donation",
-         "details": "Your logo displayed on the uniforms of the players, banner, 706 Grey Wolves 7v7 website, Facebook Page and Instagram Page."},
+         "details": "Your logo will be displayed on players' uniforms, the banner, 706 Grey Wolves 7v7 website, Facebook Page, and Instagram Page."},
     ]
 
     for level in sponsorship_levels:
@@ -202,7 +207,7 @@ elif page == "Sponsorship and Donations":
     # Donation Information
     st.markdown("<h2 class='section-title'>Donation Information</h2>", unsafe_allow_html=True)
     st.markdown(
-        "<div class='section-content'>Your generous donation assists with the costs of: Uniforms, Softshell helmets, Player Equipment, Tournament fees, Player Insurance,Qualified Family Assistance, Medical Supplies</div>",
+        "<div class='section-content'>Your generous donation assists with the costs of: uniforms, softshell helmets, player equipment, tournament fees, player insurance, qualified family assistance, and medical supplies</div>",
         unsafe_allow_html=True)
 
     # Venmo and CashApp Information
@@ -217,7 +222,7 @@ elif page == "Sponsorship and Donations":
     with col1:
         st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
         st.image('706GWImages/Venmo.jpg', width=200)
-        venmo_link = "https://venmo.com/code?user_id=398555769261378993"
+        venmo_link = "https://venmo.com/Grey-Wolves-7v7"
         st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
                     unsafe_allow_html=True)
 
@@ -248,7 +253,7 @@ elif page == "Registration":
     with col1:
         st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
         st.image('706GWImages/Venmo.jpg', width=200)
-        venmo_link = "https://venmo.com/code?user_id=398555769261378993"
+        venmo_link = "https://venmo.com"
         st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
                     unsafe_allow_html=True)
 
