@@ -180,7 +180,7 @@ elif page == "Sponsorship and Donations":
     col1, col2, col3 = st.columns([1, 2, 1])
 
     with col2:
-    st.image("Images/706gw_no_bg.png", use_column_width=True)
+        st.image("Images/706gw_no_bg.png", use_column_width=True)
 
     # Centered Title
     st.markdown("<h1 class='centered-title'>Sponsorship and Donations</h1>", unsafe_allow_html=True)
