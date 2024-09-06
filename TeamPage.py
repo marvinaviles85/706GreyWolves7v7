@@ -231,7 +231,7 @@ elif page == "Sponsorship and Donations":
     with col1:
         st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
         st.image('706GWImages/Venmo.jpg', width=200)
-        venmo_link = "https://venmo.com/Grey-Wolves-7v7"
+        venmo_link = "https://venmo.com/code?user_id=3985557692613789993"
         st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
                     unsafe_allow_html=True)
 
@@ -246,7 +246,7 @@ elif page == "Registration":
     st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
     st.markdown("""
     <div class="iframe-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexO7RZIemrzcf0Y2pBDd1d7k8ehU7EqAJcwPVcXiW1ryCUjw/viewform?embedded=true" width="800" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe src="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexO7RZIemrzcf0Y2pBDd1d7k8ehU7EqAJcwPVcXiW1ryCUjw/viewform?embedded=true" width="640" height="2665" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div> 
     """, unsafe_allow_html=True)
 
