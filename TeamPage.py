@@ -83,6 +83,12 @@ custom_css = """
         margin-left: auto;
         margin-right: auto;
     }
+    .title {
+        text-align: center;
+        font-family: 'Impact', sans-serif;
+        font-size: 50px;
+        text-shadow: 2px 2px 0 #000000, 4px 4px 0 #000000;
+    }
 </style>
 """
 st.set_page_config(layout="wide")
@@ -107,8 +113,8 @@ with st.sidebar:
 
 # Home section
 if page == "Home":
-    st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7</h1>", unsafe_allow_html=True)
-    st.write("Welcome to the home of the 706 Grey Wolves! Explore our team members, schedule, and photos.")
+    st.markdown("<h1 class='title'>706 Grey Wolves 7v7</h1>", unsafe_allow_html=True)
+    st.markdown("**Welcome to the home of the 706 Grey Wolves!**\n\nExplore our team members, schedule, and photos.")
     #st.write("Welcome to the home page!")
     st.image("Images/706gw_no_bg.png", use_column_width=True)
     st.write("Here you can find the latest updates and news.")
