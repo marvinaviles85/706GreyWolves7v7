@@ -262,7 +262,7 @@ elif page == "Registration":
     with col1:
         st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
         st.image('706GWImages/Venmo.jpg', width=200)
-        venmo_link = "https://venmo.com"
+        venmo_link = "https://venmo.com/code?user_id=3985557692613789993"
         st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
                     unsafe_allow_html=True)
 
