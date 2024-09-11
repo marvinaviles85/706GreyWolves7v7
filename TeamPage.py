@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_carousel import carousel
+import streamlit.components.v1 as components
 
 custom_css = """
 <style>
@@ -241,6 +242,13 @@ elif page == "Sponsorship and Donations":
         cashapp_link = "https://cash.app/$MarvinAviles85"
         st.markdown(f"<a href='{cashapp_link}' target='_blank'><button class='donate-button'>CashApp</button></a>",
                     unsafe_allow_html=True)
+
+# GoFundMe Widget
+    gofundme_widget = '''
+    <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/large?sharesheet=coachingTask&attribution_id=sl:164d139b-cb39-4bec-89c3-04080200f395"></div>
+    <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    '''
+    components.html(gofundme_widget, height=600)
 
 elif page == "Registration":
     st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
