@@ -243,11 +243,11 @@ elif page == "Sponsorship and Donations":
 
     sponsorship_levels = [
         {"level": "$100 Individual Donation",
-         "details": "Your business name and logo will be listed on our 706 Grey Wolves 7v7 website, Facebook Page, and Instagram Page."},
+         "details": "Your business name and logo will be prominently displayed on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account."},
         {"level": "$250 Donation",
-         "details": "Your logo will be displayed on a banner with other sponsors (supplied by 706 GW) that is showcased every Saturday during multiple games"},
+         "details": "Your business name and logo will be prominently featured on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account. Additionally, your logo will be included on a sponsor banner (provided by 706 GW) displayed every Saturday during multiple games."},
         {"level": "$500 Business Donation",
-         "details": "Your logo will be displayed on players' uniforms, the banner, 706 Grey Wolves 7v7 website, Facebook Page, and Instagram Page."},
+         "details": "Your business name and logo will be prominently displayed on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account. Additionally, your logo will be featured on a sponsor banner (provided by 706 GW) showcased every Saturday during multiple games, and proudly displayed on players’ uniforms."},
     ]
 
     for level in sponsorship_levels:
