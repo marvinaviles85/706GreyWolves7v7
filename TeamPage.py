@@ -177,10 +177,6 @@ if page == "Home":
     </div>
     """, unsafe_allow_html=True)
 
-# Test if the image path is correct
-st.image("706GWImages/VetsValor.JPG", caption="Test Image")
-
-
 # Team members section
 elif page == "Team Members":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7 Staff</h1>", unsafe_allow_html=True)
