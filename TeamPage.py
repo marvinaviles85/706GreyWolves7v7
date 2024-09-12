@@ -178,12 +178,12 @@ if page == "Home":
 
     # First and third images in the first outer column
     with col1:
-        sponsor_html = f"""
-            <a href="(sponsors_donors[0]['url]," target="blank">
+        sponsor_html = f'''
+            <a href="{sponsors_donors[0]['url']}" target="_blank">
                 <img src="{sponsors_donors[0]['photo']}" alt="{sponsors_donors[0]['name']}" width="200">
             </a>
-            """
-            st.markdown(sponsor_html, unsafe_allow_html=True)
+            '''
+        st.markdown(sponsor_html, unsafe_allow_html=True)
 
 # Team members section
 elif page == "Team Members":
