@@ -170,12 +170,16 @@ if page == "Home":
      # Add sponsors section
     st.markdown("<h2>Sponsors (Click on Logo for website)</h2>", unsafe_allow_html=True)
     
-    # Display sponsor logos using st.image
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown('<a href="https://vetvalor.com/" target="_blank">', unsafe_allow_html=True)
-        st.image("706GWImages/VetsValor.JPG", caption="Sponsor 1", use_column_width=True)
-        st.markdown('</a>', unsafe_allow_html=True)
+    # Display sponsor logos using st.markdown with HTML
+    sponsor_html = """
+    <div class="sponsor-logos">
+        <a href="https://vetvalor.com/" target="_blank">
+            <img src="706GWImages/VetsValor.JPG" alt="Sponsor 1" style="max-width: 150px;">
+        </a>
+        <!-- Add more sponsors as needed -->
+    </div>
+    """
+    st.markdown(sponsor_html, unsafe_allow_html=True)
 
 
 # Team members section
