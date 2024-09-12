@@ -93,6 +93,27 @@ custom_css = """
     .centered-text {
         text-align: center;
     }
+     #sponsors {
+        text-align: center;
+        padding: 20px;
+    }
+    .sponsor-logos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .sponsor-logos a img {
+        max-width: 150px;
+        transition: transform 0.3s;
+    }
+    .sponsor-logos a img:hover {
+        transform: scale(1.1);
+    }
+    @media (max-width: 600px) {
+        .sponsor-logos {
+            flex-direction: column;
+        }
 </style>
 """
 st.set_page_config(layout="wide")
@@ -145,6 +166,16 @@ if page == "Home":
     carousel(images)
     st.header("Latest News")
     st.write("Stay tuned for the latest news and updates.")
+
+    # Add sponsors section
+    st.markdown("<h2>Sponsors (Click on Logo for website)</h2>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class="sponsor-logos">
+        <a href="https://vetvalor.com/" target="_blank">
+            <img src="706GWImages/VetsValor.jpg" alt="Sponsor 1">
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Team members section
 elif page == "Team Members":
