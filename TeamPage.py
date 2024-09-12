@@ -346,6 +346,24 @@ elif page == "Contact Us":
     st.image("Images/706gw_no_bg.png", use_column_width=True)
     st.write("Email us at 706greywovles7v7@gmail.com")
     st.markdown("""
+        <div style="text-align: center;">
+            <a href="tel:+15207053812" style="
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+            ">
+                1-520-705-3812
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown("""
             <style>
                 .social-icons img {
                     margin-right: 20px;
