@@ -168,7 +168,7 @@ if page == "Home":
     st.write("Stay tuned for the latest news and updates.")
 
      # Add sponsors section
-    st.markdown("<h1 class='centered-title'>Sponsors</h2>", unsafe_allow_html=True)
+    st.markdown("<h1 class='centered-title'>Sponsors</h1>", unsafe_allow_html=True)
     sponsors_donors = [
         {"name": "", "position": "", "photo": "706GWImages/VetsValor.JPG"}
     ]
@@ -182,7 +182,7 @@ if page == "Home":
         st.markdown("""
             <div>
                 <a href="https://www.vetvalor.com" target="_blank">
-                    <img src="https://github.com/marvinaviles85/706GreyWolves7v7/blob/c92681657cdceb02bb28d0dd767d8069d3d0427c/706GWImages/VetsValor.JPG" width="50" height="50">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/c92681657cdceb02bb28d0dd767d8069d3d0427c/706GWImages/VetsValor.JPG" width="50" height="50">
                 </a>
             </div>
         """, unsafe_allow_html=True)
