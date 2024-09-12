@@ -287,7 +287,7 @@ elif page == "Sponsorship and Donations":
         unsafe_allow_html=True)
 
     # Create columns for QR codes and buttons
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
