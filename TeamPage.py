@@ -305,6 +305,12 @@ elif page == "Sponsorship and Donations":
 
 # Add the GoFundMe widget
     gofundme_widget = '''
+    <style>
+        .gfm-embed {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    </style>
     <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/medium?sharesheet=dashboard&attribution_id=sl:100c727f-d2bf-44ed-bf04-dedbac75b8c1"></div>
      <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     '''
