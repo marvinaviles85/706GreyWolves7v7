@@ -182,7 +182,7 @@ if page == "Home":
         st.markdown("""
             <div>
                 <a href="https://www.vetvalor.com" target="_blank">
-                    <img src="706GWImages/VetsValor.JPG" width="50" height="50">
+                    <img src="https://github.com/marvinaviles85/706GreyWolves7v7/blob/main/706GWImages/VetsValor.JPG" width="50" height="50">
                 </a>
             </div>
         """, unsafe_allow_html=True)
