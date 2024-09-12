@@ -135,8 +135,8 @@ with st.sidebar:
     )
 
     # Add a clickable phone number at the bottom
-    st.markdown("--")  # Add a horizontal line for separation
-    st.markdown("Call Us: +1-520-705-3812")
+    st.markdown("---")  # Add a horizontal line for separation
+    st.markdown("Call Us: 1-520-705-3812")
 # Page title and description
 
 # Home section
