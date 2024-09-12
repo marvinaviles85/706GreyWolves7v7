@@ -169,16 +169,17 @@ if page == "Home":
 
     # Add sponsors section
     st.markdown("<h2>Sponsors (Click on Logo for website)</h2>", unsafe_allow_html=True)
-    st.markdown("""
+    components.html("""
     <div class="sponsor-logos">
         <a href="https://vetvalor.com/" target="_blank">
             <img src="706GWImages/VetsValor.JPG" alt="Sponsor 1">
         </a>
+        <a href="https://sponsor2website.com" target="_blank">
+            <img src="706GWImages/sponsor2logo.png" alt="Sponsor 2">
+        </a>
+        <!-- Add more sponsors as needed -->
     </div>
-    """, unsafe_allow_html=True)
-
-    # Test if the image path is correct
-    st.image("706GWImages/VetsValor.JPG", caption="Test Image")
+    """, height=600)
 
 
 # Team members section
