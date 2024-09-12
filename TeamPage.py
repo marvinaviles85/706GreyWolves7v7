@@ -304,13 +304,12 @@ elif page == "Sponsorship and Donations":
                     unsafe_allow_html=True)
 
 # Add the GoFundMe widget
-st.markdown(
-    """
-    <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/medium?sharesheet=dashboard&attribution_id=sl:100c727f-d2bf-44ed-bf04-dedbac75b8c1"></div>
-    <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-    """,
-    unsafe_allow_html=True
-)
+    st.markdown(
+        """
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/medium?sharesheet=dashboard&attribution_id=sl:100c727f-d2bf-44ed-bf04-dedbac75b8c1"></div>
+        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+        """,
+        unsafe_allow_html=True)
 
 elif page == "Registration":
     st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
