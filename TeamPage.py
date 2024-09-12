@@ -172,7 +172,7 @@ if page == "Home":
     st.markdown("""
     <div class="sponsor-logos">
         <a href="https://vetvalor.com/" target="_blank">
-            <img src="706GWImages/VetsValor.jpg" alt="Sponsor 1">
+            <img src="706GWImages/VetsValor.JPG" alt="Sponsor 1">
         </a>
     </div>
     """, unsafe_allow_html=True)
