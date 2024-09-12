@@ -142,7 +142,7 @@ if page == "Home":
     st.markdown("<h1 class='centered-text'>**Welcome to the home of the 706 Grey Wolves!**\n\nExplore our team members, schedule, and photos.</h1>", unsafe_allow_html=True)
     #st.write("Welcome to the home page!")
     st.image("Images/706gw_no_bg.png", use_column_width=True)
-    st.write("<h1 class='centered-text'>REGISTRATION IS NOW OPEN FOR 11U to 18U AGE GROUPS. ROSTERS WILL BE LIMITED IN SIZE. SECURE YOUR SPOT NOW.</h1>", unsafe_allow_html=True)
+    st.write("<h2 class='centered-text'>REGISTRATION IS NOW OPEN FOR 11U to 18U AGE GROUPS. ROSTERS WILL BE LIMITED IN SIZE. SECURE YOUR SPOT NOW.</h1>", unsafe_allow_html=True)
 
     # Add a scrolling image gallery
     images = [
@@ -178,12 +178,7 @@ if page == "Home":
 
     # First and third images in the first outer column
     with col1:
-        sponsor_html = f'''
-            <a href="{sponsors_donors[0]['url']}" target="_blank">
-                <img src="{sponsors_donors[0]['photo']}" alt="{sponsors_donors[0]['name']}" width="200">
-            </a>
-            '''
-        st.markdown(sponsor_html, unsafe_allow_html=True)
+        st.image(sponsors_donors[0]["photo"], caption=sponsors_donors[0]["name"], width=200)
 
 # Team members section
 elif page == "Team Members":
