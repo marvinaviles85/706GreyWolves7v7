@@ -304,11 +304,7 @@ elif page == "Sponsorship and Donations":
                     unsafe_allow_html=True)
 
 # GoFundMe Widget
-    gofundme_widget = '''
-    <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/large?sharesheet=coachingTask&attribution_id=sl:164d139b-cb39-4bec-89c3-04080200f395"></div>
-    <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-    '''
-    components.html(gofundme_widget, height=600)
+    <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/medium?sharesheet=dashboard&attribution_id=sl:100c727f-d2bf-44ed-bf04-dedbac75b8c1"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
 
 elif page == "Registration":
     st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
