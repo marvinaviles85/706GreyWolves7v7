@@ -142,7 +142,7 @@ if page == "Home":
     st.markdown("<h1 class='centered-text'>**Welcome to the home of the 706 Grey Wolves!**\n\nExplore our team members, schedule, and photos.</h1>", unsafe_allow_html=True)
     #st.write("Welcome to the home page!")
     st.image("Images/706gw_no_bg.png", use_column_width=True)
-    st.write("<h2 class='centered-text'>REGISTRATION IS NOW OPEN FOR 11U to 18U AGE GROUPS. ROSTERS WILL BE LIMITED IN SIZE. SECURE YOUR SPOT NOW.</h1>", unsafe_allow_html=True)
+    st.write("<h2 class='centered-text'>REGISTRATION IS NOW OPEN FOR 11U to 18U AGE GROUPS. ROSTERS WILL BE LIMITED IN SIZE. SECURE YOUR SPOT NOW.</h2>", unsafe_allow_html=True)
 
     # Add a scrolling image gallery
     images = [
