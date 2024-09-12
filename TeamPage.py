@@ -275,13 +275,13 @@ elif page == "Sponsorship and Donations":
         st.markdown(f"<div class='sponsor-details'>{level['details']}</div>", unsafe_allow_html=True)
 
     # Donation Information
-    st.markdown("<h2 class='section-title'>Donation Information</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;' class='section-title'>Donation Information</h2>", unsafe_allow_html=True)
     st.markdown(
         "<div class='section-content'>Your generous donation assists with the costs of: uniforms, softshell helmets, player equipment, tournament fees, player insurance, qualified family assistance, and medical supplies</div>",
         unsafe_allow_html=True)
 
     # Venmo and CashApp Information
-    st.markdown("<h2 class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;' class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
     st.markdown(
         "<div class='section-content'>To make a donation, please send your payment to our Venmo or CashApp account:</div>",
         unsafe_allow_html=True)
