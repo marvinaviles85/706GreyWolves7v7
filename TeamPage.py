@@ -259,7 +259,7 @@ elif page == "Sponsorship and Donations":
         unsafe_allow_html=True)
 
     # Sponsorship Levels
-    st.markdown("<h2 text-align='centered', class='section-title'>Sponsorship Levels</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;' class='section-title'>Sponsorship Levels</h2>", unsafe_allow_html=True)
 
     sponsorship_levels = [
         {"level": "$100 Individual Donation",
