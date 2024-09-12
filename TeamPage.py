@@ -168,18 +168,10 @@ if page == "Home":
     st.write("Stay tuned for the latest news and updates.")
 
      # Add sponsors section
-    st.markdown("<h2>Sponsors (Click on Logo for website)</h2>", unsafe_allow_html=True)
+    st.markdown("<h1 class='centered-title'>Sponsors</h2>", unsafe_allow_html=True)
     
     # Display sponsor logos using st.markdown with HTML
-    st.markdown(
-        """<a href="https://vetvalor.com">
-            <img src="706GWImages/VetsValor.JPG;base64, {}" width="25">
-            </a>""".format(
-                base64.b64encode(open("VetsValor.JPG", "rb").read()).decode()
-            ),
-            unsafe_allow_html=True,
-    )
-
+    st.image("706GWImages/VetsValor.JPG", use_column_width=True)
 
 # Team members section
 elif page == "Team Members":
