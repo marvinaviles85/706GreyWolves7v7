@@ -291,14 +291,14 @@ elif page == "Sponsorship and Donations":
 
     with col1:
         st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
-        st.image('706GWImages/Venmo.jpg', height=300, width=300)
+        st.image('706GWImages/Venmo.jpg', width=300)
         venmo_link = "https://venmo.com/code?user_id=3985557692613789993"
         st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
                     unsafe_allow_html=True)
 
     with col2:
         st.markdown("<div class='venmo-info'>CashApp Username: $MarvinAviles85</div>", unsafe_allow_html=True)
-        st.image('706GWImages/CashApp.jpg', height=300, width=300)
+        st.image('706GWImages/CashApp.jpg', width=300)
         cashapp_link = "https://cash.app/$MarvinAviles85"
         st.markdown(f"<a href='{cashapp_link}' target='_blank'><button class='donate-button'>CashApp</button></a>",
                     unsafe_allow_html=True)
