@@ -136,7 +136,24 @@ with st.sidebar:
 
     # Add a clickable phone number at the bottom
     st.markdown("---")  # Add a horizontal line for separation
-    st.markdown('<div style="text-align: center;"><a href="tel:+15207053812">1-520-705-3812</a></div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div style="text-align: center;">
+            <a href="tel:+15207053812" style="
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+            ">
+                1-520-705-3812
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    ))
 # Page title and description
 
 # Home section
