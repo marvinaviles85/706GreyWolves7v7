@@ -309,8 +309,6 @@ elif page == "Sponsorship and Donations":
         .gfm-embed {
             border: none !important;
             box-shadow: none !important;
-            width: 100% !important;
-            margin: 0 auto !important;
         }
     </style>
     <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/medium?sharesheet=dashboard&attribution_id=sl:100c727f-d2bf-44ed-bf04-dedbac75b8c1"></div>
