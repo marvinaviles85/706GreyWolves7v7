@@ -302,19 +302,19 @@ elif page == "Sponsorship and Donations":
         cashapp_link = "https://cash.app/$MarvinAviles85"
         st.markdown(f"<a href='{cashapp_link}' target='_blank'><button class='donate-button'>CashApp</button></a>",
                     unsafe_allow_html=True)
-
-# Add the GoFundMe widget
-    gofundme_widget = '''
-    <style>
-        .gfm-embed {
-            border: none !important;
-            box-shadow: none !important;
-        }
-    </style>
-    <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/medium?sharesheet=dashboard&attribution_id=sl:100c727f-d2bf-44ed-bf04-dedbac75b8c1"></div>
-     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-    '''
-    components.html(gofundme_widget, height=300, width=300)
+    with col3:
+    # Add the GoFundMe widget
+        gofundme_widget = '''
+        <style>
+            .gfm-embed {
+                border: none !important;
+                box-shadow: none !important;
+            }
+        </style>
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/medium?sharesheet=dashboard&attribution_id=sl:100c727f-d2bf-44ed-bf04-dedbac75b8c1"></div>
+        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+        '''
+        components.html(gofundme_widget, height=300, width=300)
 
 elif page == "Registration":
     st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
