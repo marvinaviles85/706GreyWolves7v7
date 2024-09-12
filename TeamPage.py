@@ -153,7 +153,7 @@ with st.sidebar:
         </div>
         """,
         unsafe_allow_html=True
-    ))
+    )
 # Page title and description
 
 # Home section
