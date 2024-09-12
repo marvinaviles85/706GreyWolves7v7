@@ -179,6 +179,13 @@ if page == "Home":
     # First and third images in the first outer column
     with col1:
         st.image(sponsors_donors[0]["photo"], caption=sponsors_donors[0]["name"], width=200)
+        st.markdown("""
+            <div>
+                <a href="https://www.vetvalor.com" target="_blank">
+                    <img src="706GWImages/VetsValor.JPG" width="50" height="50">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
 
 # Team members section
 elif page == "Team Members":
