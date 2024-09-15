@@ -206,6 +206,15 @@ if page == "Home":
             </div>
         """, unsafe_allow_html=True)
 
+    with col2:
+        st.markdown("""
+            <div>
+                <a href="https://www.amsoil.com/?zo=408125" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/c92681657cdceb02bb28d0dd767d8069d3d0427c/706GWImages/amsoil.png" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+
 # Team members section
 elif page == "Team Members":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7 Staff</h1>", unsafe_allow_html=True)
