@@ -194,7 +194,7 @@ if page == "Home":
     ]
         
     # Create outer columns
-    col1, col2 = st.columns([1, 1])
+    col1, col2, col3 = st.columns(3)
 
     # First and third images in the first outer column
     with col1:
