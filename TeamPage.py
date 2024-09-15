@@ -124,7 +124,7 @@ custom_css = """
             font-family: 'Arial', sans-serif;
             color: white; /* Change this color to match your theme */
             padding: 20px;
-            border-bottom: 2px solid #4CAF50; /* Optional: Add a bottom border */
+            border-bottom: 2px solid white; /* Optional: Add a bottom border */
         }
         .subtext {
             text-align: center;
