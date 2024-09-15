@@ -193,7 +193,7 @@ if page == "Home":
     st.write("Stay tuned for the latest news and updates.")
 
      # Add sponsors section
-    st.markdown("<h1 class='centered-title'>Sponsors</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 class='centered-title'>Our Valued Sponsors --- Click on the images to visit their websites</h1>", unsafe_allow_html=True)
     sponsors_donors = [
         {"name": "", "position": "", "photo": "706GWImages/VetsValor.JPG"}
     ]
