@@ -122,14 +122,14 @@ custom_css = """
     .centered-title {
             text-align: center;
             font-family: 'Arial', sans-serif;
-            color: #4CAF50; /* Change this color to match your theme */
+            color: white; /* Change this color to match your theme */
             padding: 20px;
             border-bottom: 2px solid #4CAF50; /* Optional: Add a bottom border */
         }
         .subtext {
             text-align: center;
             font-family: 'Arial', sans-serif;
-            color: #4CAF50; /* Change this color to match your theme */
+            color: white; /* Change this color to match your theme */
             font-size: 14px; /* Smaller font size */
         }
 </style>
