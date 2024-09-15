@@ -347,8 +347,14 @@ elif page == "Sponsorship and Donations":
         components.html(gofundme_widget, height=300, width=300)
 
 elif page == "Registration":
-    st.image("Images/706gw_no_bg.png", width=200)
-    st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
+    # Create outer columns
+    col1, col2 = st.columns(2)
+
+    # First and third images in the first outer column
+    with col2:
+        st.image("Images/706gw_no_bg.png", width=200)
+        st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
+        
     st.markdown("""
     <div class="iframe-container">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexO7RZIemrzcf0Y2pBDd1d7k8ehU7EqAJcwPVcXiW1ryCUjw/viewform?embedded=true" width="640" height="2665" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
