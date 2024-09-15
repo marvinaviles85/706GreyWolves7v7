@@ -371,18 +371,22 @@ elif page == "Registration":
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("<div class='venmo-info'>Venmo Username: @Grey-Wolves-7v7</div>", unsafe_allow_html=True)
-        st.image('706GWImages/Venmo.jpg', width=200)
-        venmo_link = "https://venmo.com/code?user_id=3985557692613789993"
-        st.markdown(f"<a href='{venmo_link}' target='_blank'><button class='donate-button'>Venmo</button></a>",
-                    unsafe_allow_html=True)
+        st.markdown("""
+            <div>
+                <a href="https://venmo.com/code?user_id=3985557692613789993" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Venmo.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
 
     with col2:
-        st.markdown("<div class='venmo-info'>CashApp Username: $MarvinAviles85</div>", unsafe_allow_html=True)
-        st.image('706GWImages/CashApp.jpg', width=200)
-        cashapp_link = "https://cash.app/$MarvinAviles85"
-        st.markdown(f"<a href='{cashapp_link}' target='_blank'><button class='donate-button'>CashApp</button></a>",
-                    unsafe_allow_html=True)
+        st.markdown("""
+            <div style="text-align: center;">
+                <a href="https://cash.app/$MarvinAviles85" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CashApp.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
 
 elif page == "Contact Us":
     st.header("Contact Us")
