@@ -347,9 +347,7 @@ elif page == "Sponsorship and Donations":
         components.html(gofundme_widget, height=300, width=300)
 
 elif page == "Registration":
-    st.markdown('<div class="centered-image">', unsafe_allow_html=True)
     st.image("Images/706gw_no_bg.png", width=200)
-    st.markdown('</div>', unsafe_allow_html=True)
     st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
     st.markdown("""
     <div class="iframe-container">
