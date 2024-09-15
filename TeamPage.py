@@ -210,7 +210,7 @@ if page == "Home":
         st.markdown("""
             <div>
                 <a href="https://www.amsoil.com/?zo=408125" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/c92681657cdceb02bb28d0dd767d8069d3d0427c/706GWImages/amsoil.png" width="200">
+                    <img src="https://github.com/marvinaviles85/706GreyWolves7v7/blob/main/706GWImages/amsoil.png" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
