@@ -119,6 +119,19 @@ custom_css = """
                 height: auto !important;
             }
         }
+    .centered-title {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: #4CAF50; /* Change this color to match your theme */
+            padding: 20px;
+            border-bottom: 2px solid #4CAF50; /* Optional: Add a bottom border */
+        }
+        .subtext {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: #4CAF50; /* Change this color to match your theme */
+            font-size: 14px; /* Smaller font size */
+        }
 </style>
 """
 st.set_page_config(layout="wide")
@@ -193,7 +206,10 @@ if page == "Home":
     st.write("Stay tuned for the latest news and updates.")
 
      # Add sponsors section
-    st.markdown("<h1 class='centered-title'>Our Valued Sponsors --- Click on the images to visit their websites</h1>", unsafe_allow_html=True)
+    st.markdown("""
+    <h1 class='centered-title'>Our Valued Sponsors</h1>
+    <p class='subtext'>Click on the images to visit their websites</p>
+""", unsafe_allow_html=True)
     sponsors_donors = [
         {"name": "", "position": "", "photo": "706GWImages/VetsValor.JPG"}
     ]
