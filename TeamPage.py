@@ -110,9 +110,14 @@ custom_css = """
     .sponsor-logos a img:hover {
         transform: scale(1.1);
     }
-    @media (max-width: 600px) {
-        .sponsor-logos {
-            flex-direction: column;
+    @media (max-width: 768px) {
+            .stMarkdown div {
+                text-align: center;
+            }
+            .stMarkdown img {
+                width: 100% !important;
+                height: auto !important;
+            }
         }
 </style>
 """
