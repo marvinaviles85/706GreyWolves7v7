@@ -229,7 +229,7 @@ if page == "Home":
 
     with col2:
         st.markdown("""
-            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <div>
                 <a href="https://www.amsoil.com/?zo=408125" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/amsoil.png" width="200">
                 </a>
