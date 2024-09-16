@@ -240,7 +240,7 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center;">
                 <a href="https://www.valleycenterrepair.com/" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ValleyCenter.jpg" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ValleyCenter.PNG" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
