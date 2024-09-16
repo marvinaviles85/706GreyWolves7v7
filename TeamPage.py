@@ -229,7 +229,7 @@ if page == "Home":
 
     with col2:
         st.markdown("""
-            <div>
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
                 <a href="https://www.amsoil.com/?zo=408125" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/amsoil.png" width="200">
                 </a>
@@ -238,7 +238,7 @@ if page == "Home":
 
     with col3:
         st.markdown("""
-            <div style="text-align: center;">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
                 <a href="https://www.valleycenterrepair.com/" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ValleyCenter.PNG" width="200">
                 </a>
