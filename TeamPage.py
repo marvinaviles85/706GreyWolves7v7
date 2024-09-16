@@ -236,6 +236,15 @@ if page == "Home":
             </div>
         """, unsafe_allow_html=True)
 
+    with col3:
+        st.markdown("""
+            <div style="text-align: center;">
+                <a href="https://www.valleycenterrepair.com/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ValleyCenter.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+
 # Team members section
 elif page == "Team Members":
     st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7 Staff</h1>", unsafe_allow_html=True)
