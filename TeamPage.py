@@ -132,6 +132,20 @@ custom_css = """
             color: white; /* Change this color to match your theme */
             font-size: 14px; /* Smaller font size */
         }
+        .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f8f9fa;
+    }
+    .top-bar img {
+        height: 50px;
+    }
+    .top-bar select {
+        padding: 5px;
+        font-size: 16px;
+    }
 </style>
 """
 st.set_page_config(layout="wide")
@@ -139,39 +153,32 @@ st.set_page_config(layout="wide")
 # Inject the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 
-# Add the image to the sidebar
-st.sidebar.image("Images/706gw_no_bg.png", use_column_width=True)
+# Add the image and navigation bar to the top of the page
+st.markdown("""
+<div class="top-bar">
+    <img src="Images/706gw_no_bg.png" alt="Logo">
+    <select id="page-select">
+        <option value="Home">Home</option>
+        <option value="Team Members">Team Members</option>
+        <option value="Upcoming Matches">Upcoming Matches</option>
+        <option value="Sponsorship and Donations">Sponsorship and Donations</option>
+        <option value="Registration">Registration</option>
+        <option value="Contact Us">Contact Us</option>
+    </select>
+</div>
+""", unsafe_allow_html=True)
 
-# Define the sidebar menu
-with st.sidebar:
-    page = option_menu(
-        "",
-        ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donations", "Registration", "Contact Us"],
-        icons=["house", "people", "calendar", "star", "clipboard", "envelope"],
-        menu_icon="cast",
-        default_index=0,
-    )
+# JavaScript to handle page navigation
+st.markdown("""
+<script>
+    document.getElementById('page-select').addEventListener('change', function() {
+        window.location.href = window.location.pathname + '?page=' + this.value;
+    });
+</script>
+""", unsafe_allow_html=True)
 
-    # Add a clickable phone number at the bottom
-    st.markdown("---")  # Add a horizontal line for separation
-    st.markdown("""
-        <div style="text-align: center;">
-            <a href="tel:+15207053812" style="
-                display: inline-block;
-                padding: 10px 20px;
-                font-size: 16px;
-                color: white;
-                background-color: #4CAF50;
-                border: none;
-                border-radius: 5px;
-                text-decoration: none;
-            ">
-                1-520-705-3812
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+# Get the selected page from the URL
+page = st.experimental_get_query_params().get('page', ['Home'])[0]
 # Page title and description
 
 # Home section
