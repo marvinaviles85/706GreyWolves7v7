@@ -183,7 +183,7 @@ st.markdown("""
 # Dropdown menu for pages selection
 page = st.selectbox(
     "Select a Page",
-    ["Home", "Team Members", "Upcoming Matches", "Registration", "Contact Us", "Sponsorship and Donations"]
+    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donations""Registration", "Contact Us"]
 )
 
 st.markdown("""
@@ -304,6 +304,83 @@ elif page == "Upcoming Matches":
     for match in matches:
         st.write(f"{match['date']} - vs {match['opponent']} ({match['location']})")
 
+# Sponsorship and Donations section
+elif page == "Sponsorship and Donations":
+    # Page title
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+        st.image("Images/706gw_no_bg.png", use_column_width=True)
+
+    # Centered Title
+    st.markdown("<h1 class='centered-title'>Sponsorship and Donations</h1>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='section-content'>The 706 Grey Wolves (706 GW) is a travel 7v7 football team for youth ages 11-18. 706 GW is about to embark on its second season with the Hands League. From January 2025 to June 2025, the 706 GW will travel out of state every Saturday for 7v7 tournaments, as well as compete in the local Augusta Hands League 7v7 tournaments. 706 GW is proudly funded by sponsors and operated solely by dedicated volunteers.</div>",
+        unsafe_allow_html=True)
+
+    # Sponsorship Levels
+    st.markdown("<h2 style='text-align: center;' class='section-title'>Sponsorship Levels</h2>", unsafe_allow_html=True)
+
+    sponsorship_levels = [
+        {"level": "$100 Individual Donation",
+         "details": "Your business name and logo will be prominently displayed on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account."},
+        {"level": "$250 Donation",
+         "details": "Your business name and logo will be prominently featured on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account. Additionally, your logo will be included on a sponsor banner (provided by 706 GW) displayed every Saturday during multiple games."},
+        {"level": "$500 Business Donation",
+         "details": "Your business name and logo will be prominently displayed on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account. Additionally, your logo will be featured on a sponsor banner (provided by 706 GW) showcased every Saturday during multiple games, and proudly displayed on players’ uniforms."},
+    ]
+
+    for level in sponsorship_levels:
+        st.markdown(f"<div class='sponsor-level'>{level['level']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='sponsor-details'>{level['details']}</div>", unsafe_allow_html=True)
+
+    # Donation Information
+    st.markdown("<h2 style='text-align: center;' class='section-title'>Donation Information</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='section-content'>Your generous donation assists with the costs of: uniforms, softshell helmets, player equipment, tournament fees, player insurance, qualified family assistance, and medical supplies</div>",
+        unsafe_allow_html=True)
+
+    # Venmo and CashApp Information
+    st.markdown("<h2 style='text-align: center;' class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='section-content'>To make a donation, please send your payment to our Venmo or CashApp account:</div>",
+        unsafe_allow_html=True)
+
+    # Create columns for QR codes and buttons
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("""
+            <div>
+                <a href="https://venmo.com/code?user_id=3985557692613789993" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Venmo.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("""
+            <div style="text-align: center;">
+                <a href="https://cash.app/$MarvinAviles85" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CashApp.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col3:
+    # Add the GoFundMe widget
+        gofundme_widget = '''
+        <style>
+            .gfm-embed {
+                border: none !important;
+                box-shadow: none !important;
+            }
+        </style>
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/empower-706-grey-wolves-football-journey/widget/medium?sharesheet=dashboard&attribution_id=sl:100c727f-d2bf-44ed-bf04-dedbac75b8c1"></div>
+        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+        '''
+        components.html(gofundme_widget, height=300, width=300)
+
 # Registration Page
 elif page == "Registration":
     # Create outer columns
@@ -385,120 +462,3 @@ elif page == "Contact Us":
                 </a>
             </div>
         """, unsafe_allow_html=True)
-
-# Sponsorship and Donations section
-elif page == "Sponsorship and Donations":
-    # Title
-    st.title("Donate or Sponsor the Grey Wolves")
-
-    # Display the image using Streamlit's markdown function
-    st.markdown(image_html, unsafe_allow_html=True)
-
-    # Button to show impact information
-    if st.button("What impact will your donation have?"):
-        st.sidebar.title("Impact of Your Donation")
-        st.sidebar.write("""
-        Text.
-
-        Sponsorship Levels
-        - $100 Individual Donation: Text.
-        - $250 Donation: Text.
-        - $500 Business Donation: Text.
-
-        Donation Information
-        Text.
-        """)
-
-    # Donation Section
-    st.header("Your donation")
-    donation_options = ["One-time donation", "$100", "$250", "$500", "$1000"]
-    donation_choice = st.radio("Choose your donation amount", donation_options)
-
-    if donation_choice == "One-time donation":
-        donation_amount = st.number_input("Enter your donation amount", min_value=0.00, format="%.2f")
-    else:
-        donation_amount = float(donation_choice.strip('$'))
-
-    st.write(f"Donation Amount: ${donation_amount:.2f}")
-
-    # Your Details Section
-    st.header("Your details")
-    email = st.text_input("Email*")
-    first_name = st.text_input("First name*")
-    last_name = st.text_input("Last name*")
-    country = st.selectbox("Country*", ["United States", "Canada", "United Kingdom", "Australia", "Other"])
-    state = st.selectbox("State*", ["Georgia", "California", "New York", "Texas", "Other"])
-    is_corporate = st.checkbox("This is a corporate/organization donation")
-
-    # Payment Method Section
-    st.header("Payment Method")
-    payment_method = st.selectbox("Choose your payment method", ["Venmo", "CashApp"])
-
-    if payment_method == "Venmo":
-        st.write("To complete your donation via Venmo, please click here.")
-        st.write("After completing the payment, please enter the transaction ID below.")
-        transaction_id = st.text_input("Venmo Transaction ID")
-    elif payment_method == "CashApp":
-        st.write("To complete your donation via CashApp, please click here.")
-        st.write("After completing the payment, please enter the transaction ID below.")
-        transaction_id = st.text_input("CashApp Transaction ID")
-
-    # Summary Section
-    st.header("Summary")
-    st.write(f"Donation: ${donation_amount:.2f}")
-    st.write(f"Payment Method: {payment_method}")
-
-    # Submit Button
-    if st.button("Submit"):
-        if not transaction_id:
-            st.error(f"Please enter the {payment_method} transaction ID to confirm your payment.")
-        else:
-            st.success("Thank you for your donation!")
-            save_to_csv(email, first_name, last_name, country, state, is_corporate, donation_amount, payment_method, transaction_id)
-
-def save_to_csv(email, first_name, last_name, country, state, is_corporate, donation_amount, payment_method, transaction_id):
-    import pandas as pd
-    import os
-
-    # Create a DataFrame with the donation details
-    df = pd.DataFrame({
-        'Email': [email],
-        'First Name': [first_name],
-        'Last Name': [last_name],
-        'Country': [country],
-        'State': [state],
-        'Corporate Donation': [is_corporate],
-        'Donation Amount': [donation_amount],
-        'Payment Method': [payment_method],
-        'Transaction ID': [transaction_id]
-    })
-
-    # Save the DataFrame to a CSV file
-    csv_file = 'donations.csv'
-    if os.path.exists(csv_file):
-        df.to_csv(csv_file, mode='a', header=False, index=False)
-    else:
-        df.to_csv(csv_file, index=False)
-
-    # Upload the CSV file to GitHub
-    upload_to_github(csv_file)
-
-def upload_to_github(csv_file):
-    from github import Github
-
-    # Authenticate to GitHub
-    g = Github("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")
-
-    # Get the repository
-    repo = g.get_user().get_repo("706GreyWolves7v7")
-
-    # Read the CSV file content
-    with open(csv_file, 'r') as file:
-        content = file.read()
-
-    # Create or update the file in the repository
-    try:
-        contents = repo.get_contents(csv_file)
-        repo.update_file(contents.path, "Update donations", content, contents.sha)
-    except:
-        repo.create_file(csv_file, "Create donations file", content)
