@@ -137,7 +137,8 @@ custom_css = """
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        background-color: #f8f9fa;
+        background-color: None;
+        flex-wrap: wrap;
     }
     .top-bar img {
         height: 50px;
@@ -146,6 +147,17 @@ custom_css = """
         padding: 5px;
         font-size: 16px;
     }
+    @media (max-width: 600px) {
+        .top-bar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .top-bar img {
+            margin-bottom: 10px;
+        }
+        .top-bar select {
+            width: 100%;
+        }
 </style>
 """
 st.set_page_config(layout="wide")
