@@ -165,45 +165,19 @@ st.set_page_config(layout="wide")
 # Inject the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 
-# Initialize session state for page selection
-if 'page' not in st.session_state:
-    st.session_state.page = 'Home'
-
 # Add the image and navigation bar to the top of the page
 st.markdown("""
 <div class="top-bar">
     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Logo">
-    <select id="page-select">
-        <option value="Home">Home</option>
-        <option value="Team Members">Team Members</option>
-        <option value="Upcoming Matches">Upcoming Matches</option>
-        <option value="Sponsorship and Donations">Sponsorship and Donations</option>
-        <option value="Registration">Registration</option>
-        <option value="Contact Us">Contact Us</option>
-    </select>
 </div>
-""".format(
-    home_selected="selected" if st.session_state.page == "Home" else "",
-    team_selected="selected" if st.session_state.page == "Team Members" else "",
-    matches_selected="selected" if st.session_state.page == "Upcoming Matches" else "",
-    sponsorship_selected="selected" if st.session_state.page == "Sponsorship and Donations" else "",
-    registration_selected="selected" if st.session_state.page == "Registration" else "",
-    contact_selected="selected" if st.session_state.page == "Contact Us" else ""
-), unsafe_allow_html=True)
-
-# JavaScript to handle page navigation
-st.markdown("""
-<script>
-    document.getElementById('page-select').addEventListener('change', function() {
-        const selectedPage = this.value;
-        window.location.href = window.location.pathname + '?page=' + selectedPage;
-    });
-</script>
 """, unsafe_allow_html=True)
 
-# Get the selected page from the URL
-page = st.experimental_get_query_params().get('page', [st.session_state.page])[0]
-st.session_state.page = page
+# Dropdown menu for pages selection
+page = st.selectbox(
+    "Select a Page",
+    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donations", "Registration", "Contact Us"]
+)
+   
 # Page title and description
 
 # Home section
