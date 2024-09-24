@@ -139,7 +139,8 @@ custom_css = """
         padding: 10px;
         background-color: None;
         flex-wrap: wrap;
-        position: fixed;
+        position: -webkit-sticky;
+        position: sticky;
         top: 0;
         z-index: 1000, /* Ensure it stays on top of other content */
     }
@@ -161,6 +162,9 @@ custom_css = """
         .top-bar select {
             width: 100%;
         }
+        body {
+            padding-top: 70px;
+        }
 </style>
 """
 st.set_page_config(layout="wide")
@@ -172,6 +176,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown("""
 <div class="top-bar">
     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Logo">
+    <div id="dropdown-container"></div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -180,7 +185,14 @@ page = st.selectbox(
     "Select a Page",
     ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donations", "Registration", "Contact Us"]
 )
-   
+
+st.markdown("""
+<script>
+    const dropdownContainer = document.getElementbyId('drowndown-container');
+    const selectbox = document.querySelector('select[data-testid="stSelectbox"]');
+    dropdownContainer.appendChild(selectbox);
+</script>
+""", unsafe_allow_html=True)
 # Page title and description
 
 # Home section
