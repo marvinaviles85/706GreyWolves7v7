@@ -167,7 +167,7 @@ custom_css = """
         }
 </style>
 """
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 
 # Inject the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
