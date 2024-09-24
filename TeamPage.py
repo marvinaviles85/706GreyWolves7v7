@@ -421,6 +421,7 @@ def upload_to_github(csv_file):
     except:
         repo.create_file(csv_file, "Create donations file", content)
 
+# Registration Page
 elif page == "Registration":
     # Create outer columns
     col1, col2, col3 = st.columns(3)
