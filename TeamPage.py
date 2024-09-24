@@ -184,7 +184,10 @@ st.markdown("""
 st.markdown("""
 <script>
     document.getElementById('page-select').addEventListener('change', function() {
-        window.location.href = window.location.pathname + '?page=' + this.value;
+        const selectedPage = this.value;
+        const queryParams = new URLSearchParams(window.location.search);
+        queryParams.set('page', selectedPage);
+        window.location.search = queryParams.toString();
     });
 </script>
 """, unsafe_allow_html=True)
