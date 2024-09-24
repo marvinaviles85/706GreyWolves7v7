@@ -165,6 +165,10 @@ st.set_page_config(layout="wide")
 # Inject the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 
+# Initialize session state for page selection
+if 'page' not in st.session_state:
+    st.session_state.page = 'Home'
+
 # Add the image and navigation bar to the top of the page
 st.markdown("""
 <div class="top-bar">
@@ -178,22 +182,28 @@ st.markdown("""
         <option value="Contact Us">Contact Us</option>
     </select>
 </div>
-""", unsafe_allow_html=True)
+""".format(
+    home_selected="selected" if st.session_state.page == "Home" else "",
+    team_selected="selected" if st.session_state.page == "Team Members" else "",
+    matches_selected="selected" if st.session_state.page == "Upcoming Matches" else "",
+    sponsorship_selected="selected" if st.session_state.page == "Sponsorship and Donations" else "",
+    registration_selected="selected" if st.session_state.page == "Registration" else "",
+    contact_selected="selected" if st.session_state.page == "Contact Us" else ""
+), unsafe_allow_html=True)
 
 # JavaScript to handle page navigation
 st.markdown("""
 <script>
     document.getElementById('page-select').addEventListener('change', function() {
         const selectedPage = this.value;
-        const queryParams = new URLSearchParams(window.location.search);
-        queryParams.set('page', selectedPage);
-        window.location.search = queryParams.toString();
+        window.location.href = window.location.pathname + '?page=' + selectedPage;
     });
 </script>
 """, unsafe_allow_html=True)
 
 # Get the selected page from the URL
-page = st.experimental_get_query_params().get('page', ['Home'])[0]
+page = st.experimental_get_query_params().get('page', [st.session_state.page])[0]
+st.session_state.page = page
 # Page title and description
 
 # Home section
