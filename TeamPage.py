@@ -307,14 +307,14 @@ elif page == "Upcoming Matches":
 # Sponsorship and Donations section
 elif page == "Sponsorship and Donations":
 # Title
-st.title("Donate or Sponsor the Grey Wolves")
+    st.title("Donate or Sponsor the Grey Wolves")
 
 # HTML and CSS to position the image
-image_html = """
-<div style="position: absolute; top: 10px; right: 10px;">
-    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Logo" width="100">
-</div>
-"""
+    image_html = """
+        <div style="position: absolute; top: 10px; right: 10px;">
+        <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Logo" width="100">
+        </div>
+    """
 
 # Display the image using Streamlit's markdown function
 st.markdown(image_html, unsafe_allow_html=True)
