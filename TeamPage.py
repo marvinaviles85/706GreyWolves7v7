@@ -139,8 +139,7 @@ custom_css = """
         padding: 10px;
         background-color: None;
         flex-wrap: wrap;
-        position: -webkit-sticky; /* For Safari */
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 1000, /* Ensure it stays on top of other content */
     }
