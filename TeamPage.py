@@ -309,13 +309,6 @@ elif page == "Sponsorship and Donations":
 # Title
     st.title("Donate or Sponsor the Grey Wolves")
 
-# HTML and CSS to position the image
-    image_html = """
-        <div style="position: absolute; top: 10px; right: 10px;">
-        <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Logo" width="100">
-        </div>
-    """
-
 # Display the image using Streamlit's markdown function
 st.markdown(image_html, unsafe_allow_html=True)
 
@@ -427,16 +420,6 @@ def upload_to_github(csv_file):
         repo.update_file(contents.path, "Update donations", content, contents.sha)
     except:
         repo.create_file(csv_file, "Create donations file", content)
-
-# Initialize session state
-if "page" not in st.session_state:
-    st.session_state.page = "home"
-
-# Navigation logic
-if st.session_state.page == "home":
-    home_page()
-elif st.session_state.page == "donation":
-    donation_page()
 
 elif page == "Registration":
     # Create outer columns
