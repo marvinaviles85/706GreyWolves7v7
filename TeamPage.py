@@ -156,7 +156,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 # Add the image and navigation bar to the top of the page
 st.markdown("""
 <div class="top-bar">
-    <img src="Images/706gw_no_bg.png" alt="Logo">
+    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Logo">
     <select id="page-select">
         <option value="Home">Home</option>
         <option value="Team Members">Team Members</option>
