@@ -310,7 +310,7 @@ elif page == "Sponsorship and Donations":
 # HTML and CSS to position the image
     image_html = """
         <div style="position: absolute; top: 10px; right: 10px;">
-            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FirstTeamImage.jpg" alt="Your Image" width="100">
+            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FirstTeamImage.jpg" alt="Your Image" width="500">
         </div>
         """
 
