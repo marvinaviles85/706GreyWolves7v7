@@ -395,7 +395,7 @@ elif page == "Sponsorship and Donations":
         else:
             st.success("Thank you for your donation!")
             #save_to_csv(email, first_name, last_name, country, state, is_corporate, donation_amount, payment_method,
-                        transaction_id)
+            #            transaction_id)
 
 
    # def save_to_csv(email, first_name, last_name, country, state, is_corporate, donation_amount, payment_method,
