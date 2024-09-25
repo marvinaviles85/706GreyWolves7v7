@@ -589,7 +589,7 @@ def upload_to_github(csv_file):
     except:
         repo.create_file(csv_file, "Create registrations file", content)
 
-elif page == "Contact Us":
+if page == "Contact Us":
     st.header("Contact Us")
     st.image("Images/706gw_no_bg.png", use_column_width=True)
     st.write("Email us at 706greywovles7v7@gmail.com")
