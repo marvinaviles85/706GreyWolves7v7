@@ -451,12 +451,12 @@ def get_available_jersey_numbers(age_group):
 # Function to save registration data to CSV
 def save_registration(first_name, last_name, email, phone, age_group, name_on_jersey, jersey_number, jersey_size, shorts_size, street, city, state, country, zip_code, emergency_contact_name, emergency_contact_phone, relationship, payment_method, transaction_id):
     file_path = "registrations.csv"
-    if os.path.exists(file_path):
+    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
         df = pd.read_csv(file_path)
     else:
         df = pd.DataFrame(columns=["First Name", "Last Name", "Email", "Phone", "Age Group", "Name on Jersey", "Jersey Number", "Jersey Size", "Shorts Size", "Street", "City", "State", "Country", "Zip Code", "Emergency Contact Name", "Emergency Contact Phone", "Relationship", "Payment Method", "Transaction ID"])
 
-    new_entry = {
+    new_entry = pd.DataFrame([{
         "First Name": first_name,
         "Last Name": last_name,
         "Email": email,
@@ -476,8 +476,9 @@ def save_registration(first_name, last_name, email, phone, age_group, name_on_je
         "Relationship": relationship,
         "Payment Method": payment_method,
         "Transaction ID": transaction_id
-    }
-    df = df.append(new_entry, ignore_index=True)
+    }])
+
+    df = pd.concat([df, new_entry], ignore_index=True)
     df.to_csv(file_path, index=False)
 
 # Dictionary to store the count of registered players for each age group
@@ -529,14 +530,12 @@ if page == "Registration":
     street = st.text_input("Street*")
     city = st.text_input("City*")
     state = st.text_input("State*")
-    country = st.text_input("Country*")
     zip_code = st.text_input("Zip Code*")
 
     # Emergency Contact Section
     emergency_contact_name = st.text_input("Emergency Contact Name*")
     emergency_contact_phone = st.text_input("Emergency Contact Phone*")
     relationship = st.text_input("Relationship*")
-
     # Payment Method Section
     st.header("Payment Method")
     payment_method = st.selectbox("Choose your payment method", ["Venmo", "CashApp"])
