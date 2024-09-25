@@ -458,22 +458,13 @@ if page == "Registration":
     </div> 
     """, unsafe_allow_html=True)
 
-    # Your Details Section
-    st.header("Your details")
-    email = st.text_input("Email*")
-    first_name = st.text_input("First name*")
-    last_name = st.text_input("Last name*")
-    country = st.selectbox("Country*", ["United States", "Canada", "United Kingdom", "Australia", "Other"])
-    state = st.selectbox("State*", ["Georgia", "California", "New York", "Texas", "Other"])
-    is_corporate = st.checkbox("This is a corporate/organization donation")
-
-   Venmo and CashApp Information
+    # Venmo and CashApp Information
     st.markdown("<h2 class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
     st.markdown(
         "<div class='section-content'>Please send your registration payment to our Venmo or CashApp account:</div>",
         unsafe_allow_html=True)
 
-     Create columns for QR codes and buttons
+    # Create columns for QR codes and buttons
     col1, col2 = st.columns(2)
 
     with col1:
