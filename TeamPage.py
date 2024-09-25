@@ -444,7 +444,7 @@ elif page == "Sponsorship and Donations":
 
 # Registration Page
 if page == "Registration":
-    def upload_to_github(csv_file):
+def upload_to_github(csv_file):
     # Read the CSV file content
     with open(csv_file, 'r') as file:
         content = file.read()
