@@ -443,32 +443,6 @@ elif page == "Sponsorship and Donations":
           #  repo.create_file(csv_file, "Create donations file", content)
 
 # Registration Page
-if page == "Registration":
-# Registration Page
-# Dictionary to store the count of registered players for each age group
-player_limits = {
-    "11U": 20,
-    "13U": 20,
-    "15U": 20,
-    "18U": 20
-}
-
-# Dictionary to store the current count of registered players for each age group
-registered_players = {
-    "11U": 0,
-    "13U": 0,
-    "15U": 0,
-    "18U": 0
-}
-
-# Dictionary to store assigned jersey numbers for each age group
-assigned_jersey_numbers = {
-    "11U": set(),
-    "13U": set(),
-    "15U": set(),
-    "18U": set()
-}
-
 # Function to get available jersey numbers for a specific age group
 def get_available_jersey_numbers(age_group):
     all_numbers = set(range(0, 100))  # Assuming jersey numbers range from 0 to 99
@@ -506,6 +480,32 @@ def save_registration(first_name, last_name, email, phone, age_group, name_on_je
     df = df.append(new_entry, ignore_index=True)
     df.to_csv(file_path, index=False)
 
+# Dictionary to store the count of registered players for each age group
+player_limits = {
+    "11U": 20,
+    "13U": 20,
+    "15U": 20,
+    "18U": 20
+}
+
+# Dictionary to store the current count of registered players for each age group
+registered_players = {
+    "11U": 0,
+    "13U": 0,
+    "15U": 0,
+    "18U": 0
+}
+
+# Dictionary to store assigned jersey numbers for each age group
+assigned_jersey_numbers = {
+    "11U": set(),
+    "13U": set(),
+    "15U": set(),
+    "18U": set()
+}
+
+# Registration Page
+if page == "Registration":
     # Registration Section
     st.header("Player Registration")
 
