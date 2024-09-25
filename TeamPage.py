@@ -460,7 +460,7 @@ if page == "Registration":
         }
 
         # GitHub API URL for the file
-        url = f"https://api.github.com/repos/marvinaviles85/706GreyWolves7v7/tree/main/contents{csv_file}"
+        url = f"https://api.github.com/repos/marvinaviles85/706GreyWolves7v7/contents/contents/{csv_file}"
 
         # GitHub token
         token = os.getenv("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")
