@@ -307,42 +307,11 @@ elif page == "Upcoming Matches":
 # Sponsorship and Donations section
 elif page == "Sponsorship and Donations":
     # Page title
-# HTML and CSS for the layout
-    layout_html = """
-    <style>
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 20px;
-        }
-        .text {
-            flex: 1;
-            margin-right: 20px;
-        }
-        .image {
-            flex: 0 0 auto;
-        }
-        .image img {
-            max-width: 100%;
-            height: auto;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .image {
-                order: -1;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
-    <div class="container">
-        <div class="image">
+# HTML and CSS to position the image
+    image_html = """
+        <div style="position: absolute; top: 5px; right: 5px;">
             <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FirstTeamImage.jpg" alt="Your Image" width="400">
         </div>
-    </div>
         """
 
     # Display the image using Streamlit's markdown function
