@@ -521,6 +521,13 @@ if page == "Registration":
     phone = st.text_input("Phone Number*")
     age_group = st.selectbox("Age Group*", ["11U", "13U", "15U", "18U"])
     name_on_jersey = st.text_input("Name Requested on Jersey")
+    # Check if the age group has reached its player limit
+    if registered_players[age_group] >= player_limits[age_group]:
+        st.error(f"Registration for {age_group} is full. Please select a different age group.")
+    else:
+        jersey_number = st.selectbox("Jersey Number*", get_available_jersey_numbers(age_group))
+        jersey_size = st.selectbox("Jersey Size*", ["Youth Small", "Youth Medium", "Youth Large", "Youth Extra Large", "Adult Small", "Adult Medium", "Adult Large", "Adult Extra Large"])
+        shorts_size = st.selectbox("Shorts Size*", ["Youth Small", "Youth Medium", "Youth Large", "Youth Extra Large", "Adult Small", "Adult Medium", "Adult Large", "Adult Extra Large"])
 
     # Address Section
     street = st.text_input("Street*")
