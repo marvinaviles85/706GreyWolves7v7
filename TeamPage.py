@@ -482,6 +482,7 @@ last_name = st.text_input("Last Name*")
 email = st.text_input("Email*")
 phone = st.text_input("Phone Number*")
 age_group = st.selectbox("Age Group*", ["11U", "13U", "15U", "18U"])
+name_on_jersey = st.text_input("Name Requested on Jersey"])
 
 # Check if the age group has reached its player limit
 if registered_players[age_group] >= player_limits[age_group]:
@@ -495,6 +496,7 @@ else:
     st.header("Address")
     country = st.selectbox("Country*", ["United States", "Canada", "United Kingdom", "Australia", "Other"])
     state = st.selectbox("State*", ["Georgia", "California", "New York", "Texas", "Other"])
+    street = st.text_input("Street Address")
     city = st.text_input("City*")
     zip_code = st.text_input("Zip Code*")
 
@@ -523,16 +525,17 @@ else:
     st.write(f"Email: {email}")
     st.write(f"Phone Number: {phone}")
     st.write(f"Age Group: {age_group}")
+    st.write(f"Name on Jersey: {name_on_jersey}")
     st.write(f"Jersey Number: {jersey_number}")
     st.write(f"Jersey Size: {jersey_size}")
     st.write(f"Shorts Size: {shorts_size}")
-    st.write(f"Address: {city}, {state}, {country}, {zip_code}")
+    st.write(f"Address: {street}, {city}, {state}, {country}, {zip_code}")
     st.write(f"Emergency Contact: {emergency_contact_name} ({relationship}) - {emergency_contact_phone}")
     st.write(f"Payment Method: {payment_method}")
 
     # Submit Button
     if st.button("Submit"):
-        if not (first_name and last_name and email and phone and age_group and jersey_number and jersey_size and shorts_size and city and state and country and zip_code and emergency_contact_name and emergency_contact_phone and relationship and transaction_id):
+        if not (first_name and last_name and email and phone and age_group and name_on_jersey and jersey_number and jersey_size and shorts_size and ssreet and city and state and country and zip_code and emergency_contact_name and emergency_contact_phone and relationship and transaction_id):
             st.error("Please fill out all required fields.")
         else:
             # Update the assigned jersey numbers
@@ -548,11 +551,13 @@ else:
                 "Email": [email],
                 "Phone": [phone],
                 "Age Group": [age_group],
+                "Name on Jersey": [name_on_jersey],
                 "Jersey Number": [jersey_number],
                 "Jersey Size": [jersey_size],
                 "Shorts Size": [shorts_size],
                 "Country": [country],
                 "State": [state],
+                "Street": [street],
                 "City": [city],
                 "Zip Code": [zip_code],
                 "Emergency Contact Name": [emergency_contact_name],
@@ -590,10 +595,10 @@ def upload_to_github(csv_file):
     }
 
     # GitHub API URL for the file
-    url = f"https://api.github.com/repos/YOUR_USERNAME/706GreyWolves7v7/contents/{csv_file}"
+    url = f"https://api.github.com/repos/marvinaviles85/706GreyWolves7v7/contents/{csv_file}"
 
     # GitHub token
-    token = os.getenv("GITHUB_TOKEN")
+    token = os.getenv("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")
 
     # Headers for the request
     headers = {
