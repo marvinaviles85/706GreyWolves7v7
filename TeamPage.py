@@ -441,9 +441,9 @@ elif page == "Sponsorship and Donations":
 if page == "Registration":
     # Dictionary to store the count of registered players for each age group
     player_limits = {
-        "11U": 15,
-        "13U": 15,
-        "15U": 15,
+        "11U": 20,
+        "13U": 20,
+        "15U": 20,
         "18U": 20
     }
 
@@ -465,7 +465,7 @@ if page == "Registration":
 
 # Function to get available jersey numbers for a specific age group
 def get_available_jersey_numbers(age_group):
-    all_numbers = set(range(1, 100))  # Assuming jersey numbers range from 1 to 99
+    all_numbers = set(range(00, 100))  # Assuming jersey numbers range from 1 to 99
     return sorted(all_numbers - assigned_jersey_numbers[age_group])
 
 # Registration Section
