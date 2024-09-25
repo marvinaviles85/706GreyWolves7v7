@@ -482,7 +482,7 @@ last_name = st.text_input("Last Name*")
 email = st.text_input("Email*")
 phone = st.text_input("Phone Number*")
 age_group = st.selectbox("Age Group*", ["11U", "13U", "15U", "18U"])
-name_on_jersey = st.text_input("Name Requested on Jersey"])
+name_on_jersey = st.text_input("Name Requested on Jersey")
 
 # Check if the age group has reached its player limit
 if registered_players[age_group] >= player_limits[age_group]:
