@@ -2,6 +2,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_carousel import carousel
 import streamlit.components.v1 as components
+import pandas as pd
+from github import Github
 
 custom_css = """
 <style>
