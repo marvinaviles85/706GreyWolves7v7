@@ -444,67 +444,141 @@ elif page == "Sponsorship and Donations":
 
 # Registration Page
 if page == "Registration":
-    # Create outer columns
-    col1, col2, col3 = st.columns(3)
+# Registration Page
+# Dictionary to store the count of registered players for each age group
+player_limits = {
+    "11U": 20,
+    "13U": 20,
+    "15U": 20,
+    "18U": 20
+}
 
-    # First and third images in the first outer column
-    with col2:
-        st.image("Images/706gw_no_bg.png", width=200)
-        
-    st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
-    st.markdown("""
-    <div class="iframe-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexO7RZIemrzcf0Y2pBDd1d7k8ehU7EqAJcwPVcXiW1ryCUjw/viewform?embedded=true" width="640" height="2665" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div> 
-    """, unsafe_allow_html=True)
+# Dictionary to store the current count of registered players for each age group
+registered_players = {
+    "11U": 0,
+    "13U": 0,
+    "15U": 0,
+    "18U": 0
+}
 
-    # Your Details Section
-    st.header("Your details")
+# Dictionary to store assigned jersey numbers for each age group
+assigned_jersey_numbers = {
+    "11U": set(),
+    "13U": set(),
+    "15U": set(),
+    "18U": set()
+}
+
+# Function to get available jersey numbers for a specific age group
+def get_available_jersey_numbers(age_group):
+    all_numbers = set(range(0, 100))  # Assuming jersey numbers range from 0 to 99
+    return sorted(all_numbers - assigned_jersey_numbers[age_group])
+
+# Function to save registration data to CSV
+def save_registration(first_name, last_name, email, phone, age_group, name_on_jersey, jersey_number, jersey_size, shorts_size, street, city, state, country, zip_code, emergency_contact_name, emergency_contact_phone, relationship, payment_method, transaction_id):
+    file_path = "registrations.csv"
+    if os.path.exists(file_path):
+        df = pd.read_csv(file_path)
+    else:
+        df = pd.DataFrame(columns=["First Name", "Last Name", "Email", "Phone", "Age Group", "Name on Jersey", "Jersey Number", "Jersey Size", "Shorts Size", "Street", "City", "State", "Country", "Zip Code", "Emergency Contact Name", "Emergency Contact Phone", "Relationship", "Payment Method", "Transaction ID"])
+
+    new_entry = {
+        "First Name": first_name,
+        "Last Name": last_name,
+        "Email": email,
+        "Phone": phone,
+        "Age Group": age_group,
+        "Name on Jersey": name_on_jersey,
+        "Jersey Number": jersey_number,
+        "Jersey Size": jersey_size,
+        "Shorts Size": shorts_size,
+        "Street": street,
+        "City": city,
+        "State": state,
+        "Country": country,
+        "Zip Code": zip_code,
+        "Emergency Contact Name": emergency_contact_name,
+        "Emergency Contact Phone": emergency_contact_phone,
+        "Relationship": relationship,
+        "Payment Method": payment_method,
+        "Transaction ID": transaction_id
+    }
+    df = df.append(new_entry, ignore_index=True)
+    df.to_csv(file_path, index=False)
+
+    # Registration Section
+    st.header("Player Registration")
+
+    # Player Details Section
+    st.header("Player Details")
+    first_name = st.text_input("First Name*")
+    last_name = st.text_input("Last Name*")
     email = st.text_input("Email*")
-    first_name = st.text_input("First name*")
-    last_name = st.text_input("Last name*")
-    country = st.selectbox("Country*", ["United States", "Canada", "United Kingdom", "Australia", "Other"])
-    state = st.selectbox("State*", ["Georgia", "California", "New York", "Texas", "Other"])
-    is_corporate = st.checkbox("This is a corporate/organization donation")
+    phone = st.text_input("Phone Number*")
+    age_group = st.selectbox("Age Group*", ["11U", "13U", "15U", "18U"])
+    name_on_jersey = st.text_input("Name Requested on Jersey")
+    # Check if the age group has reached its player limit
+    if registered_players[age_group] >= player_limits[age_group]:
+        st.error(f"Registration for {age_group} is full. Please select a different age group.")
+    else:
+        jersey_number = st.selectbox("Jersey Number*", get_available_jersey_numbers(age_group))
+        jersey_size = st.selectbox("Jersey Size*", ["Youth Small", "Youth Medium", "Youth Large", "Youth Extra Large", "Adult Small", "Adult Medium", "Adult Large", "Adult Extra Large"])
+        shorts_size = st.selectbox("Shorts Size*", ["Youth Small", "Youth Medium", "Youth Large", "Youth Extra Large", "Adult Small", "Adult Medium", "Adult Large", "Adult Extra Large"])
+
+    # Address Section
+    street = st.text_input("Street*")
+    city = st.text_input("City*")
+    state = st.text_input("State*")
+    country = st.text_input("Country*")
+    zip_code = st.text_input("Zip Code*")
+
+    # Emergency Contact Section
+    emergency_contact_name = st.text_input("Emergency Contact Name*")
+    emergency_contact_phone = st.text_input("Emergency Contact Phone*")
+    relationship = st.text_input("Relationship*")
 
     # Payment Method Section
     st.header("Payment Method")
     payment_method = st.selectbox("Choose your payment method", ["Venmo", "CashApp"])
 
     if payment_method == "Venmo":
-        st.write("To complete your donation via Venmo, please [click here](https://venmo.com/code?user_id=3985557692613789993).")
+        st.write("To complete your payment via Venmo, please [click here](https://venmo.com/code?user_id=3985557692613789993).")
         st.write("After completing the payment, please enter the transaction ID below.")
         transaction_id = st.text_input("Venmo Transaction ID")
     elif payment_method == "CashApp":
-        st.write("To complete your donation via CashApp, please [click here](https://cash.app/$MarvinAviles85).")
+        st.write("To complete your payment via CashApp, please [click here](https://cash.app/$MarvinAviles85).")
         st.write("After completing the payment, please enter the transaction ID below.")
         transaction_id = st.text_input("CashApp Transaction ID")
-    # Venmo and CashApp Information
-    #st.markdown("<h2 class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
-    #st.markdown(
-     #   "<div class='section-content'>Please send your registration payment to our Venmo or CashApp account:</div>",
-      #  unsafe_allow_html=True)
 
-    # Create columns for QR codes and buttons
-    #col1, col2 = st.columns(2)
+    # Summary Section
+    st.header("Summary")
+    st.write(f"Player Name: {first_name} {last_name}")
+    st.write(f"Email: {email}")
+    st.write(f"Phone Number: {phone}")
+    st.write(f"Age Group: {age_group}")
+    st.write(f"Name on Jersey: {name_on_jersey}")
+    st.write(f"Jersey Number: {jersey_number}")
+    st.write(f"Jersey Size: {jersey_size}")
+    st.write(f"Shorts Size: {shorts_size}")
+    st.write(f"Address: {street}, {city}, {state}, {country}, {zip_code}")
+    st.write(f"Emergency Contact: {emergency_contact_name} ({relationship}) - {emergency_contact_phone}")
+    st.write(f"Payment Method: {payment_method}")
 
-    #with col1:
-       # st.markdown("""
-       #     <div>
-       #         <a href="https://venmo.com/code?user_id=3985557692613789993" target="_blank">
-       #             <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Venmo.jpg" width="200">
-       #         </a>
-       #     </div>
-       # """, unsafe_allow_html=True)
+    # Submit Button
+    if st.button("Submit"):
+        if not (first_name and last_name and email and phone and age_group and name_on_jersey and street and city and state and country and zip_code and emergency_contact_name and emergency_contact_phone and relationship and transaction_id):
+            st.error("Please fill out all required fields.")
+        else:
+            # Update the assigned jersey numbers
+            assigned_jersey_numbers[age_group].add(jersey_number)
 
-   # with col2:
-     #   st.markdown("""
-      #      <div style="text-align: center;">
-       #         <a href="https://cash.app/$MarvinAviles85" target="_blank">
-      #              <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CashApp.jpg" width="200">
-       #         </a>
-       #     </div>
-       # """, unsafe_allow_html=True)
+            # Update the registered players count
+            registered_players[age_group] += 1
+
+            # Save registration data to CSV
+            save_registration(first_name, last_name, email, phone, age_group, name_on_jersey, jersey_number, jersey_size, shorts_size, street, city, state, country, zip_code, emergency_contact_name, emergency_contact_phone, relationship, payment_method, transaction_id)
+            st.success("Registration successful!")
+
 
 
 if page == "Contact Us":
