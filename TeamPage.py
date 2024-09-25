@@ -494,11 +494,11 @@ else:
 
     # Address Section
     st.header("Address")
-    country = st.selectbox("Country*", ["United States", "Canada", "United Kingdom", "Australia", "Other"])
-    state = st.selectbox("State*", ["Georgia", "California", "New York", "Texas", "Other"])
-    street = st.text_input("Street Address")
+    street = st.text_input("Street Address*")
     city = st.text_input("City*")
     zip_code = st.text_input("Zip Code*")
+    country = st.selectbox("Country*", ["United States", "Other"])
+    state = st.selectbox("State*", ["Georgia", "South Carolina", "Texas", "Other"])
 
     # Emergency Contact Section
     st.header("Emergency Contact")
@@ -535,7 +535,7 @@ else:
 
     # Submit Button
     if st.button("Submit"):
-        if not (first_name and last_name and email and phone and age_group and name_on_jersey and jersey_number and jersey_size and shorts_size and ssreet and city and state and country and zip_code and emergency_contact_name and emergency_contact_phone and relationship and transaction_id):
+        if not (first_name and last_name and email and phone and age_group and name_on_jersey and jersey_number and jersey_size and shorts_size and street and city and state and country and zip_code and emergency_contact_name and emergency_contact_phone and relationship and transaction_id):
             st.error("Please fill out all required fields.")
         else:
             # Update the assigned jersey numbers
