@@ -450,7 +450,7 @@ def get_available_jersey_numbers(age_group):
 
 # Function to save registration data to CSV
 def save_registration(first_name, last_name, email, phone, age_group, name_on_jersey, jersey_number, jersey_size, shorts_size, street, city, state, country, zip_code, emergency_contact_name, emergency_contact_phone, relationship, payment_method, transaction_id):
-    file_path = "registrations.csv"
+    file_path = "706GreyWolves7v7/registrations.csv"
     if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
         df = pd.read_csv(file_path)
     else:
