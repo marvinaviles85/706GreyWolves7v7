@@ -444,6 +444,41 @@ elif page == "Sponsorship and Donations":
 
 # Registration Page
 if page == "Registration":
+    def upload_to_github(csv_file):
+    # Read the CSV file content
+    with open(csv_file, 'r') as file:
+        content = file.read()
+
+    # Encode the content to base64
+    encoded_content = base64.b64encode(content.encode()).decode()
+
+    # Prepare the request payload
+    payload = {
+        "message": "Update registrations",
+        "content": encoded_content
+    }
+
+    # GitHub API URL for the file
+    url = f"https://api.github.com/repos/marvinaviles85/706GreyWolves7v7/contents/{csv_file}"
+
+    # GitHub token
+    token = os.getenv("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")
+
+    # Headers for the request
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+
+    # Make the request to create or update the file
+    response = requests.put(url, headers=headers, data=json.dumps(payload))
+
+    if response.status_code == 201:
+        print("File created successfully.")
+    elif response.status_code == 200:
+        print("File updated successfully.")
+    else:
+        print(f"Failed to upload file: {response.json()}")
     # Dictionary to store the count of registered players for each age group
     player_limits = {
         "11U": 20,
@@ -581,41 +616,6 @@ else:
 
             st.success("Thank you for registering!")
 
-def upload_to_github(csv_file):
-    # Read the CSV file content
-    with open(csv_file, 'r') as file:
-        content = file.read()
-
-    # Encode the content to base64
-    encoded_content = base64.b64encode(content.encode()).decode()
-
-    # Prepare the request payload
-    payload = {
-        "message": "Update registrations",
-        "content": encoded_content
-    }
-
-    # GitHub API URL for the file
-    url = f"https://api.github.com/repos/marvinaviles85/706GreyWolves7v7/contents/{csv_file}"
-
-    # GitHub token
-    token = os.getenv("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")
-
-    # Headers for the request
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-
-    # Make the request to create or update the file
-    response = requests.put(url, headers=headers, data=json.dumps(payload))
-
-    if response.status_code == 201:
-        print("File created successfully.")
-    elif response.status_code == 200:
-        print("File updated successfully.")
-    else:
-        print(f"Failed to upload file: {response.json()}")
 
 if page == "Contact Us":
     st.header("Contact Us")
