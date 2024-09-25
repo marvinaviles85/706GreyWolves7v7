@@ -531,6 +531,7 @@ if page == "Registration":
     city = st.text_input("City*")
     state = st.text_input("State*")
     zip_code = st.text_input("Zip Code*")
+    country = st.text_input("Country*")
 
     # Emergency Contact Section
     emergency_contact_name = st.text_input("Emergency Contact Name*")
