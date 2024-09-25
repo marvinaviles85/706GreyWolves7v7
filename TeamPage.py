@@ -444,41 +444,43 @@ elif page == "Sponsorship and Donations":
 
 # Registration Page
 if page == "Registration":
-def upload_to_github(csv_file):
-    # Read the CSV file content
-    with open(csv_file, 'r') as file:
-        content = file.read()
 
-    # Encode the content to base64
-    encoded_content = base64.b64encode(content.encode()).decode()
+    def upload_to_github(csv_file):
+        # Read the CSV file content
+        with open(csv_file, 'r') as file:
+            content = file.read()
 
-    # Prepare the request payload
-    payload = {
-        "message": "Update registrations",
-        "content": encoded_content
-    }
+        # Encode the content to base64
+        encoded_content = base64.b64encode(content.encode()).decode()
 
-    # GitHub API URL for the file
-    url = f"https://api.github.com/repos/marvinaviles85/706GreyWolves7v7/contents/{csv_file}"
+        # Prepare the request payload
+        payload = {
+            "message": "Update registrations",
+            "content": encoded_content
+        }
 
-    # GitHub token
-    token = os.getenv("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")
+        # GitHub API URL for the file
+        url = f"https://api.github.com/repos/marvinaviles85/706GreyWolves7v7/contents/{csv_file}"
 
-    # Headers for the request
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
+        # GitHub token
+        token = os.getenv("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")
 
-    # Make the request to create or update the file
-    response = requests.put(url, headers=headers, data=json.dumps(payload))
+        # Headers for the request
+        headers = {
+            "Authorization": f"token {token}",
+            "Accept": "application/vnd.github.v3+json"
+        }
 
-    if response.status_code == 201:
-        print("File created successfully.")
-    elif response.status_code == 200:
-        print("File updated successfully.")
-    else:
-        print(f"Failed to upload file: {response.json()}")
+        # Make the request to create or update the file
+        response = requests.put(url, headers=headers, data=json.dumps(payload))
+
+        if response.status_code == 201:
+            print("File created successfully.")
+        elif response.status_code == 200:
+            print("File updated successfully.")
+        else:
+            print(f"Failed to upload file: {response.json()}")
+
     # Dictionary to store the count of registered players for each age group
     player_limits = {
         "11U": 20,
@@ -487,7 +489,7 @@ def upload_to_github(csv_file):
         "18U": 20
     }
 
-# Dictionary to store the current count of registered players for each age group
+    # Dictionary to store the current count of registered players for each age group
     registered_players = {
         "11U": 0,
         "13U": 0,
@@ -495,7 +497,7 @@ def upload_to_github(csv_file):
         "18U": 0
     }
 
-# Dictionary to store assigned jersey numbers for each age group
+    # Dictionary to store assigned jersey numbers for each age group
     assigned_jersey_numbers = {
         "11U": set(),
         "13U": set(),
@@ -503,44 +505,34 @@ def upload_to_github(csv_file):
         "18U": set()
     }
 
-# Function to get available jersey numbers for a specific age group
-def get_available_jersey_numbers(age_group):
-    all_numbers = set(range(00, 100))  # Assuming jersey numbers range from 1 to 99
-    return sorted(all_numbers - assigned_jersey_numbers[age_group])
+    # Function to get available jersey numbers for a specific age group
+    def get_available_jersey_numbers(age_group):
+        all_numbers = set(range(0, 100))  # Assuming jersey numbers range from 0 to 99
+        return sorted(all_numbers - assigned_jersey_numbers[age_group])
 
-# Registration Section
-st.header("Player Registration")
+    # Registration Section
+    st.header("Player Registration")
 
-# Player Details Section
-st.header("Player Details")
-first_name = st.text_input("First Name*")
-last_name = st.text_input("Last Name*")
-email = st.text_input("Email*")
-phone = st.text_input("Phone Number*")
-age_group = st.selectbox("Age Group*", ["11U", "13U", "15U", "18U"])
-name_on_jersey = st.text_input("Name Requested on Jersey")
-
-# Check if the age group has reached its player limit
-if registered_players[age_group] >= player_limits[age_group]:
-    st.error(f"Registration for {age_group} is full. Please select a different age group.")
-else:
-    jersey_number = st.selectbox("Jersey Number*", get_available_jersey_numbers(age_group))
-    jersey_size = st.selectbox("Jersey Size*", ["Youth Small", "Youth Medium", "Youth Large", "Youth Extra Large", "Adult Small", "Adult Medium", "Adult Large", "Adult Extra Large"])
-    shorts_size = st.selectbox("Shorts Size*", ["Youth Small", "Youth Medium", "Youth Large", "Youth Extra Large", "Adult Small", "Adult Medium", "Adult Large", "Adult Extra Large"])
+    # Player Details Section
+    st.header("Player Details")
+    first_name = st.text_input("First Name*")
+    last_name = st.text_input("Last Name*")
+    email = st.text_input("Email*")
+    phone = st.text_input("Phone Number*")
+    age_group = st.selectbox("Age Group*", ["11U", "13U", "15U", "18U"])
+    name_on_jersey = st.text_input("Name Requested on Jersey")
 
     # Address Section
-    st.header("Address")
-    street = st.text_input("Street Address*")
+    street = st.text_input("Street*")
     city = st.text_input("City*")
+    state = st.text_input("State*")
+    country = st.text_input("Country*")
     zip_code = st.text_input("Zip Code*")
-    country = st.selectbox("Country*", ["United States", "Other"])
-    state = st.selectbox("State*", ["Georgia", "South Carolina", "Texas", "Other"])
 
     # Emergency Contact Section
-    st.header("Emergency Contact")
     emergency_contact_name = st.text_input("Emergency Contact Name*")
-    emergency_contact_phone = st.text_input("Emergency Contact Phone Number*")
-    relationship = st.text_input("Relationship to Player*")
+    emergency_contact_phone = st.text_input("Emergency Contact Phone*")
+    relationship = st.text_input("Relationship*")
 
     # Payment Method Section
     st.header("Payment Method")
@@ -571,7 +563,7 @@ else:
 
     # Submit Button
     if st.button("Submit"):
-        if not (first_name and last_name and email and phone and age_group and name_on_jersey and jersey_number and jersey_size and shorts_size and street and city and state and country and zip_code and emergency_contact_name and emergency_contact_phone and relationship and transaction_id):
+        if not (first_name and last_name and email and phone and age_group and name_on_jersey and street and city and state and country and zip_code and emergency_contact_name and emergency_contact_phone and relationship and transaction_id):
             st.error("Please fill out all required fields.")
         else:
             # Update the assigned jersey numbers
