@@ -444,176 +444,46 @@ elif page == "Sponsorship and Donations":
 
 # Registration Page
 if page == "Registration":
+    # Create outer columns
+    col1, col2, col3 = st.columns(3)
 
-    def upload_to_github(csv_file):
-        # Read the CSV file content
-        with open(csv_file, 'r') as file:
-            content = file.read()
+    # First and third images in the first outer column
+    with col2:
+        st.image("Images/706gw_no_bg.png", width=200)
+        
+    st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexO7RZIemrzcf0Y2pBDd1d7k8ehU7EqAJcwPVcXiW1ryCUjw/viewform?embedded=true" width="640" height="2665" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div> 
+    """, unsafe_allow_html=True)
 
-        # Encode the content to base64
-        encoded_content = base64.b64encode(content.encode()).decode()
+    # Venmo and CashApp Information
+    st.markdown("<h2 class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='section-content'>Please send your registration payment to our Venmo or CashApp account:</div>",
+        unsafe_allow_html=True)
 
-        # Prepare the request payload
-        payload = {
-            "message": "Update registrations",
-            "content": encoded_content
-        }
+    # Create columns for QR codes and buttons
+    col1, col2 = st.columns(2)
 
-        # GitHub API URL for the file
-        url = f"https://api.github.com/repos/marvinaviles85/706GreyWolves7v7/contents/contents/{csv_file}"
+    with col1:
+        st.markdown("""
+            <div>
+                <a href="https://venmo.com/code?user_id=3985557692613789993" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Venmo.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
 
-        # GitHub token
-        token = os.getenv("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")
-
-        # Headers for the request
-        headers = {
-            "Authorization": f"token {token}",
-            "Accept": "application/vnd.github.v3+json"
-        }
-
-        # Make the request to create or update the file
-        response = requests.put(url, headers=headers, data=json.dumps(payload))
-
-        if response.status_code == 201:
-            print("File created successfully.")
-        elif response.status_code == 200:
-            print("File updated successfully.")
-        else:
-            print(f"Failed to upload file: {response.json()}")
-
-    # Dictionary to store the count of registered players for each age group
-    player_limits = {
-        "11U": 20,
-        "13U": 20,
-        "15U": 20,
-        "18U": 20
-    }
-
-    # Dictionary to store the current count of registered players for each age group
-    registered_players = {
-        "11U": 0,
-        "13U": 0,
-        "15U": 0,
-        "18U": 0
-    }
-
-    # Dictionary to store assigned jersey numbers for each age group
-    assigned_jersey_numbers = {
-        "11U": set(),
-        "13U": set(),
-        "15U": set(),
-        "18U": set()
-    }
-
-    # Function to get available jersey numbers for a specific age group
-    def get_available_jersey_numbers(age_group):
-        all_numbers = set(range(0, 100))  # Assuming jersey numbers range from 0 to 99
-        return sorted(all_numbers - assigned_jersey_numbers[age_group])
-
-    # Registration Section
-    st.header("Player Registration")
-
-    # Player Details Section
-    st.header("Player Details")
-    first_name = st.text_input("First Name*")
-    last_name = st.text_input("Last Name*")
-    email = st.text_input("Email*")
-    phone = st.text_input("Phone Number*")
-    age_group = st.selectbox("Age Group*", ["11U", "13U", "15U", "18U"])
-    name_on_jersey = st.text_input("Name Requested on Jersey")
-    # Check if the age group has reached its player limit
-    if registered_players[age_group] >= player_limits[age_group]:
-        st.error(f"Registration for {age_group} is full. Please select a different age group.")
-    else:
-        jersey_number = st.selectbox("Jersey Number*", get_available_jersey_numbers(age_group))
-        jersey_size = st.selectbox("Jersey Size*", ["Youth Small", "Youth Medium", "Youth Large", "Youth Extra Large", "Adult Small", "Adult Medium", "Adult Large", "Adult Extra Large"])
-        shorts_size = st.selectbox("Shorts Size*", ["Youth Small", "Youth Medium", "Youth Large", "Youth Extra Large", "Adult Small", "Adult Medium", "Adult Large", "Adult Extra Large"])
-
-    # Address Section
-    street = st.text_input("Street*")
-    city = st.text_input("City*")
-    state = st.text_input("State*")
-    country = st.text_input("Country*")
-    zip_code = st.text_input("Zip Code*")
-
-    # Emergency Contact Section
-    emergency_contact_name = st.text_input("Emergency Contact Name*")
-    emergency_contact_phone = st.text_input("Emergency Contact Phone*")
-    relationship = st.text_input("Relationship*")
-
-    # Payment Method Section
-    st.header("Payment Method")
-    payment_method = st.selectbox("Choose your payment method", ["Venmo", "CashApp"])
-
-    if payment_method == "Venmo":
-        st.write("To complete your payment via Venmo, please [click here](https://venmo.com/code?user_id=3985557692613789993).")
-        st.write("After completing the payment, please enter the transaction ID below.")
-        transaction_id = st.text_input("Venmo Transaction ID")
-    elif payment_method == "CashApp":
-        st.write("To complete your payment via CashApp, please [click here](https://cash.app/$MarvinAviles85).")
-        st.write("After completing the payment, please enter the transaction ID below.")
-        transaction_id = st.text_input("CashApp Transaction ID")
-
-    # Summary Section
-    st.header("Summary")
-    st.write(f"Player Name: {first_name} {last_name}")
-    st.write(f"Email: {email}")
-    st.write(f"Phone Number: {phone}")
-    st.write(f"Age Group: {age_group}")
-    st.write(f"Name on Jersey: {name_on_jersey}")
-    st.write(f"Jersey Number: {jersey_number}")
-    st.write(f"Jersey Size: {jersey_size}")
-    st.write(f"Shorts Size: {shorts_size}")
-    st.write(f"Address: {street}, {city}, {state}, {country}, {zip_code}")
-    st.write(f"Emergency Contact: {emergency_contact_name} ({relationship}) - {emergency_contact_phone}")
-    st.write(f"Payment Method: {payment_method}")
-
-    # Submit Button
-    if st.button("Submit"):
-        if not (first_name and last_name and email and phone and age_group and name_on_jersey and street and city and state and country and zip_code and emergency_contact_name and emergency_contact_phone and relationship and transaction_id):
-            st.error("Please fill out all required fields.")
-        else:
-            # Update the assigned jersey numbers
-            assigned_jersey_numbers[age_group].add(jersey_number)
-
-            # Update the registered players count
-            registered_players[age_group] += 1
-
-            # Create a DataFrame
-            data = {
-                "First Name": [first_name],
-                "Last Name": [last_name],
-                "Email": [email],
-                "Phone": [phone],
-                "Age Group": [age_group],
-                "Name on Jersey": [name_on_jersey],
-                "Jersey Number": [jersey_number],
-                "Jersey Size": [jersey_size],
-                "Shorts Size": [shorts_size],
-                "Country": [country],
-                "State": [state],
-                "Street": [street],
-                "City": [city],
-                "Zip Code": [zip_code],
-                "Emergency Contact Name": [emergency_contact_name],
-                "Emergency Contact Phone": [emergency_contact_phone],
-                "Relationship": [relationship],
-                "Payment Method": [payment_method],
-                "Transaction ID": [transaction_id]
-            }
-            df = pd.DataFrame(data)
-
-            # Save the DataFrame to a CSV file
-            csv_file = 'registrations.csv'
-            if os.path.exists(csv_file):
-                df.to_csv(csv_file, mode='a', header=False, index=False)
-            else:
-                df.to_csv(csv_file, index=False)
-
-            # Upload the CSV file to GitHub
-            upload_to_github(csv_file)
-
-            st.success("Thank you for registering!")
+    with col2:
+        st.markdown("""
+            <div style="text-align: center;">
+                <a href="https://cash.app/$MarvinAviles85" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CashApp.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
 
 
 if page == "Contact Us":
