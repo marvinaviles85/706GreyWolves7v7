@@ -189,7 +189,7 @@ st.markdown("""
 # Dropdown menu for pages selection
 page = st.selectbox(
     "Select a Page",
-    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donations", "Registration", "Contact Us"]
+    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Contact Us"]
 )
 
 #st.markdown("""
