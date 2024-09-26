@@ -179,10 +179,18 @@ st.set_page_config(initial_sidebar_state="collapsed")
 
 st.markdown("""
     <style>
-        [data-testid='collapsedControl']{
-            display: none
+        [data-testid='stSidebarNav'] {
+            display: none;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector("[data-testid='stSidebarNav']");
+            if (sidebar) {
+                sidebar.style.display = 'none';
+            }
+        });
+    </script>
     """,
         unsafe_allow_html=True,
     )
