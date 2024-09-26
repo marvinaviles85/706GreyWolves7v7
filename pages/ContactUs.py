@@ -1,6 +1,40 @@
 import streamlit as st
 
+# Add the image and navigation bar to the top of the page
+st.markdown("""
+<div class="top-bar">
+    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Logo">
+    <div id="dropdown-container"></div>
+</div>
+""", unsafe_allow_html=True)
 
+# Dropdown menu for pages selection
+page = st.selectbox(
+    "Select a Page",
+    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Contact Us"]
+)
+
+#st.markdown("""
+#<script>
+#    const dropdownContainer = document.getElementbyId('drowndown-container');
+#    const selectbox = document.querySelector('select[data-testid="stSelectbox"]');
+#    dropdownContainer.appendChild(selectbox);
+#</script>
+#""", unsafe_allow_html=True)
+# Page title and description
+# Navigation Logic
+if page == "Home":
+    st.write("Welcome to the Home Page")
+elif page == "Team Members":
+    team_members_page()
+elif page == "Upcoming Matches":
+    upcoming_matches_page()
+elif page == "Sponsorship and Donation":
+    sponsorship_and_donation_page()
+elif page == "Registration":
+    registration_page()
+elif page == "Contact Us":
+    contact_us_page()
 
 def contact_us_page():
     st.title("Contact Us")
