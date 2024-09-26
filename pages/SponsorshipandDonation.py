@@ -27,10 +27,10 @@ def sponsorship_and_donation_page():
     st.title("Donate or Sponsor the Grey Wolves")
 
     # Display the image using Streamlit's markdown function
-    image_html = """
-    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Grey Wolves Logo" style="width:100%;height:auto;">
-    """
-    st.markdown(image_html, unsafe_allow_html=True)
+    #image_html = """
+    #<img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Grey Wolves Logo" style="width:100%;height:auto;">
+    #"""
+    #st.markdown(image_html, unsafe_allow_html=True)
 
     # Button to show impact information
     if st.button("What impact will your donation have?"):
