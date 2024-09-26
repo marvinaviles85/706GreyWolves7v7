@@ -7,7 +7,7 @@ from TeamMembers import team_members_page
 from UpcomingMatches import upcoming_matches_page
 from SponsorshipandDonation import sponsorship_and_donation_page
 from Registration import registration_page
-from Contact Us import contact_us_page
+from ContactUs import contact_us_page
 
 custom_css = """
 <style>
