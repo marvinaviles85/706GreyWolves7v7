@@ -187,8 +187,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Dropdown menu for pages selection
-def dropdown_menu():
-    st.sidebar.selectbox("Select a Page", ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Contact Us"])
+page = st.selectbox(
+    "Select a Page",
+    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donations", "Registration", "Contact Us"]
+)
 
 #st.markdown("""
 #<script>
