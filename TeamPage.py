@@ -171,8 +171,7 @@ custom_css = """
         body {
             padding-top: 70px;
         }
-        .css-1d391kg {
-            display: none;
+        @import url('style.css');
         }
 </style>
 """
