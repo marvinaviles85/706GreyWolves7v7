@@ -3,11 +3,11 @@ from streamlit_option_menu import option_menu
 from streamlit_carousel import carousel
 import streamlit.components.v1 as components
 
-from TeamMembers import team_members_page
-from UpcomingMatches import upcoming_matches_page
-from SponsorshipandDonation import sponsorship_and_donation_page
-from Registration import registration_page
-from ContactUs import contact_us_page
+from pages.TeamMembers import team_members_page
+from pages.UpcomingMatches import upcoming_matches_page
+from pages.SponsorshipandDonation import sponsorship_and_donation_page
+from pages.Registration import registration_page
+from pages.ContactUs import contact_us_page
 
 custom_css = """
 <style>
