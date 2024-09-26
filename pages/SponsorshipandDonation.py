@@ -1,5 +1,26 @@
 import streamlit as st
+import pandas as pd
+import os
 
+def update_csv(new_data):
+    # Path to your CSV file
+    csv_file_path = "sponsorships.csv"
+
+    # Check if the CSV file exists
+    if not os.path.exists(csv_file_path):
+        # Create the CSV file with headers if it doesn't exist
+        df = pd.DataFrame(columns=new_data.keys())
+        df.to_csv(csv_file_path, index=False)
+
+    # Read the existing CSV file
+    df = pd.read_csv(csv_file_path)
+
+    # Append the new data using concat
+    new_row = pd.DataFrame([new_data])
+    df = pd.concat([df, new_row], ignore_index=True)
+
+    # Save the updated CSV file
+    df.to_csv(csv_file_path, index=False)
 # Sponsorship and Donations section
 def sponsorship_and_donation_page():
     # Title
@@ -43,7 +64,7 @@ def sponsorship_and_donation_page():
     email = st.text_input("Email*")
     first_name = st.text_input("First name*")
     last_name = st.text_input("Last name*")
-    country = st.selectbox("Country*", ["United States", "Canada", "United Kingdom", "Australia", "Other"])
+    country = st.selectbox("Country*", ["United States", "Canada", "Other"])
     state = st.selectbox("State*", ["Georgia", "California", "New York", "Texas", "Other"])
     is_corporate = st.checkbox("This is a corporate/organization donation")
 
@@ -70,57 +91,21 @@ def sponsorship_and_donation_page():
         if not transaction_id:
             st.error(f"Please enter the {payment_method} transaction ID to confirm your payment.")
         else:
+            # Update the CSV file
+            new_data = {
+                "Email": email,
+                "First Name": first_name,
+                "Last Name": last_name,
+                "Country": country,
+                "State": state,
+                "Corporate Donation": is_corporate,
+                "Donation Amount": donation_amount,
+                "Payment Method": payment_method,
+                "Transaction ID": transaction_id
+            }
+            update_csv(new_data)
             st.success("Thank you for your donation!")
 
 # Run the page function if this file is executed
 if __name__ == "__main__":
     sponsorship_and_donation_page()
-
-#            save_to_csv(email, first_name, last_name, country, state, is_corporate, donation_amount, payment_method, transaction_id)
-
-#def save_to_csv(email, first_name, last_name, country, state, is_corporate, donation_amount, payment_method, transaction_id):
-#    import pandas as pd
-#    import os
-#
-#    # Create a DataFrame with the donation details
-#    df = pd.DataFrame({
-#        'Email': [email],
-#        'First Name': [first_name],
-#        'Last Name': [last_name],
-#        'Country': [country],
-#        'State': [state],
-#        'Corporate Donation': [is_corporate],
-#        'Donation Amount': [donation_amount],
-#        'Payment Method': [payment_method],
-#        'Transaction ID': [transaction_id]
-#    })
-#
-#    # Save the DataFrame to a CSV file
-#    csv_file = 'donations.csv'
-#    if os.path.exists(csv_file):
-#        df.to_csv(csv_file, mode='a', header=False, index=False)
-#    else:
-#        df.to_csv(csv_file, index=False)
-#
-#    # Upload the CSV file to GitHub
-#    upload_to_github(csv_file)
-#
-#def upload_to_github(csv_file):
-#    from github import Github
-#
-#    # Authenticate to GitHub
-#    g = Github("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")
-#
-#    # Get the repository
-#    repo = g.get_user().get_repo("706GreyWolves7v7")
-#
-#    # Read the CSV file content
-#    with open(csv_file, 'r') as file:
-#        content = file.read()
-#
-#    # Create or update the file in the repository
-#    try:
-#        contents = repo.get_contents(csv_file)
-#        repo.update_file(contents.path, "Update donations", content, contents.sha)
-#    except:
-#        repo.create_file(csv_file, "Create donations file", content)
