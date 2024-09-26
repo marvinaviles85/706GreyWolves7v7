@@ -2,11 +2,12 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_carousel import carousel
 import streamlit.components.v1 as components
-import pandas as pd
-import requests
-import base64
-import json
-import os
+
+from Upcoming Matches import upcoming_matches_page
+from Team Members import team_members_page
+from Sponsorship and Donation import sponsorship_and_donation_page
+from Registration import registration_page
+from Contact Us import contact_us_page
 
 custom_css = """
 <style>
@@ -191,14 +192,27 @@ page = st.selectbox(
     ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donations", "Registration", "Contact Us"]
 )
 
-st.markdown("""
-<script>
-    const dropdownContainer = document.getElementbyId('drowndown-container');
-    const selectbox = document.querySelector('select[data-testid="stSelectbox"]');
-    dropdownContainer.appendChild(selectbox);
-</script>
-""", unsafe_allow_html=True)
+#st.markdown("""
+#<script>
+#    const dropdownContainer = document.getElementbyId('drowndown-container');
+#    const selectbox = document.querySelector('select[data-testid="stSelectbox"]');
+#    dropdownContainer.appendChild(selectbox);
+#</script>
+#""", unsafe_allow_html=True)
 # Page title and description
+# Navigation Logic
+if page == "Home":
+    st.write("Welcome to the Home Page")
+elif page == "Team Members":
+    team_members_page()
+elif page == "Upcoming Matches":
+    upcoming_matches_page()
+elif page == "Sponsorship and Donations":
+    sponsorship_and_donations_page()
+elif page == "Registration":
+    registration_page()
+elif page == "Contact Us":
+    contact_us_page()
 
 # Home section
 if page == "Home":
@@ -267,259 +281,6 @@ if page == "Home":
             <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
                 <a href="https://www.valleycenterrepair.com/" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ValleyCenter.PNG" width="200">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
-
-# Team members section
-elif page == "Team Members":
-    st.markdown("<h1 class='centered-title'>706 Grey Wolves 7v7 Staff</h1>", unsafe_allow_html=True)
-    team_members = [
-        {"name": "Marvin Aviles", "position": "Founder", "photo": "Images/MarvinSr.PNG"},
-        {"name": "Pam Aviles", "position": "Co-Founder/Team Trainer", "photo": "Images/Pam.jpg"},
-        {"name": "Marvin Aviles Jr", "position": "Defensive Coordinator", "photo": "Images/MarvinJr.PNG"},
-        # Add more team members here
-    ]
-
-    # Create outer columns
-    col1, col2 = st.columns(2)
-
-    # First and third images in the first outer column
-    with col1:
-        st.image(team_members[0]["photo"], caption=team_members[0]["name"], width=200)
-        st.write(f"Position: {team_members[0]['position']}")
-        st.image(team_members[2]["photo"], caption=team_members[2]["name"], width=200)
-        st.write(f"Position: {team_members[2]['position']}")
-
-    # Second image in the second outer column
-    with col2:
-        st.image(team_members[1]["photo"], caption=team_members[1]["name"], width=200)
-        st.write(f"Position: {team_members[1]['position']}")
-
-
-# Schedule section
-elif page == "Upcoming Matches":
-    st.header("Upcoming Matches")
-    matches = [
-        {"date": "2025-01-01", "opponent": "TBD", "location": "TBD"},
-        {"date": "2025-02-01", "opponent": "TBD", "location": "TBD"},
-        # Add more matches here
-    ]
-
-    for match in matches:
-        st.write(f"{match['date']} - vs {match['opponent']} ({match['location']})")
-
-# Sponsorship and Donations section
-elif page == "Sponsorship and Donations":
-    # Page title
-# HTML and CSS to position the image
-    image_html = """
-        <div style="position: absolute; top: 5px; right: 5px;">
-            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FirstTeamImage.jpg" alt="Your Image" width="300">
-        </div>
-        """
-
-    # Display the image using Streamlit's markdown function
-    st.markdown(image_html, unsafe_allow_html=True)
-
-    # JavaScript for side scroll action
-    scroll_js = """
-        <script>
-        function showImpact() {
-            var sidebar = document.getElementById("sidebar-content");
-            sidebar.style.display = "block";
-            sidebar.scrollIntoView({behavior: 'smooth'});
-        }
-        </script>
-        """
-
-    # Embed the JavaScript in Streamlit
-    components.html(scroll_js)
-
-    # Button to show impact information
-    if st.button("What impact will your donation have?"):
-        st.sidebar.title("Impact of Your Donation")
-        st.sidebar.write("""
-            The 706 Grey Wolves (706 GW) is a dedicated travel 7v7 football team for youth aged 11-18. As we gear up for our second season with the Hands League, we are excited to announce our schedule from January 2025 to June 2025. Every Saturday, 706 GW will travel out of state for 7v7 tournaments, while also competing in local Augusta Hands League 7v7 tournaments. 706 GW thrives thanks to the generous support of our sponsors and the unwavering commitment of our volunteers. We invite you to join us in our mission to shape the leaders of tomorrow by supporting the 706 Grey Wolves.
-
-            Sponsorship Levels
-            - $100 Individual Donation: Your business name and logo will be prominently displayed on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account.
-            - $250 Donation: Your business name and logo will be prominently featured on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account. Additionally, your logo will be included on a sponsor banner (provided by 706 GW) displayed every Saturday during multiple games.
-            - $500 Business Donation: Your business name and logo will be prominently displayed on our 706 Grey Wolves 7v7 website, Facebook page, and Instagram account. Additionally, your logo will be featured on a sponsor banner (provided by 706 GW) showcased every Saturday during multiple games, and proudly displayed on players’ uniforms.
-
-            Donation Information
-            Your generous donation assists with the costs of: uniforms, softshell helmets, player equipment, tournament fees, player insurance, qualified family assistance, and medical supplies.
-            """)
-
-    # Add a hidden div for the sidebar content
-    st.sidebar.markdown('<div id="sidebar-content" style="display:none;"></div>', unsafe_allow_html=True)
-
-    # Donation Section
-    st.header("Your Sponsorship or Donation")
-    donation_options = ["One-time donation", "$100", "$250", "$500", "$1000"]
-    donation_choice = st.radio("Choose your donation amount", donation_options)
-
-    if donation_choice == "One-time donation":
-        donation_amount = st.number_input("Enter your donation amount", min_value=0.00, format="%.2f")
-    else:
-        donation_amount = float(donation_choice.strip('$'))
-
-    st.write(f"Donation Amount: ${donation_amount:.2f}")
-
-    # Your Details Section
-    st.header("Your details")
-    email = st.text_input("Email*")
-    first_name = st.text_input("First name*")
-    last_name = st.text_input("Last name*")
-    country = st.selectbox("Country*", ["United States", "Canada", "United Kingdom", "Australia", "Other"])
-    state = st.selectbox("State*", ["Georgia", "California", "New York", "Texas", "Other"])
-    is_corporate = st.checkbox("This is a corporate/organization donation")
-
-    # Payment Method Section
-    st.header("Payment Method")
-    payment_method = st.selectbox("Choose your payment method", ["Venmo", "CashApp"])
-
-    if payment_method == "Venmo":
-        st.write("To complete your donation via Venmo, please [click here](https://venmo.com/code?user_id=3985557692613789993).")
-        st.write("After completing the payment, please enter the transaction ID below.")
-        transaction_id = st.text_input("Venmo Transaction ID")
-    elif payment_method == "CashApp":
-        st.write("To complete your donation via CashApp, please [click here](https://cash.app/$MarvinAviles85).")
-        st.write("After completing the payment, please enter the transaction ID below.")
-        transaction_id = st.text_input("CashApp Transaction ID")
-
-    # Submit Button
-    if st.button("Submit"):
-        if not transaction_id:
-            st.error(f"Please enter the {payment_method} transaction ID to confirm your payment.")
-        else:
-            st.success("Thank you for your donation!")
-            #save_to_csv(email, first_name, last_name, country, state, is_corporate, donation_amount, payment_method,
-            #            transaction_id)
-
-
-   # def save_to_csv(email, first_name, last_name, country, state, is_corporate, donation_amount, payment_method,
-                   # transaction_id):
-        # Create a DataFrame with the donation details
-       # df = pd.DataFrame({
-         #   'Email': [email],
-          #  'First Name': [first_name],
-          #  'Last Name': [last_name],
-         #   'Country': [country],
-         #   'State': [state],
-         #   'Corporate Donation': [is_corporate],
-         #   'Donation Amount': [donation_amount],
-         #   'Payment Method': [payment_method],
-          #  'Transaction ID': [transaction_id]
-       # })
-
-        # Save the DataFrame to a CSV file
-        #csv_file = 'donations.csv'
-       # if os.path.exists(csv_file):
-          #  df.to_csv(csv_file, mode='a', header=False, index=False)
-       # else:
-           # df.to_csv(csv_file, index=False)
-
-        # Upload the CSV file to GitHub
-        #upload_to_github(csv_file)
-
-
-   # def upload_to_github(csv_file):
-        # Authenticate to GitHub
-      #  g = Github("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")
-
-        # Get the repository
-       # repo = g.get_user().get_repo("706GreyWolves7v7")
-
-        # Read the CSV file content
-       # with open(csv_file, 'r') as file:
-       #     content = file.read()
-
-        # Create or update the file in the repository
-      #  try:
-        #    contents = repo.get_contents(csv_file)
-        #    repo.update_file(contents.path, "Update donations", content, contents.sha)
-        #except:
-          #  repo.create_file(csv_file, "Create donations file", content)
-
-# Registration Page
-if page == "Registration":
-    # Create outer columns
-    col1, col2, col3 = st.columns(3)
-
-    # First and third images in the first outer column
-    with col2:
-        st.image("Images/706gw_no_bg.png", width=200)
-        
-    st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
-    st.markdown("""
-    <div class="iframe-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexO7RZIemrzcf0Y2pBDd1d7k8ehU7EqAJcwPVcXiW1ryCUjw/viewform?embedded=true" width="640" height="2665" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div> 
-    """, unsafe_allow_html=True)
-
-    # Venmo and CashApp Information
-    st.markdown("<h2 class='section-title'>Payment Information</h2>", unsafe_allow_html=True)
-    st.markdown(
-        "<div class='section-content'>Please send your registration payment to our Venmo or CashApp account:</div>",
-        unsafe_allow_html=True)
-
-    # Create columns for QR codes and buttons
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown("""
-            <div>
-                <a href="https://venmo.com/code?user_id=3985557692613789993" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Venmo.jpg" width="200">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("""
-            <div style="text-align: center;">
-                <a href="https://cash.app/$MarvinAviles85" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CashApp.jpg" width="200">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
-
-if page == "Contact Us":
-    st.header("Contact Us")
-    st.image("Images/706gw_no_bg.png", use_column_width=True)
-    st.write("Email us at 706greywovles7v7@gmail.com")
-    st.markdown("""
-        <div style="text-align: center;">
-            <a href="tel:+15207053812" style="
-                display: inline-block;
-                padding: 10px 20px;
-                font-size: 16px;
-                color: white;
-                background-color: #4CAF50;
-                border: none;
-                border-radius: 5px;
-                text-decoration: none;
-            ">
-                1-520-705-3812
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    st.markdown("""
-            <style>
-                .social-icons img {
-                    margin-right: 20px;
-                }
-            </style>
-            **Follow us on social media:**
-            <div class="social-icons">
-                <a href="https://www.facebook.com/706GreyWolves7v7" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="50" height="50">
-                </a>
-                <a href="https://www.instagram.com/706greywolves" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="50" height="50">
                 </a>
             </div>
         """, unsafe_allow_html=True)
