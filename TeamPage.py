@@ -3,9 +3,9 @@ from streamlit_option_menu import option_menu
 from streamlit_carousel import carousel
 import streamlit.components.v1 as components
 
+from TeamMembers import team_members_page
 from UpcomingMatches import upcoming_matches_page
-from Team Members import team_members_page
-from Sponsorship and Donation import sponsorship_and_donation_page
+from SponsorshipandDonation import sponsorship_and_donation_page
 from Registration import registration_page
 from Contact Us import contact_us_page
 
