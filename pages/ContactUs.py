@@ -1,23 +1,6 @@
 import streamlit as st
 
-st.set_page_config(initial_sidebar_state="collapsed")
 
-# Inject custom CSS and JavaScript
-st.markdown("""
-    <style>
-        [data-testid='stSidebarNav'] {
-            display: none;
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sidebar = document.querySelector("[data-testid='stSidebarNav']");
-            if (sidebar) {
-                sidebar.style.display = 'none';
-            }
-        });
-    </script>
-    """, unsafe_allow_html=True)
 
 def contact_us_page():
     st.title("Contact Us")
