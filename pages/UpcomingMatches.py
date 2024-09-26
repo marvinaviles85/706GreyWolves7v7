@@ -6,17 +6,9 @@ page = st.selectbox(
     ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Contact Us"]
 )
 
-#st.markdown("""
-#<script>
-#    const dropdownContainer = document.getElementbyId('drowndown-container');
-#    const selectbox = document.querySelector('select[data-testid="stSelectbox"]');
-#    dropdownContainer.appendChild(selectbox);
-#</script>
-#""", unsafe_allow_html=True)
-# Page title and description
 # Navigation Logic
 if page == "Home":
-    st.write("Welcome to the Home Page")
+    home_page()
 elif page == "Team Members":
     team_members_page()
 elif page == "Upcoming Matches":
@@ -27,6 +19,13 @@ elif page == "Registration":
     registration_page()
 elif page == "Contact Us":
     contact_us_page()
+
+def home_page():
+    st.write("Welcome to the Home Page")
+
+def team_members_page():
+    st.header("Team Members")
+    # Add content for Team Members page
 
 def upcoming_matches_page():
     st.header("Upcoming Matches")
@@ -48,6 +47,29 @@ def upcoming_matches_page():
         </div>
         """, unsafe_allow_html=True)
 
+def sponsorship_and_donation_page():
+    st.header("Sponsorship and Donation")
+    # Add content for Sponsorship and Donation page
+
+def registration_page():
+    st.header("Registration")
+    # Add content for Registration page
+
+def contact_us_page():
+    st.header("Contact Us")
+    # Add content for Contact Us page
+
 # Example usage
 if __name__ == "__main__":
-    upcoming_matches_page()
+    if page == "Home":
+        home_page()
+    elif page == "Team Members":
+        team_members_page()
+    elif page == "Upcoming Matches":
+        upcoming_matches_page()
+    elif page == "Sponsorship and Donation":
+        sponsorship_and_donation_page()
+    elif page == "Registration":
+        registration_page()
+    elif page == "Contact Us":
+        contact_us_page()
