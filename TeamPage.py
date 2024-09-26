@@ -171,6 +171,9 @@ custom_css = """
         body {
             padding-top: 70px;
         }
+        .css-1d391kg {
+            display: none;
+        }
 </style>
 """
 #st.set_page_config(layout="wide")
