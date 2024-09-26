@@ -16,7 +16,7 @@ page = st.selectbox(
 # Page title and description
 # Navigation Logic
 if page == "Home":
-    #st.write("Welcome to the Home Page")
+    st.write("Welcome to the Home Page")
 elif page == "Team Members":
     team_members_page()
 elif page == "Upcoming Matches":
