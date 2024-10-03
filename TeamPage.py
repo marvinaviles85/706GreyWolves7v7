@@ -196,7 +196,7 @@ st.markdown("""
 
 # Inject the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
-st.cache.clear()
+
 # Add the image and navigation bar to the top of the page
 st.markdown("""
 <div class="top-bar">
