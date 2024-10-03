@@ -67,23 +67,12 @@ elif page == "Contact Us":
 
 # Registration Page
 def spirit_wear_order_page():
-    st.title("Spirit Wear Order")
-
-    # Create outer columns
-    col1, col2, col3 = st.columns(3)
-
-    # Center the logo in the middle column
-    with col2:
-        st.image("Images/706gw_no_bg.png", width=200)
-        
-    st.markdown("<h1 class='centered-title'>Spirit Wear Order</h1>", unsafe_allow_html=True)
     st.markdown("""
-    <div class="iframe-container">
-         <iframe id="JotFormIFrame-242764337730156" title="Product Order Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/242764337730156" frameborder="0" style="width:800px;height:2700px;border:none;overflow:auto;" scrolling="yes"></iframe>
-<script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242764337730156']", "https://form.jotform.com/")</script> 
-    </div> 
+    <iframe id="JotFormIFrame-242764337730156" title="Product Order Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/242764337730156" frameborder="0" style="min-width:100%;height:2700px;border:none;overflow:auto;" scrolling="yes"></iframe>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242764337730156']", "https://form.jotform.com/")</script>
     """, unsafe_allow_html=True)
+    
 
     # Venmo and CashApp Information
     # Payment Section
