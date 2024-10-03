@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_carousel import carousel
 import streamlit.components.v1 as components
+import webbrowser
 
 from pages.TeamMembers import team_members_page
 from pages.UpcomingMatches import upcoming_matches_page
