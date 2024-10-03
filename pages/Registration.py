@@ -11,10 +11,32 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Dropdown menu for pages selection
+# Dropdown menu for pages selection
 page = st.selectbox(
     "Select a Page",
-    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Contact Us"]
+    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Contact Us"],
+    key="registration_selectbox"
 )
+
+# Page title and description
+# Navigation Logic
+def home_page():
+    st.write("Welcome to the Home Page")
+
+def team_members_page():
+    st.write("Team Members Page")
+
+def upcoming_matches_page():
+    st.write("Upcoming Matches Page")
+
+def sponsorship_and_donation_page():
+    st.write("Sponsorship and Donation Page")
+
+def registration_page():
+    st.write("Registration Page")
+
+def contact_us_page():
+    st.title("Contact Us")
 
 #st.markdown("""
 #<script>
