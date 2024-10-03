@@ -76,10 +76,10 @@ def spirit_wear_order_page():
     with col2:
         st.image("Images/706gw_no_bg.png", width=200)
         
-    st.markdown("<h1 class='centered-title'>Register Now</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 class='centered-title'>Spirit Wear Order</h1>", unsafe_allow_html=True)
     st.markdown("""
     <div class="iframe-container">
-         <iframe id="JotFormIFrame-242764337730156" title="Product Order Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/242764337730156" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242764337730156']", "https://form.jotform.com/")</script> 
+         <iframe id="JotFormIFrame-242764337730156" title="Product Order Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/242764337730156" frameborder="0" style="min-width:100%;max-width:100%;height:800px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242764337730156']", "https://form.jotform.com/")</script> 
     </div> 
     """, unsafe_allow_html=True)
 
