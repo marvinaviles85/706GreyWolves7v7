@@ -15,10 +15,10 @@ page = st.selectbox(
 #""", unsafe_allow_html=True)
 # Page title and description
 # Navigation Logic
-if page == "Team Members":
-    st.write("Welcome to the Team Members Page")
-elif page == "Home":
-    teampage_page()
+if page == "Home":
+    st.write("Welcome to the Home Page")
+elif page == "Team Members":
+    team_members_page()
 elif page == "Upcoming Matches":
     upcoming_matches_page()
 elif page == "Sponsorship and Donation":
