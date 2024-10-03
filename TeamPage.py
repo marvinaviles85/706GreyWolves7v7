@@ -1,4 +1,5 @@
 import streamlit as st
+st.cache.clear()
 from streamlit_option_menu import option_menu
 from streamlit_carousel import carousel
 import streamlit.components.v1 as components
