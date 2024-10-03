@@ -34,8 +34,10 @@ def sponsorship_and_donation_page():
 
 def registration_page():
     st.write("Registration Page")
-def spirit_wear_order_page()
+    
+def spirit_wear_order_page():
     st.write("Spirit Wear Order")
+    
 def contact_us_page():
     st.title("Contact Us")
 
