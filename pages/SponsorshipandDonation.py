@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+import webbrowser
 
 
 # Dropdown menu for pages selection
@@ -135,6 +136,10 @@ def sponsorship_and_donation_page():
         st.write("To complete your donation via Credit Card, please [click here](https://buy.stripe.com/cN2044cqYfAwd9e000).")
         st.write("After completing the payment, please enter the transaction ID below.")
         transaction_id = st.text_input("Credit Card Transaction ID")
+
+    st.header("Complete Your Payment")
+    if st.button("Pay Now"):
+        webbrowser.open("https://buy.stripe.com/cN2044cqYfAwd9e000")
 
     # Summary Section
     st.header("Summary")
