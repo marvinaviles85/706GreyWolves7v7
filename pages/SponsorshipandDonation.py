@@ -137,9 +137,9 @@ def sponsorship_and_donation_page():
         st.write("After completing the payment, please enter the transaction ID below.")
         transaction_id = st.text_input("Credit Card Transaction ID")
 
-    st.header("Complete Your Payment")
-    if st.button("Pay Now"):
-        webbrowser.open("https://buy.stripe.com/cN2044cqYfAwd9e000")
+    #st.header("Complete Your Payment")
+    #if st.button("Pay Now"):
+    #    webbrowser.open("https://buy.stripe.com/cN2044cqYfAwd9e000")
 
     # Summary Section
     st.header("Summary")
