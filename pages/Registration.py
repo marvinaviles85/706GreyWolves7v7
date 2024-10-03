@@ -1,4 +1,5 @@
 import streamlit as st
+import webbrowser
 
 # Dropdown menu for pages selection
 # Add the image and navigation bar to the top of the page
@@ -56,7 +57,10 @@ def registration_page():
     """, unsafe_allow_html=True)
 
     # Venmo and CashApp Information
-
+    # Payment Section
+    st.header("Complete Your Payment")
+    if st.button("Pay Now"):
+        webbrowser.open("https://buy.stripe.com/cN2044cqYfAwd9e000")
 
 # Run the page function if this file is executed
 if __name__ == "__main__":
