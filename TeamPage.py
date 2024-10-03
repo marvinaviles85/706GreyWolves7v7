@@ -1,5 +1,4 @@
 import streamlit as st
-st.cache.clear()
 from streamlit_option_menu import option_menu
 from streamlit_carousel import carousel
 import streamlit.components.v1 as components
@@ -197,7 +196,7 @@ st.markdown("""
 
 # Inject the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
-
+st.cache.clear()
 # Add the image and navigation bar to the top of the page
 st.markdown("""
 <div class="top-bar">
