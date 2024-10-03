@@ -99,7 +99,7 @@ def sponsorship_and_donation_page():
 
     # Payment Method Section
     st.header("Payment Method")
-    payment_method = st.selectbox("Choose your payment method", ["Venmo", "CashApp"])
+    payment_method = st.selectbox("Choose your payment method", ["Venmo", "CashApp", "Credit Card"])
 
     if payment_method == "Venmo":
         st.write("To complete your donation via Venmo, please [click here](https://venmo.com/code?user_id=3985557692613789993).")
@@ -109,6 +109,10 @@ def sponsorship_and_donation_page():
         st.write("To complete your donation via CashApp, please [click here](https://cash.app/$MarvinAviles85).")
         st.write("After completing the payment, please enter the transaction ID below.")
         transaction_id = st.text_input("CashApp Transaction ID")
+    elif payment_method == "Credit Card":
+        st.write("To complete your donation via Credit Card, please [click here](https://buy.stripe.com/cN2044cqYfAwd9e000).")
+        st.write("After completing the payment, please enter the transaction ID below.")
+        transaction_id = st.text_input("Credit Card Transaction ID")
 
     # Summary Section
     st.header("Summary")
