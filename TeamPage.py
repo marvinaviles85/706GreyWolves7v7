@@ -286,7 +286,7 @@ if page == "Home":
     # First and third images in the first outer column
     with col1:
         st.markdown("""
-            <div>
+            <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.carboncustomhomes.com/" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/carbonhomes.jpg" width="200">
                 </a>
