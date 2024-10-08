@@ -287,6 +287,13 @@ if page == "Home":
     with col1:
         st.markdown("""
             <div>
+                <a href="https://www.carboncustomhomes.com/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/carbonhomes.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+        st.markdown("""
+            <div>
                 <a href="https://www.vetvalor.com" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/VetValor.PNG" width="200">
                 </a>
