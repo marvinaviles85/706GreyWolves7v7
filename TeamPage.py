@@ -176,7 +176,10 @@ custom_css = """
         }
 </style>
 """
-st.set_page_config(initial_sidebar_state="collapsed")
+st.set_page_config(
+    page_title="706 Grey Wolves",
+    page_icon="🐺",
+    initial_sidebar_state="collapsed")
 
 st.markdown("""
     <style>
