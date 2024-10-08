@@ -14,7 +14,7 @@ def home_page():
     st.write("Welcome to the Home Page")
 
 def team_members_page():
-    st.write("Team Members Page")
+    st.write(" ")
 
 def upcoming_matches_page():
     st.write("Upcoming Matches Page")
