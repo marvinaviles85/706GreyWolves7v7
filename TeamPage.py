@@ -322,7 +322,7 @@ if page == "Home":
             <div style="text-align: center; margin-bottom: 20px;">
             </div>
         """, unsafe_allow_html=True)
-        st.image("706GWImages/VetValor.PNG", width="200", caption= " ")
+        st.image("706GWImages/VetValor.PNG", width=200, caption= " ")
 
     with col2:
         st.markdown("""
