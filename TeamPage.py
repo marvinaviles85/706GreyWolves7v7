@@ -209,7 +209,7 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-st.image("Images/706gw_no_bg.png", caption= " ")
+st.image("Images/706gw.jpg", caption= " ")
 
 # Dropdown menu for pages selection
 page = st.selectbox(
