@@ -319,12 +319,10 @@ if page == "Home":
             </div>
         """, unsafe_allow_html=True)
         st.markdown("""
-            <div>
-                <a href="https://www.vetvalor.com" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/VetValor.PNG" width="200">
-                </a>
+            <div style="text-align: center; margin-bottom: 20px;">
             </div>
         """, unsafe_allow_html=True)
+        st.image("706GWImages/VetValor.PNG", width="200", caption= " ")
 
     with col2:
         st.markdown("""
