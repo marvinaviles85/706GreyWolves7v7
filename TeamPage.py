@@ -204,9 +204,18 @@ st.markdown(custom_css, unsafe_allow_html=True)
 
 # Add the image and navigation bar to the top of the page
 st.markdown("""
-    <div class="top-bar">
+    <div class="top-bar" style="position: fixed; top: 0; width: 100%; background-color: black; z-index: 1000;">
         <div id="dropdown-container"></div>
     </div>
+    """, unsafe_allow_html=True)
+
+# Add some padding to the top of the page content to avoid overlap with the fixed menu
+st.markdown("""
+    <style>
+    body {
+        padding-top: 60px; /* Adjust this value based on the height of your fixed top bar */
+    }
+    </style>
     """, unsafe_allow_html=True)
 
 st.image("Images/gwlogonobg.jpg", caption= " ")
