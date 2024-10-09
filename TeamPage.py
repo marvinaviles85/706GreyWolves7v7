@@ -314,14 +314,14 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.carboncustomhomes.com/" target="_blank">
-                    <img src="706GWImages/carbonhomes.jpg" width="200" alt=" ">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/carbonhomes.jpg" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://vetvalor.com/" target="_blank">
-                    <img src="706GWImages/VetValor.PNG" width="200" alt=" ">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/VetValor.PNG" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
@@ -330,7 +330,7 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.amsoil.com/?zo=408125" target="_blank">
-                    <img src="706GWImages/amsoil.png" width="200" alt=" ">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/amsoil.png" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
@@ -339,7 +339,7 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.valleycenterrepair.com/" target="_blank">
-                    <img src="706GWImages/ValleyCenter.PNG" width="200" alt=" ">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ValleyCenter.PNG" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
