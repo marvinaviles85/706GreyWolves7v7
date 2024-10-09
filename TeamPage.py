@@ -311,33 +311,27 @@ if page == "Home":
 
     # First and third images in the first outer column
     with col1:
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://www.carboncustomhomes.com/" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/carbonhomes.jpg" width="200">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-            </div>
-        """, unsafe_allow_html=True)
-        st.image("706GWImages/VetValor.PNG", width=200, caption= " ")
+    st.markdown("""
+        <div style="text-align: center; margin-bottom: 20px;">
+        </div>
+    """, unsafe_allow_html=True)
+    st.image("706GWImages/carbonhomes.jpg", width=200, caption=" ")
+    st.markdown("""
+        <div style="text-align: center; margin-bottom: 20px;">
+        </div>
+    """, unsafe_allow_html=True)
+    st.image("706GWImages/VetValor.PNG", width=200, caption=" ")
 
-    with col2:
-        st.markdown("""
-            <div style="display: flex; justify-content: center; align-items: center; height: 100;">
-                <a href="https://www.amsoil.com/?zo=408125" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/amsoil.png" width="200">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
+with col2:
+    st.markdown("""
+        <div style="text-align: center; margin-bottom: 20px;">
+        </div>
+    """, unsafe_allow_html=True)
+    st.image("706GWImages/amsoil.png", width=200, caption=" ")
 
-    with col3:
-        st.markdown("""
-            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                <a href="https://www.valleycenterrepair.com/" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ValleyCenter.PNG" width="200">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
+with col3:
+    st.markdown("""
+        <div style="text-align: center; margin-bottom: 20px;">
+        </div>
+    """, unsafe_allow_html=True)
+    st.image("706GWImages/ValleyCenter.PNG", width=200, caption=" ")
