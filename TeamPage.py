@@ -204,11 +204,12 @@ st.markdown(custom_css, unsafe_allow_html=True)
 
 # Add the image and navigation bar to the top of the page
 st.markdown("""
-<div class="top-bar">
-    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" alt="Logo">
-    <div id="dropdown-container"></div>
-</div>
-""", unsafe_allow_html=True)
+    <div class="top-bar">
+        <div id="dropdown-container"></div>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.image("Images/706gw_no_bg.png", caption= " ")
 
 # Dropdown menu for pages selection
 page = st.selectbox(
