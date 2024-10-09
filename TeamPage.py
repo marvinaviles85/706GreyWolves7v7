@@ -245,6 +245,26 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Add JavaScript to ensure the menu stays fixed
+st.markdown(
+    """
+    <script>
+    window.onscroll = function() {
+        var topBar = document.querySelector('.top-bar');
+        if (window.pageYOffset > 0) {
+            topBar.style.position = 'fixed';
+            topBar.style.top = '0';
+            topBar.style.width = '100%';
+            topBar.style.zIndex = '1000';
+        } else {
+            topBar.style.position = 'relative';
+        }
+    };
+    </script>
+    """,
+    unsafe_allow_html=True
+)
+
 # Dropdown menu for pages selection
 page = st.selectbox(
     "Select a Page",
