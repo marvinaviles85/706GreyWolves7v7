@@ -211,6 +211,31 @@ st.markdown("""
 
 st.image("Images/gwlogonobg.jpg", caption= " ")
 
+# Custom CSS to change the dropdown menu colors
+st.markdown(
+    """
+    <style>
+    /* Change the background color of the dropdown menu */
+    div[data-baseweb="select"] > div {
+        background-color: black;
+    }
+    /* Change the text color of the dropdown menu */
+    div[data-baseweb="select"] > div > div {
+        color: white;
+    }
+    /* Change the background color of the dropdown options */
+    div[role="listbox"] ul {
+        background-color: black;
+    }
+    /* Change the text color of the dropdown options */
+    div[role="listbox"] li {
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Dropdown menu for pages selection
 page = st.selectbox(
     "Select a Page",
