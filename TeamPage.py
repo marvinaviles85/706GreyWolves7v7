@@ -311,27 +311,28 @@ if page == "Home":
 
     # First and third images in the first outer column
     with col1:
-    st.markdown("""
-        <div style="text-align: center; margin-bottom: 20px;">
-        </div>
-    """, unsafe_allow_html=True)
-    st.image("706GWImages/carbonhomes.jpg", width=200, caption=" ")
-    st.markdown("""
-        <div style="text-align: center; margin-bottom: 20px;">
-        </div>
-    """, unsafe_allow_html=True)
-    st.image("706GWImages/VetValor.PNG", width=200, caption=" ")
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+            </div>
+        """, unsafe_allow_html=True)
+        st.image("706GWImages/carbonhomes.jpg", width=200, caption=" ")
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+            </div>
+        """, unsafe_allow_html=True)
+        st.image("706GWImages/VetValor.PNG", width=200, caption= " ")
 
-with col2:
-    st.markdown("""
-        <div style="text-align: center; margin-bottom: 20px;">
-        </div>
-    """, unsafe_allow_html=True)
-    st.image("706GWImages/amsoil.png", width=200, caption=" ")
+    with col2:
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+            </div>
+        """, unsafe_allow_html=True)
+        st.image("706GWImages/amsoil.png", width=200, caption=" ")
 
-with col3:
-    st.markdown("""
-        <div style="text-align: center; margin-bottom: 20px;">
-        </div>
-    """, unsafe_allow_html=True)
-    st.image("706GWImages/ValleyCenter.PNG", width=200, caption=" ")
+    with col3:
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://www.valleycenterrepair.com/" target="_blank">
+            </div>
+        """, unsafe_allow_html=True)
+        st.image("706GWImages/ValleyCenter.PNG", width=200, caption=" ")
