@@ -115,25 +115,25 @@ html_code = """
         <section id="home">
             <h1 class='title'>706 Grey Wolves 7v7</h1>
             <h1 class='centered-text'><strong>Welcome to the home of the 706 Grey Wolves!</strong><br><br>Explore our team members, schedule, and photos.</h1>
-            <img src="Images/706gw_no_bg.png" style="width: 100%;">
+            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" style="width: 100%;">
             <h3 class='centered-text'>Registration is now open for age groups 11U to 18U! Spots are limited, so secure your place today!</h3>
 
             <div class="carousel">
-                <img src="706GWImages/AllStars.jpg" alt="">
-                <img src="706GWImages/BJ.jpg" alt="">
-                <img src="706GWImages/BJ and Alan.jpg" alt="">
-                <img src="706GWImages/cody.jpg" alt="">
-                <img src="706GWImages/Dylan.jpg" alt="">
-                <img src="706GWImages/FirstTeamImage.jpg" alt="">
-                <img src="706GWImages/Flash.jpg" alt="">
-                <img src="706GWImages/GetOutTheWay.jpg" alt="">
-                <img src="706GWImages/HunterHeadTop.jpg" alt="">
-                <img src="706GWImages/Isaac.jpg" alt="">
-                <img src="706GWImages/MikeWeathers.jpg" alt="">
-                <img src="706GWImages/MoneyInTheBank.jpg" alt="">
-                <img src="706GWImages/PB12.jpg" alt="">
-                <img src="706GWImages/TheBoys.jpg" alt="">
-                <img src="706GWImages/TooStrong.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/AllStars.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/BJ.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/BJ and Alan.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/cody.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Dylan.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FirstTeamImage.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Flash.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/GetOutTheWay.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HunterHeadTop.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Isaac.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/MikeWeathers.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/MoneyInTheBank.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/PB12.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TheBoys.jpg" alt="">
+                <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TooStrong.jpg" alt="">
             </div>
 
             <h2>Latest News</h2>
@@ -167,13 +167,13 @@ html_code = """
             <h1 class='centered-title'>706 Grey Wolves 7v7 Staff</h1>
             <div class="columns">
                 <div class="column">
-                    <img src="Images/MarvinSr.PNG" alt="Marvin Aviles" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/MarvinSr.PNG" alt="Marvin Aviles" width="200">
                     <p>Position: Founder</p>
-                    <img src="Images/MarvinJr.PNG" alt="Marvin Aviles Jr" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/MarvinJr.PNG" alt="Marvin Aviles Jr" width="200">
                     <p>Position: Defensive Coordinator</p>
                 </div>
                 <div class="column">
-                    <img src="Images/Pam.jpg" alt="Pam Aviles" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/Pam.jpg" alt="Pam Aviles" width="200">
                     <p>Position: Co-Founder/Team Trainer</p>
                 </div>
             </div>
@@ -327,7 +327,7 @@ html_code = """
 
         <section id="contact-us">
             <h2>Contact Us</h2>
-            <img src="Images/706gw_no_bg.png" style="width: 100%;">
+            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/Images/706gw_no_bg.png" style="width: 100%;">
             <p>Email us at <a href="mailto:706greywolves7v7@gmail.com">706greywolves7v7@gmail.com</a></p>
             <div style="text-align: center;">
                 <a href="tel:+15207053812" style="
