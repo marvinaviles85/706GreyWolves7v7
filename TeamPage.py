@@ -9,6 +9,7 @@ from pages.UpcomingMatches import upcoming_matches_page
 from pages.SponsorshipandDonation import sponsorship_and_donation_page
 from pages.Registration import registration_page
 from pages.Spirit_Wear_Order import spirit_wear_order_page
+from pages.media import media_page
 from pages.ContactUs import contact_us_page
 
 custom_css = """
@@ -268,7 +269,7 @@ st.markdown(
 # Dropdown menu for pages selection
 page = st.selectbox(
     "Select a Page",
-    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Spirit Wear Order", "Contact Us"]
+    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Spirit Wear Order", "Media", "Contact Us"]
 )
 
 #st.markdown("""
@@ -292,6 +293,8 @@ elif page == "Registration":
     registration_page()
 elif page == "Spirit Wear Order":
     spirit_wear_order_page()
+elif page == "Media":
+    media_page()
 elif page == "Contact Us":
     contact_us_page()
 
