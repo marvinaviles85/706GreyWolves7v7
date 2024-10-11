@@ -16,13 +16,12 @@ def media_page():
 #    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=YOUR_PLAYLIST_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 #    """, unsafe_allow_html=True)
 
-    # Add subscribe button
+    # Add subscribe button using iframe
     st.markdown("""
     <h2>Subscribe to Our Channel</h2>
-    <a href="https://www.youtube.com/@706GreyWolves7v7?sub_confirmation=1" target="_blank">
-        <img src="https://www.gstatic.com/youtube/img/subscribe/en_GB/subscribebutton_144x42.png" alt="Subscribe to our YouTube channel">
-    </a>
+    <iframe src="https://www.youtube.com/subscribe_widget?channel=@706GreyWolves7v7" width="480" height="130" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
     """, unsafe_allow_html=True)
+
 
     # Social Media Icons (Optional)
     st.markdown("""
