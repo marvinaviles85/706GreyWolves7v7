@@ -9,7 +9,7 @@ from pages.UpcomingMatches import upcoming_matches_page
 from pages.SponsorshipandDonation import sponsorship_and_donation_page
 from pages.Registration import registration_page
 from pages.Spirit_Wear_Order import spirit_wear_order_page
-from pages.media import media_page
+from pages.Media import media_page
 from pages.ContactUs import contact_us_page
 
 custom_css = """
