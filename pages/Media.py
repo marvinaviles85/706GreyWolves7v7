@@ -19,7 +19,7 @@ def media_page():
     # Add subscribe button
     st.markdown("""
     <h2>Subscribe to Our Channel</h2>
-    <a href="https://www.youtube.com/channel/@706GreyWolves7v7?sub_confirmation=1" target="_blank">
+    <a href="https://www.youtube.com/@706GreyWolves7v7?si=Jjoy4mDMpZsB5VzFsub_confirmation=1" target="_blank">
         <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/subscribe.jpg" alt="Subscribe to our channel">
     </a>
     """, unsafe_allow_html=True)
@@ -28,7 +28,7 @@ def media_page():
     # Social Media Icons (Optional)
     st.markdown("""
     <div style="text-align: center;">
-        <a href="https://www.youtube.com/@706GreyWolves7v7" target="_blank">
+        <a href="https://www.youtube.com/@706GreyWolves7v7?si=Jjoy4mDMpZsB5VzF" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="50" height="50">
         </a>
     </div>
