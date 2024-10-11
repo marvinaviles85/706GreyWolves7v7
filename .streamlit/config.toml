@@ -5,3 +5,6 @@ showSidebarNavigation = false
 backgroundColor="#000000"
 secondaryBackgroundColor="#000000"
 textColor="#f3ecec"
+
+[layout]
+wide_mode = true
