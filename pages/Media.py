@@ -20,7 +20,7 @@ def media_page():
     st.markdown("""
     <h2>Subscribe to Our Channel</h2>
     <a href="https://www.youtube.com/channel/@706GreyWolves7v7?sub_confirmation=1" target="_blank">
-        <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/subscribe.jpg" alt="Subscribe to our YouTube channel">
+        <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/subscribe.jpg" alt="Subscribe to our channel">
     </a>
     """, unsafe_allow_html=True)
 
