@@ -328,6 +328,17 @@ if page == "Home":
     carousel(images)
     st.header("Latest News")
     st.write("Stay tuned for the latest news and updates.")
+    # Create outer columns
+    col1, col2, col3 = st.columns(3)
+
+    # First and third images in the first outer column
+    with col1:
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://www.facebook.com/profile.php?id=61567362084142" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg" width="200">
+                </a>
+            </div>
 
      # Add sponsors section
     st.markdown("""
