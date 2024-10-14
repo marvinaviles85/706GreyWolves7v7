@@ -339,9 +339,9 @@ if page == "Home":
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg" width="200">
                 </a>
             </div>
+        """, unsafe_allow_html=True)
 
-     # Add sponsors section
-    st.markdown("""
+
     <h1 class='centered-title'>Our Valued Sponsors</h1>
     <p class='subtext'>Click on the images to visit their websites</p>
 """, unsafe_allow_html=True)
