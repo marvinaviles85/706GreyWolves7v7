@@ -342,6 +342,8 @@ if page == "Home":
         """, unsafe_allow_html=True)
 
 
+ # Add sponsors section
+    st.markdown("""
     <h1 class='centered-title'>Our Valued Sponsors</h1>
     <p class='subtext'>Click on the images to visit their websites</p>
 """, unsafe_allow_html=True)
