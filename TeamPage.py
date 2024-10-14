@@ -326,8 +326,12 @@ if page == "Home":
     ]
 
     carousel(images)
-    st.header("Latest News")
-    st.write("Stay tuned for the latest news and updates.")
+    st.markdown("""
+    <h1 class='centered-title'>Latest News</h1>
+    <p class='subtext'>#MEETUSONTHE50</p>
+""", unsafe_allow_html=True)
+    #st.header("Latest News")
+    #st.write("Stay tuned for the latest news and updates.")
     # Create outer columns
     col1, col2, col3 = st.columns(3)
 
