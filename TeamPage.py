@@ -348,7 +348,7 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.facebook.com/events/2695524287283994/?acontext=%7B%22event_action_history%22%3A[]%7D" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Slim Chickens Fundraiser.jpg" width="400">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Slim Chickens Fundraiser.jpg" width="800">
                 </a>
             </div>
         """, unsafe_allow_html=True)
