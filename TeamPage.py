@@ -362,7 +362,7 @@ if page == "Home":
     with col3:
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.community-fundraiser.com%2Ffundraiser%2Fevents%2Fpromotions%2F3b124f16-c59e-8fce-d33a-6cdb6c068a0d%2Fen%2Flanding%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR3Lpqgx1MdawwTHtiU-t-0nKH8fcRNFoBdjErL2rJ2fKBPbdRcnfwZb44I_aem_z4sVpeIcqWkNyH9UDGTbIw&h=AT2ixRwKgFInpmVfWotuD-pVYkci2nFyxUI4vMi1A62jPoY_TNMAOiiyvKZp7IckIEcX7eJQV724pfgjSS-pOl85H3RQxccpe0COJp0mYP1eYtc5kHcSRxYBbjQxBiQSmw&__tn__=-UK-R&c[0]=AT3PkjgQ5XmJODbhj7HWzfOQ_U8OVQcvrcS8kmuoGVnBEvoRPu6xdt-vgZqlLde1S7zqmKrl2uvBS0aCJxAq-GUuvkYBdOV7-ST0TttTwnVNXB9KsU46QoIctoCiugyTovXWGAARrQgpmV4XoYbD9cLVNgI8rWHyW8NJB9eR3DnJ5Ln8pAVgiy14yLJMv81I12KIGX6tiCLDDG32ps613ZFw30vZL59p" target="_blank">
+                <a href="https://www.community-fundraiser.com/fundraiser/events/promotions/3b124f16-c59e-8fce-d33a-6cdb6c068a0d/en/landing?fbclid=IwY2xjawGFzIFleHRuA2FlbQIxMAABHcumqDHUx1rDBMe2JT637Scofx9xE0WgF2MSsvasnZ8oE9t1Fyd_Blvjgg_aem_z4sVpeIcqWkNyH9UDGTbIw" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/PandaExpressFundraiser.jpg" width="3000">
                 </a>
             </div>
