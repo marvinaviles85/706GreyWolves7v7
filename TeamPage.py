@@ -378,7 +378,7 @@ We're kicking off a shoe drive fundraiser and we need your help! Donate your unw
 
 Your contributions will make a huge difference. Let's make this fundraiser a step in the right direction!
 
-For details, [e-mail me](mailto:706greywolves7v7@gmail.com)
+For details send us an e-mail, [706greywolves7v7@gmail.com](mailto:706greywolves7v7@gmail.com)
 """)
 
 
