@@ -359,10 +359,17 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://www.facebook.com/events/1557126532352210/?ref=newsfeed" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ChipotleFundraiser.jpg" width="3000">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
     with col3:
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://www.community-fundraiser.com/fundraiser/events/promotions/3b124f16-c59e-8fce-d33a-6cdb6c068a0d/en/landing?fbclid=IwY2xjawGFzIFleHRuA2FlbQIxMAABHcumqDHUx1rDBMe2JT637Scofx9xE0WgF2MSsvasnZ8oE9t1Fyd_Blvjgg_aem_z4sVpeIcqWkNyH9UDGTbIw" target="_blank">
+                <a href="https://www.facebook.com/events/1309314690479021/?ref=newsfeed" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/PandaExpressFundraiser.jpg" width="3000">
                 </a>
             </div>
