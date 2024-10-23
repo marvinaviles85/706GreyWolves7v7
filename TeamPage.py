@@ -367,6 +367,17 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
+    st.title("Join Our Shoe Drive Fundraiser!")
+    st.write("""
+We're kicking off a shoe drive fundraiser and we need your help! Donate your unwanted, gently worn shoes, cleats, boots, and more. The team earns money for every pound of shoes we collect. Our goal is to gather 100 bags of shoes, with each bag holding 25 pairs.
+
+**Important Guidelines:**
+- No holes in the shoes
+- No flip-flops
+- No ice skates or roller blades
+
+Your contributions will make a huge difference. Let's make this fundraiser a step in the right direction!
+""")
 
 
  # Add sponsors section
