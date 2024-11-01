@@ -7,7 +7,7 @@ import webbrowser
 from pages.TeamMembers import team_members_page
 from pages.UpcomingMatches import upcoming_matches_page
 from pages.SponsorshipandDonation import sponsorship_and_donation_page
-from pages.Registration import registration_page
+#from pages.Registration import registration_page
 #from pages.Spirit_Wear_Order import spirit_wear_order_page
 #from pages.Media import media_page
 from pages.ContactUs import contact_us_page
@@ -269,7 +269,7 @@ st.markdown(
 # Dropdown menu for pages selection
 page = st.selectbox(
     "Select a Page",
-    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Registration", "Contact Us"]
+    ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Contact Us"]
 )
 
 #st.markdown("""
@@ -289,8 +289,8 @@ elif page == "Upcoming Matches":
     upcoming_matches_page()
 elif page == "Sponsorship and Donation":
     sponsorship_and_donation_page()
-elif page == "Registration":
-    registration_page()
+#elif page == "Registration":
+#    registration_page()
 #elif page == "Spirit Wear Order":
 #    spirit_wear_order_page()
 #elif page == "Media":
@@ -301,7 +301,7 @@ elif page == "Contact Us":
 # Home section
 if page == "Home":
     #st.markdown("<h1 class='title'>706 Grey Wolves 7v7</h1>", unsafe_allow_html=True)
-    #st.markdown("<h1 class='centered-text'>**Welcome to the home of the 706 Grey Wolves!**\n\nExplore our team members, schedule, and photos.</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 class='centered-text'>**Welcome to the home of the 706 Grey Wolves!**\n\nExplore our team members, schedule, and photos. \n\n We are a 501(c)(3) Organization</h1>", unsafe_allow_html=True)
     #st.write("Welcome to the home page!")
     st.image("Images/706gw_no_bg.png", use_column_width=True)
     st.write("<h3 class='centered-text'>Registration is now open for age groups 13U to 18U! Spots are limited, so secure your place today!</h3>", unsafe_allow_html=True)
