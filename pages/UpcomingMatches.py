@@ -18,10 +18,12 @@ def upcoming_matches_page():
     st.header("Upcoming Matches")
     
     matches = [
-        {"date": "01/18-19/2025", "opponent": "Team Takeover Classic", "location": "Columbia, SC", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTO.png"},
-        {"date": "02/01/2025", "opponent": "Rare Air Classic", "location": "Marietta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/RareAir.jpg"},
-        {"date": "02/22/2025", "opponent": "FSG Tournament Series - Atlanta Shoot-Out", "location": "Atlanta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FSG.png"},
-        {"date": "03/01/2025", "opponent": "Hands League Spring Shootout", "location": "Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
+        {"date": "01/18-19/2025", "opponent": "Team Takeover Classic", "location": "Ridge View High School, Hard Scrabble Rd, Columbia, SC", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTO.png"},
+        {"date": "02/01/2025", "opponent": "3rd Annual Rare Air Kickoff Classic", "location": "City of Marietta Franklin Gateway Sports Complex, Franklin Gateway Southeast, Marietta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/RareAir.jpg"},
+        {"date": "02/22/2025", "opponent": "FSG Tournament Series - Atlanta Shoot-Out", "location": "Wade Walker Park, Rockbridge Road Southwest, Stone Mountain, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FSG.png"},
+        {"date": "03/01/2025", "opponent": "Hands League Spring Shootout", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
+        {"date": "03/15/2025", "opponent": "Hands League", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
+        {"date": "03/22/2025", "opponent": "Shock Doctor Legends Showcase 7v7 Tournament Atlanta 2025", "location": "N Mt Carmel Park, McDonough, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ShockDoctor.png"},
         # Add more matches here
     ]
 
