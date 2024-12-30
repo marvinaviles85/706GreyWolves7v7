@@ -23,15 +23,36 @@ def upcoming_matches_page():
         # Add more matches here
     ]
 
-    st.markdown("<style>.match-card { padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }</style>", unsafe_allow_html=True)
+    st.markdown("""
+    <style>
+    .match-card {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+    .match-card img {
+        max-width: 100px;
+        margin-right: 20px;
+    }
+    .match-info {
+        display: flex;
+        flex-direction: column;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
     for match in matches:
-        st.image(match["image_url"], caption=f"{match['opponent']} on {match['date']} at {match['location']}")
         st.markdown(f"""
         <div class="match-card">
-            <strong>Date:</strong> {match['date']}<br>
-            <strong>Opponent:</strong> {match['opponent']}<br>
-            <strong>Location:</strong> {match['location']}
+            <img src="{match['image_url']}" alt="Match image">
+            <div class="match-info">
+                <strong>Date:</strong> {match['date']}<br>
+                <strong>Opponent:</strong> {match['opponent']}<br>
+                <strong>Location:</strong> {match['location']}
+            </div>
         </div>
         """, unsafe_allow_html=True)
         st.write("---")
