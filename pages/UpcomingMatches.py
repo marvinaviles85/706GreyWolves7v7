@@ -20,6 +20,7 @@ def upcoming_matches_page():
     matches = [
         {"date": "01/18-19/2025", "opponent": "Team Takeover Classic", "location": "Columbia, SC", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTO.png"},
         {"date": "02/01/2025", "opponent": "Rare Air Classic", "location": "Marietta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/RareAir.jpg"},
+        {"date": "02/22/2025", "opponent": "FSG Tournament Series - Atlanta Shoot-Out", "location": "Atlanta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FSG.png"},
         {"date": "03/01/2025", "opponent": "Hands League Spring Shootout", "location": "Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
         # Add more matches here
     ]
