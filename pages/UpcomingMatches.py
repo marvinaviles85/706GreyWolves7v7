@@ -19,7 +19,8 @@ def upcoming_matches_page():
     
     matches = [
         {"date": "01/18-19/2025", "opponent": "Team Takeover Classic", "location": "Columbia, SC", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTO.png"},
-        {"date": "2025-02-01", "opponent": "TBD", "location": "TBD", "image_url": "https://example.com/image2.jpg"},
+        {"date": "02/01/2025", "opponent": "Rare Air Classic", "location": "Marietta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/RareAir.jpg"},
+        {"date": "03/01/2025", "opponent": "Hands League Spring Shootout", "location": "Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
         # Add more matches here
     ]
 
@@ -50,7 +51,7 @@ def upcoming_matches_page():
             <img src="{match['image_url']}" alt="Match image">
             <div class="match-info">
                 <strong>Date:</strong> {match['date']}<br>
-                <strong>Opponent:</strong> {match['opponent']}<br>
+                <strong>Tournament:</strong> {match['opponent']}<br>
                 <strong>Location:</strong> {match['location']}
             </div>
         </div>
