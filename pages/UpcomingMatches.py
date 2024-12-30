@@ -54,7 +54,7 @@ def upcoming_matches_page():
     st.header("Upcoming Matches")
     
     matches = [
-        {"date": "01/18-19/2025", "opponent": "Team Takeover Classic", "location": "Columbia, SC", "image_path": "706GWImages/TTO.png"},
+        {"date": "01/18-19/2025", "opponent": "Team Takeover Classic", "location": "Columbia, SC", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTO.png" width="200"},
         {"date": "2025-02-01", "opponent": "TBD", "location": "TBD"},
         # Add more matches here
     ]
