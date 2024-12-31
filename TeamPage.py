@@ -344,6 +344,8 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
+        
+    with col2:
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.facebook.com/photo/?fbid=122181338096177637&set=pb.61555329136562.-2207520000" target="_blank">
@@ -351,7 +353,6 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
-    #with col2:
 
     #with col3:
 
