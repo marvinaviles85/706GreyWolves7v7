@@ -7,9 +7,6 @@ import webbrowser
 from pages.TeamMembers import team_members_page
 from pages.UpcomingMatches import upcoming_matches_page
 from pages.SponsorshipandDonation import sponsorship_and_donation_page
-#from pages.Registration import registration_page
-#from pages.Spirit_Wear_Order import spirit_wear_order_page
-#from pages.Media import media_page
 from pages.ContactUs import contact_us_page
 
 custom_css = """
@@ -21,68 +18,62 @@ custom_css = """
         color: white;
     }
     .team-member img, .photo-gallery img {
-        width: 100%; /* Set a Consistent Width */
-        height: 100%; /* Maintain aspect ratio */
+        width: 100%;
+        height: 100%;
         object-fit: contain;
     }
-     .carousel-title {
+    .carousel-title, .carousel-text {
         position: absolute;
         bottom: 20px;
         left: 20px;
-        font-size: 1.5em;
         color: white;
     }
+    .carousel-title {
+        font-size: 1.5em;
+    }
     .carousel-text {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
         font-size: 1em;
-        color: white;
     }
     .iframe-container {
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
-        background-color: None;
         border-radius: 10px;
     }
     .iframe-container iframe {
         width: 100%;
         border: none;
     }
-        .section-content {
+    .section-content, .sponsor-details, .venmo-inf {
         font-family: 'Arial', sans-serif;
-        font-size: 1.2em;
         color: white;
+    }
+    .section-content {
+        font-size: 1.2em;
         margin-bottom: 20px;
     }
     .sponsor-level {
-        font-family: 'Arial', sans-serif;
         font-size: 1.5em;
-        color: white;
         margin-top: 10px;
     }
     .sponsor-details {
-        font-family: 'Arial', sans-serif;
         font-size: 1em;
-        color: white;
         margin-bottom: 10px;
     }
     .donate-button {
         background-color: #4CAF50;
         color: white;
         padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
-        border-radius:12px;
+        border-radius: 12px;
+        text-align: center;
+        text-decoration: none;
     }
     .venmo-inf {
-        font-family: 'Montserrat', sans-serif;
         font-size: 1.2em;
         color: #333;
         margin-top: 20px;
@@ -101,7 +92,7 @@ custom_css = """
     .centered-text {
         text-align: center;
     }
-     #sponsors {
+    #sponsors {
         text-align: center;
         padding: 20px;
     }
@@ -119,38 +110,36 @@ custom_css = """
         transform: scale(1.1);
     }
     @media (max-width: 768px) {
-            .stMarkdown div {
-                text-align: center;
-            }
-            .stMarkdown img {
-                width: 100% !important;
-                height: auto !important;
-            }
+        .stMarkdown div {
+            text-align: center;
         }
+        .stMarkdown img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+    .centered-title, .subtext {
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        color: white;
+    }
     .centered-title {
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            color: white; /* Change this color to match your theme */
-            padding: 20px;
-            border-bottom: 2px solid white; /* Optional: Add a bottom border */
-        }
-        .subtext {
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            color: white; /* Change this color to match your theme */
-            font-size: 14px; /* Smaller font size */
-        }
-        .top-bar {
+        padding: 20px;
+        border-bottom: 2px solid white;
+    }
+    .subtext {
+        font-size: 14px;
+    }
+    .top-bar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        background-color: None;
         flex-wrap: wrap;
-        position: -webkit-sticky;
+        background-color: None;
         position: sticky;
         top: 0;
-        z-index: 1000, /* Ensure it stays on top of other content */
+        z-index: 1000;
     }
     .top-bar img {
         height: 50px;
@@ -174,13 +163,15 @@ custom_css = """
             padding-top: 70px;
         }
         @import url('style.css');
-        }
+    }
 </style>
 """
+
 st.set_page_config(
     page_title="706 Grey Wolves",
     page_icon="Images/706gw_no_bg.png",
-    initial_sidebar_state="collapsed")
+    initial_sidebar_state="collapsed"
+)
 
 st.markdown("""
     <style>
@@ -196,9 +187,7 @@ st.markdown("""
             }
         });
     </script>
-    """,
-        unsafe_allow_html=True,
-    )
+""", unsafe_allow_html=True)
 
 # Inject the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
@@ -208,63 +197,53 @@ st.markdown("""
     <div class="top-bar" style="position: fixed; top: 0; width: 100%; background-color: black; z-index: 1000;">
         <div id="dropdown-container"></div>
     </div>
-    """, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 # Add some padding to the top of the page content to avoid overlap with the fixed menu
 st.markdown("""
     <style>
-    body {
-        padding-top: 60px; /* Adjust this value based on the height of your fixed top bar */
-    }
+        body {
+            padding-top: 60px;
+        }
     </style>
-    """, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
-st.image("Images/gwlogonobg.jpg", caption= " ")
+st.image("Images/gwlogonobg.jpg", caption=" ")
 
 # Custom CSS to change the dropdown menu colors
-st.markdown(
-    """
+st.markdown("""
     <style>
-    /* Change the background color of the dropdown menu */
-    div[data-baseweb="select"] > div {
-        background-color: black;
-    }
-    /* Change the text color of the dropdown menu */
-    div[data-baseweb="select"] > div > div {
-        color: white;
-    }
-    /* Change the background color of the dropdown options */
-    div[role="listbox"] ul {
-        background-color: black;
-    }
-    /* Change the text color of the dropdown options */
-    div[role="listbox"] li {
-        color: white;
-    }
+        div[data-baseweb="select"] > div {
+            background-color: black;
+        }
+        div[data-baseweb="select"] > div > div {
+            color: white;
+        }
+        div[role="listbox"] ul {
+            background-color: black;
+        }
+        div[role="listbox"] li {
+            color: white;
+        }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 # Add JavaScript to ensure the menu stays fixed
-st.markdown(
-    """
+st.markdown("""
     <script>
-    window.onscroll = function() {
-        var topBar = document.querySelector('.top-bar');
-        if (window.pageYOffset > 0) {
-            topBar.style.position = 'fixed';
-            topBar.style.top = '0';
-            topBar.style.width = '100%';
-            topBar.style.zIndex = '1000';
-        } else {
-            topBar.style.position = 'relative';
-        }
-    };
+        window.onscroll = function() {
+            var topBar = document.querySelector('.top-bar');
+            if (window.pageYOffset > 0) {
+                topBar.style.position = 'fixed';
+                topBar.style.top = '0';
+                topBar.style.width = '100%';
+                topBar.style.zIndex = '1000';
+            } else {
+                topBar.style.position = 'relative';
+            }
+        };
     </script>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 # Dropdown menu for pages selection
 page = st.selectbox(
@@ -272,13 +251,6 @@ page = st.selectbox(
     ["Home", "Team Members", "Upcoming Matches", "Sponsorship and Donation", "Contact Us"]
 )
 
-#st.markdown("""
-#<script>
-#    const dropdownContainer = document.getElementbyId('drowndown-container');
-#    const selectbox = document.querySelector('select[data-testid="stSelectbox"]');
-#    dropdownContainer.appendChild(selectbox);
-#</script>
-#""", unsafe_allow_html=True)
 # Page title and description
 # Navigation Logic
 if page == "Home":
@@ -289,23 +261,15 @@ elif page == "Upcoming Matches":
     upcoming_matches_page()
 elif page == "Sponsorship and Donation":
     sponsorship_and_donation_page()
-#elif page == "Registration":
-#    registration_page()
-#elif page == "Spirit Wear Order":
-#    spirit_wear_order_page()
-#elif page == "Media":
-#    media_page()
 elif page == "Contact Us":
     contact_us_page()
 
 # Home section
 if page == "Home":
-    #st.markdown("<h1 class='title'>706 Grey Wolves 7v7</h1>", unsafe_allow_html=True)
     st.markdown("<h1 class='centered-text'>**Welcome to the home of the 706 Grey Wolves!**\n\nExplore our team members, schedule, and photos. \n\n We are a 501(c)(3) Organization</h1>", unsafe_allow_html=True)
-    #st.write("Welcome to the home page!")
     st.image("Images/706gw_no_bg.png", use_column_width=True)
-    st.write("<h3 class='centered-text'>Registration is now open for age groups 13U to 18U! Spots are limited, so secure your place today!</h3>", unsafe_allow_html=True)
-
+    st.markdown("<h3 class='centered-text'>Registration is now open for age groups 13U to 18U! Spots are limited, so secure your place today!</h3>", unsafe_allow_html=True)
+    
     # Add a scrolling image gallery
     images = [
         {'img': '706GWImages/AllStars.jpg', 'title': '', 'text': ''},
@@ -322,20 +286,18 @@ if page == "Home":
         {'img': '706GWImages/MoneyInTheBank.jpg', 'title': '', 'text': ''},
         {'img': '706GWImages/PB12.jpg', 'title': '', 'text': ''},
         {'img': '706GWImages/TheBoys.jpg', 'title': '', 'text': ''},
-        {'img': '706GWImages/TooStrong.jpg', 'title': '', 'text': ''},
+        {'img': '706GWImages/TooStrong.jpg', 'title': '', 'text': ''}
     ]
 
     carousel(images)
+
     st.markdown("""
-    <h1 class='centered-title'>Latest News</h1>
-    <p class='subtext'>#MEETUSONTHE50</p>
-""", unsafe_allow_html=True)
-    #st.header("Latest News")
-    #st.write("Stay tuned for the latest news and updates.")
-    # Create outer columns
+        <h1 class='centered-title'>Latest News</h1>
+        <p class='subtext'>#MEETUSONTHE50</p>
+    """, unsafe_allow_html=True)
+
     col1, col2, col3 = st.columns(3)
 
-    # First and third images in the first outer column
     with col1:
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
@@ -354,21 +316,13 @@ if page == "Home":
             </div>
         """, unsafe_allow_html=True)
 
-    #with col3:
-
- # Add sponsors section
     st.markdown("""
-    <h1 class='centered-title'>Our Valued Sponsors</h1>
-    <p class='subtext'>Click on the images to visit their websites</p>
-""", unsafe_allow_html=True)
-    sponsors_donors = [
-        {"name": "", "position": "", "photo": "706GWImages/VetsValor.JPG"}
-    ]
-        
-    # Create outer columns
+        <h1 class='centered-title'>Our Valued Sponsors</h1>
+        <p class='subtext'>Click on the images to visit their websites</p>
+    """, unsafe_allow_html=True)
+
     col1, col2, col3 = st.columns(3)
 
-    # First and third images in the first outer column
     with col1:
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
