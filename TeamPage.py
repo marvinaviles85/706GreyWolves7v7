@@ -309,7 +309,7 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTOGamedayFlyer.jpg" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTOGamedayFlyer.jpg" width="500">
                 </a>
             </div>
         """, unsafe_allow_html=True)
@@ -325,7 +325,7 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/15URoster.jpg" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/15URoster.jpg" width="500">
                 </a>
             </div>
         """, unsafe_allow_html=True)
@@ -334,14 +334,14 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://gofund.me/db7d9283" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CoachCoopsSummerTour.jpg" width="400">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CoachCoopsSummerTour.jpg" width="600">
                 </a>
             </div>
         """, unsafe_allow_html=True)
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/18URoster.jpg" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/18URoster.jpg" width="500">
                 </a>
             </div>
         """, unsafe_allow_html=True)
