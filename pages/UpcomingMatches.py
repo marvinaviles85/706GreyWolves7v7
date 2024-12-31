@@ -15,7 +15,7 @@ def team_members_page():
     st.write("Team Members Page")
 
 def upcoming_matches_page():
-    st.header("Upcoming Matches")
+    st.header("Upcoming Tournaments")
     
     matches = [
         {"date": "01/18-19/2025", "opponent": "Team Takeover Classic", "location": "Ridge View High School, Hard Scrabble Rd, Columbia, SC", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTO.png"},
