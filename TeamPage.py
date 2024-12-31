@@ -351,9 +351,9 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
-    with col2:
+    #with col2:
 
-    with col3:
+    #with col3:
 
  # Add sponsors section
     st.markdown("""
