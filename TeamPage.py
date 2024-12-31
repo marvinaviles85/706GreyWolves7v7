@@ -352,42 +352,8 @@ if page == "Home":
             </div>
         """, unsafe_allow_html=True)
     with col2:
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://www.facebook.com/events/2695524287283994/?acontext=%7B%22event_action_history%22%3A[]%7D" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/Slim Chickens Fundraiser.jpg" width="3000">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://www.facebook.com/events/1557126532352210/?ref=newsfeed" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ChipotleFundraiser.jpg" width="3000">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
+
     with col3:
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://www.facebook.com/events/1309314690479021/?ref=newsfeed" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/PandaExpressFundraiser.jpg" width="3000">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
-    st.title("Join Our Shoe Drive Fundraiser!")
-    st.write("""
-We're kicking off a shoe drive fundraiser and we need your help! Donate your unwanted, gently worn shoes, cleats, boots, and more. The team earns money for every pound of shoes we collect. Our goal is to gather 100 bags of shoes, with each bag holding 25 pairs.
-
-**Important Guidelines:**
-- No holes in the shoes
-- No flip-flops
-- No ice skates or roller blades
-
-Your contributions will make a huge difference. Let's make this fundraiser a step in the right direction!
-
-For details send us an e-mail, [706greywolves7v7@gmail.com](mailto:706greywolves7v7@gmail.com)
-""")
-
 
  # Add sponsors section
     st.markdown("""
@@ -423,6 +389,13 @@ For details send us an e-mail, [706greywolves7v7@gmail.com](mailto:706greywolves
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.amsoil.com/?zo=408125" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/amsoil.png" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://superior-athlete.com//" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/superiorathlete.png" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
