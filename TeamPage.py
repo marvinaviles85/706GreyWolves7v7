@@ -306,12 +306,42 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTOGamedayFlyer.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
         
     with col2:
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://www.facebook.com/photo/?fbid=122181338096177637&set=pb.61555329136562.-2207520000" target="_blank">
                     <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/NXGNRegionalShowcase.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/15URoster.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    with col3:
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://gofund.me/db7d9283" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CoachCoopSummerTour.jpg" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/18URoster.jpg" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
