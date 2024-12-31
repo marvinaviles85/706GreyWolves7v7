@@ -334,7 +334,7 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://gofund.me/db7d9283" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CoachCoopSummerTour.jpg" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/CoachCoopsSummerTour.jpg" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
