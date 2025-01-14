@@ -393,3 +393,10 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
+        st.markdown("""
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://www.flexmyhealth.com/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/IMG_3713.png" width="200">
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
