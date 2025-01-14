@@ -22,8 +22,12 @@ def upcoming_matches_page():
         {"date": "02/01/2025", "opponent": "3rd Annual Rare Air Kickoff Classic", "location": "City of Marietta Franklin Gateway Sports Complex, Franklin Gateway Southeast, Marietta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/RareAir.jpg"},
         {"date": "02/22/2025", "opponent": "FSG Tournament Series - Atlanta Shoot-Out", "location": "Wade Walker Park, Rockbridge Road Southwest, Stone Mountain, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/FSG.png"},
         {"date": "03/01/2025", "opponent": "Hands League Spring Shootout", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
-        {"date": "03/15/2025", "opponent": "Hands League", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
+        {"date": "03/15-16/2025", "opponent": "Hands League Battle 4 The City", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
         {"date": "03/22/2025", "opponent": "Shock Doctor Legends Showcase 7v7 Tournament Atlanta 2025", "location": "N Mt Carmel Park, McDonough, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/ShockDoctor.png"},
+        {"date": "04/05/2025", "opponent": "Hands League Turf Wars - Fast & Furious", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
+        {"date": "04/19/2025", "opponent": "Hands League Magnificent 7 Showdown", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
+        {"date": "05/03/2025", "opponent": "Hands League Air Raid Classic", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
+        {"date": "05/16/2025", "opponent": "Hands League Tournament of Champions", "TBD", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
         # Add more matches here
     ]
 
