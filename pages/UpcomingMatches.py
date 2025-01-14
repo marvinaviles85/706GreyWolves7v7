@@ -27,7 +27,7 @@ def upcoming_matches_page():
         {"date": "04/05/2025", "opponent": "Hands League Turf Wars - Fast & Furious", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
         {"date": "04/19/2025", "opponent": "Hands League Magnificent 7 Showdown", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
         {"date": "05/03/2025", "opponent": "Hands League Air Raid Classic", "location": "1337 Flowing Wells Road, Augusta, GA", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
-        {"date": "05/16/2025", "opponent": "Hands League Tournament of Champions", "TBD", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"},
+        {"date": "05/16/2025", "opponent": "Hands League Tournament of Champions", "TBD", "image_url": "https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/HandsLeagueLogo.jpg"}
         # Add more matches here
     ]
 
