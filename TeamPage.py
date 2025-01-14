@@ -380,7 +380,7 @@ if page == "Home":
         st.markdown("""
             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="https://superior-athlete.com//" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/superiorathlete.png" width="200">
+                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/IMG_3715.jpeg" width="200">
                 </a>
             </div>
         """, unsafe_allow_html=True)
