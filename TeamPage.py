@@ -268,7 +268,7 @@ elif page == "Contact Us":
 if page == "Home":
     st.markdown("<h1 class='centered-text'>**Welcome to the home of the 706 Grey Wolves!**\n\nExplore our team members, schedule, and photos. \n\n We are a 501(c)(3) Organization</h1>", unsafe_allow_html=True)
     st.image("Images/706gw_no_bg.png", use_column_width=True)
-    st.markdown("<h3 class='centered-text'>Registration is now open for age groups 13U to 18U! Spots are limited, so secure your place today!</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 class='centered-text'>Registration is now 'CLOSED' for age groups 13U to 18U!</h3>", unsafe_allow_html=True)
     
     # Add a scrolling image gallery
     images = [
