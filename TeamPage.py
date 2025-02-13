@@ -306,13 +306,13 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTOGamedayFlyer.jpg" width="500">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
+        #st.markdown("""
+        #    <div style="text-align: center; margin-bottom: 20px;">
+        #        <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
+        #            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/TTOGamedayFlyer.jpg" width="500">
+        #        </a>
+        #    </div>
+        #""", unsafe_allow_html=True)
         
     with col2:
         st.markdown("""
@@ -322,13 +322,13 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/15URoster.jpg" width="500">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
+        #st.markdown("""
+        #    <div style="text-align: center; margin-bottom: 20px;">
+        #        <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
+        #            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/15URoster.jpg" width="500">
+        #        </a>
+        #    </div>
+        #""", unsafe_allow_html=True)
         
     with col3:
         st.markdown("""
@@ -338,13 +338,13 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/18URoster.jpg" width="500">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
+        #st.markdown("""
+        #    <div style="text-align: center; margin-bottom: 20px;">
+        #        <a href="https://www.instagram.com/706greywolves?fbclid=IwZXh0bgNhZW0CMTAAAR0QOMxQ9T0TWipMlhxmOBQog83Wo3Lb7CaBBI8YY024VM-40ZCvjdPYEZ8_aem_Vxhh_Cw7jD0foFthc2usFA" target="_blank">
+        #            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/18URoster.jpg" width="500">
+        #        </a>
+        #    </div>
+        #""", unsafe_allow_html=True)
 
     st.markdown("""
         <h1 class='centered-title'>Our Valued Sponsors</h1>
@@ -377,13 +377,13 @@ if page == "Home":
                 </a>
             </div>
         """, unsafe_allow_html=True)
-        st.markdown("""
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="https://superior-athlete.com//" target="_blank">
-                    <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/IMG_3715.jpeg" width="200">
-                </a>
-            </div>
-        """, unsafe_allow_html=True)
+        #st.markdown("""
+        #    <div style="text-align: center; margin-bottom: 20px;">
+        #        <a href="https://superior-athlete.com//" target="_blank">
+        #            <img src="https://raw.githubusercontent.com/marvinaviles85/706GreyWolves7v7/main/706GWImages/IMG_3715.jpeg" width="200">
+        #        </a>
+        #    </div>
+        #""", unsafe_allow_html=True)
 
     with col3:
         st.markdown("""
