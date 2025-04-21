@@ -1,48 +1,18 @@
+import os
 import streamlit as st
 
-# Data structure to organize photos by tournament
-tournament_photos = {
-    "Rare Air": [
-        {"caption": "Rare Air 1", "file": "706GWImages/RareAir.jpg"}
-    ],
-    "Shock Doctor": [
-        {"caption": "Shock Doctor 1", "file": "706GWImages/ShockDoctor.png"}
-    ],
-    "TTO": [
-        {"caption": "TTO 1", "file": "706GWImages/TTO.png"},
-        {"caption": "TTO Gameday", "file": "706GWImages/TTOGamedayFlyer.jpg"}
-    ],
-    "The Boys": [
-        {"caption": "The Boys", "file": "706GWImages/TheBoys.jpg"}
-    ],
-    "Too Strong": [
-        {"caption": "Too Strong", "file": "706GWImages/TooStrong.jpg"}
-    ],
-    "Valley Center": [
-        {"caption": "Valley Center", "file": "706GWImages/ValleyCenter.PNG"}
-    ],
-    "Venmo": [
-        {"caption": "Venmo", "file": "706GWImages/Venmo.jpg"}
-    ],
-    "NXGN Regional Showcase": [
-        {"caption": "NXGN Showcase", "file": "706GWImages/NXGNRegionalShowcase.jpg"}
-    ]
-}
-
-# Main photo gallery page
-def photo_gallery_page():
-    st.title("Tournament Photo Gallery")
-    
-    # Display clickable tournament links
-    st.header("Select a Tournament")
-    for tournament in tournament_photos.keys():
-        if st.button(tournament):  # Button to select tournament
-            display_tournament_photos(tournament)
+# Function to load images dynamically from a folder
+def load_images_from_folder(folder_path):
+    image_files = []
+    for file_name in os.listdir(folder_path):
+        if file_name.lower().endswith(('.png', '.jpg', '.jpeg')):  # Check for valid image file extensions
+            image_files.append({"caption": file_name, "file": os.path.join(folder_path, file_name)})
+    return image_files
 
 # Function to display photos for the selected tournament
-def display_tournament_photos(tournament):
-    st.header(f"Photos from {tournament}")
-    photos = tournament_photos[tournament]
+def display_tournament_photos(folder_path, tournament_name):
+    st.header(f"Photos from {tournament_name}")
+    photos = load_images_from_folder(folder_path)
 
     # Create a dynamic layout for the selected tournament
     col1, col2, col3 = st.columns(3)
@@ -56,6 +26,30 @@ def display_tournament_photos(tournament):
         else:
             with col3:
                 st.image(photo["file"], caption=photo["caption"], use_column_width=True)
+
+# Main photo gallery page
+def photo_gallery_page():
+    st.title("Tournament Photo Gallery")
+
+    # Dictionary linking tournament names to their respective folder paths
+    tournament_folders = {
+        "Rare Air": "706GWImages/RareAir",
+        "Shock Doctor": "706GWImages/Shock Doctor",
+        "TTO": "706GWImages/TTO",
+        "The Boys": "706GWImages/The Boys",
+        "Too Strong": "706GWImages/Too Strong",
+        "Valley Center": "706GWImages/Valley Center",
+        "Venmo": "706GWImages/Venmo",
+        "NXGN Regional Showcase": "706GWImages/NXGN Regional Showcase"
+    }
+
+    # Sidebar to select a tournament
+    st.sidebar.title("Select a Tournament")
+    selected_tournament = st.sidebar.selectbox("Choose a tournament:", list(tournament_folders.keys()))
+
+    if selected_tournament:
+        folder_path = tournament_folders[selected_tournament]
+        display_tournament_photos(folder_path, selected_tournament)
 
 # Example usage
 if __name__ == "__main__":
