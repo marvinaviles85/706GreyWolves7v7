@@ -6,16 +6,16 @@ def photo_gallery_page():
     #st.markdown("<h1 class='centered-title'>Explore Our Gallery</h1>", unsafe_allow_html=True)
 
     photos = [
-        {"caption": " ", "file": "706GWImages/FSG_Sign.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_13U.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_13U_CHamps.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_13U_Champs_2.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_13U_Coaches.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_at_FSG_1.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_Coachs_FSG_Champs.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_FSG_Team_Champs.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_FSG_Trophy.JPG"},
-        {"caption": " ", "file": "706GWImages/NFZ_Prayer_3.JPG"},
+        {"caption": " ", "file": "706GWImages/RareAir.jpg"},
+        {"caption": " ", "file": "706GWImages/ShockDoctor.png"},
+        {"caption": " ", "file": "706GWImages/TTO.png"},
+        {"caption": " ", "file": "706GWImages/TTOGamedayFlyer.jpg"},
+        {"caption": " ", "file": "706GWImages/TheBoys.jpg"},
+        {"caption": " ", "file": "706GWImages/TooStrong.jpg"},
+        {"caption": " ", "file": "706GWImages/ValleyCenter.PNG"},
+        {"caption": " ", "file": "706GWImages/VelleyCenter.jpg"},
+        {"caption": " ", "file": "706GWImages/Venmo.jpg"},
+        {"caption": " ", "file": "706GWImages/NXGNRegionalShowcase.jpg"},
         # Add more photos here
     ]
 
