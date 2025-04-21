@@ -4,10 +4,10 @@ from streamlit_carousel import carousel
 import streamlit.components.v1 as components
 import webbrowser
 
-from pages.TeamMembers import team_members_page
-from pages.UpcomingMatches import upcoming_matches_page
+#from pages.TeamMembers import team_members_page
+#from pages.UpcomingMatches import upcoming_matches_page
 from pages.Photo_Gallery import photo_gallery_page
-from pages.SponsorshipandDonation import sponsorship_and_donation_page
+#from pages.SponsorshipandDonation import sponsorship_and_donation_page
 from pages.ContactUs import contact_us_page
 
 custom_css = """
@@ -249,21 +249,21 @@ st.markdown("""
 # Dropdown menu for pages selection
 page = st.selectbox(
     "Select a Page",
-    ["Home", "Team Members", "Upcoming Matches", "Photo Gallery", "Sponsorship and Donation", "Contact Us"]
+    ["Home", "Photo Gallery", "Contact Us"]
 )
 
 # Page title and description
 # Navigation Logic
 if page == "Home":
     st.write(" ")
-elif page == "Team Members":
-    team_members_page()
-elif page == "Upcoming Matches":
-    upcoming_matches_page()
+#elif page == "Team Members":
+#    team_members_page()
+#elif page == "Upcoming Matches":
+#    upcoming_matches_page()
 elif page == "Photo Gallery":
     photo_gallery_page()
-elif page == "Sponsorship and Donation":
-    sponsorship_and_donation_page()
+#elif page == "Sponsorship and Donation":
+#    sponsorship_and_donation_page()
 elif page == "Contact Us":
     contact_us_page()
 
