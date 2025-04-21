@@ -19,13 +19,13 @@ def display_tournament_photos(folder_path, tournament_name):
     for idx, photo in enumerate(photos):
         if idx % 3 == 0:
             with col1:
-                st.image(photo["file"], caption=photo["caption"], use_column_width=True)
+                st.image(photo["file"], caption=photo[" "], use_column_width=True)
         elif idx % 3 == 1:
             with col2:
-                st.image(photo["file"], caption=photo["caption"], use_column_width=True)
+                st.image(photo["file"], caption=photo[" "], use_column_width=True)
         else:
             with col3:
-                st.image(photo["file"], caption=photo["caption"], use_column_width=True)
+                st.image(photo["file"], caption=photo[" "], use_column_width=True)
 
 # Main photo gallery page
 def photo_gallery_page():
