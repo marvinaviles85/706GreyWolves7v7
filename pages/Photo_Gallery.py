@@ -29,31 +29,33 @@ tournament_photos = {
     ]
 }
 
-# Page title and description
+# Main photo gallery page
 def photo_gallery_page():
     st.title("Tournament Photo Gallery")
+    
+    # Display clickable tournament links
+    st.header("Select a Tournament")
+    for tournament in tournament_photos.keys():
+        if st.button(tournament):  # Button to select tournament
+            display_tournament_photos(tournament)
 
-    # Sidebar to select a tournament
-    st.sidebar.title("Select a Tournament")
-    tournaments = list(tournament_photos.keys())
-    selected_tournament = st.sidebar.selectbox("Choose a tournament:", tournaments)
+# Function to display photos for the selected tournament
+def display_tournament_photos(tournament):
+    st.header(f"Photos from {tournament}")
+    photos = tournament_photos[tournament]
 
-    if selected_tournament:
-        st.header(f"Photos from {selected_tournament}")
-        photos = tournament_photos[selected_tournament]
-
-        # Create a dynamic layout for the selected tournament
-        col1, col2, col3 = st.columns(3)
-        for idx, photo in enumerate(photos):
-            if idx % 3 == 0:
-                with col1:
-                    st.image(photo["file"], caption=photo["caption"], use_column_width=True)
-            elif idx % 3 == 1:
-                with col2:
-                    st.image(photo["file"], caption=photo["caption"], use_column_width=True)
-            else:
-                with col3:
-                    st.image(photo["file"], caption=photo["caption"], use_column_width=True)
+    # Create a dynamic layout for the selected tournament
+    col1, col2, col3 = st.columns(3)
+    for idx, photo in enumerate(photos):
+        if idx % 3 == 0:
+            with col1:
+                st.image(photo["file"], caption=photo["caption"], use_column_width=True)
+        elif idx % 3 == 1:
+            with col2:
+                st.image(photo["file"], caption=photo["caption"], use_column_width=True)
+        else:
+            with col3:
+                st.image(photo["file"], caption=photo["caption"], use_column_width=True)
 
 # Example usage
 if __name__ == "__main__":
