@@ -34,7 +34,7 @@ def photo_gallery_page():
     # Dictionary linking tournament names to their respective folder paths
     tournament_folders = {
         #"Rare Air": "706GWImages/RareAir",
-        "Shock Doctor": "706GWImages/Shock Doctor",
+        "Shock Doctor": "706GWImages/Hands League 4-19/",
         #"TTO": "706GWImages/TTO",
         #"The Boys": "706GWImages/The Boys",
         #"Too Strong": "706GWImages/Too Strong",
