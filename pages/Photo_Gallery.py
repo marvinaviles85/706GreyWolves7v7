@@ -33,14 +33,14 @@ def photo_gallery_page():
 
     # Dictionary linking tournament names to their respective folder paths
     tournament_folders = {
-        "Rare Air": "706GWImages/RareAir",
+        #"Rare Air": "706GWImages/RareAir",
         "Shock Doctor": "706GWImages/Shock Doctor",
-        "TTO": "706GWImages/TTO",
-        "The Boys": "706GWImages/The Boys",
-        "Too Strong": "706GWImages/Too Strong",
-        "Valley Center": "706GWImages/Valley Center",
-        "Venmo": "706GWImages/Venmo",
-        "NXGN Regional Showcase": "706GWImages/NXGN Regional Showcase"
+        #"TTO": "706GWImages/TTO",
+        #"The Boys": "706GWImages/The Boys",
+        #"Too Strong": "706GWImages/Too Strong",
+        #"Valley Center": "706GWImages/Valley Center",
+        #"Venmo": "706GWImages/Venmo",
+        #"NXGN Regional Showcase": "706GWImages/NXGN Regional Showcase"
     }
 
     # Sidebar to select a tournament
