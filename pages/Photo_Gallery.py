@@ -13,7 +13,6 @@ def photo_gallery_page():
         {"caption": " ", "file": "706GWImages/TheBoys.jpg"},
         {"caption": " ", "file": "706GWImages/TooStrong.jpg"},
         {"caption": " ", "file": "706GWImages/ValleyCenter.PNG"},
-        {"caption": " ", "file": "706GWImages/VelleyCenter.jpg"},
         {"caption": " ", "file": "706GWImages/Venmo.jpg"},
         {"caption": " ", "file": "706GWImages/NXGNRegionalShowcase.jpg"},
         # Add more photos here
